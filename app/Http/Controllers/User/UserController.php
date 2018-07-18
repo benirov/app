@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Login;
+use App\company;
 
 class UserController extends Controller
 {
@@ -58,6 +59,7 @@ class UserController extends Controller
         $fields['fkIdMaster'] =  $fields['typeUser'];
 
         $loginSesion = Login::class;
+        $dataCompany     = company::class;
 
         return DB::transaction(function() use ($fields, $loginSesion)
         {
@@ -70,7 +72,15 @@ class UserController extends Controller
               'fkIdUser' => $lastIdUser
             ];
 
+            $dataCompany =
+            [
+              'name' => $fields['namecompany'],
+              'url' => $fields['url'],
+              'fkIdUser' => $lastIdUser
+            ];
+
             $login = $loginSesion::create($dataLogin);
+            $company = $dataCompany::store($dataLogin);
 
             return response()->json(['data' => $user], 201);
         });
