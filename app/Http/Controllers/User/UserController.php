@@ -83,7 +83,7 @@ class UserController extends Controller
             ];
 
             $login = $loginSesion::create($dataLogin);
-            $company = $classCompany::store($dataCompany);
+            $company = $classCompany::create($dataCompany);
 
             return response()->json(['data' => $user], 201);
         });
