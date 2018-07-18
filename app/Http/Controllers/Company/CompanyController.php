@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Company;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\company;
 
 class CompanyController extends Controller
 {
@@ -35,7 +36,7 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        $company = $dataCompany::create($request);
+        return company::create($request);
     }
 
     /**
