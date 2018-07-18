@@ -138,7 +138,7 @@ return [
     |
     */
 
-    'path' => '/',
+    'path' => '/storage/framework/sessions',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,7 +151,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', 'apirestful.dev'),
+    'domain' => env('SESSION_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------
