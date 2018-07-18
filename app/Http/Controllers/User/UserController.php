@@ -43,8 +43,8 @@ class UserController extends Controller
     public function store(Request $request)
     {
 
-        echo $request;
-        exit();
+        // echo $request;
+        // exit();
       $rules =
       [
         'email' => 'required|email|unique:tblUsers',
