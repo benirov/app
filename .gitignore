@@ -2,8 +2,6 @@
 /public/hot
 /public/storage
 /storage/*.key
-vendor/acacha/admin-lte-template-laravel/resources/lang/es
-vendor/acacha/admin-lte-template-laravel/resources/lang/en
 /vendor
 /.idea
 /.vagrant
