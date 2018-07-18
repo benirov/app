@@ -31,7 +31,7 @@
                     <br>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('adminlte_lang::message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                        <input type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
@@ -39,12 +39,12 @@
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('adminlte_lang::message.age') }}" name="age" value="{{ old('name') }}"/>
+                        <input type="text" class="form-control" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('name') }}"/>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
 
                     <div class="form-group has-feedback">
-                        <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" value="{{ old('email') }}" required/>
+                        <input type="email" class="form-control" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('email') }}" required/>
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
@@ -56,7 +56,7 @@
                         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                      <label for="typeUser"><b>{{ trans('adminlte_lang::message.typeuser') }}</b></label>
+                      <label for="typeUser"><b>{{ trans('message.typeuser') }}</b></label>
                         <select type="password" class="form-control"  name="typeUser">
                           <option value="1">Administrador</option>
                           <option value="2">Cliente</option>
@@ -67,11 +67,11 @@
                     <center><label for=""><h3><b>datos de empresa</b><h3></label></center>
                     <br>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('adminlte_lang::message.nickcompany') }}" name="namecompany" value="{{ old('name') }}" required/>
+                        <input type="text" class="form-control" placeholder="{{ trans('message.nickcompany') }}" name="namecompany" value="{{ old('name') }}" required/>
                         <span class="fa fa-building form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('adminlte_lang::message.url') }}" name="url" value="{{ old('name') }}" required/>
+                        <input type="text" class="form-control" placeholder="{{ trans('message.url') }}" name="url" value="{{ old('name') }}" required/>
                         <span class="fa fa-globe form-control-feedback"></span>
                     </div>
                   </div>
