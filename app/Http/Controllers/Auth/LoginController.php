@@ -34,7 +34,7 @@ class LoginController extends Controller
     }
 
     public function getUser(Request $request){
-        
+
 
       $rules =
       [
@@ -68,6 +68,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('auth');
         // $this->middleware('guest', ['except' => 'logout']);
     }
 }
