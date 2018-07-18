@@ -62,7 +62,7 @@ class UserController extends Controller
         $fields['fkIdMaster'] =  $fields['typeUser'];
 
         $loginSesion = Login::class;
-        $dataCompany     = company::class;
+        $classCompany     = company::class;
 
         return DB::transaction(function() use ($fields, $loginSesion, $dataCompany)
         {
@@ -83,7 +83,7 @@ class UserController extends Controller
             ];
 
             $login = $loginSesion::create($dataLogin);
-            $company = $dataCompany::store($dataLogin);
+            $company = $classCompany::store($dataCompany);
 
             return response()->json(['data' => $user], 201);
         });
