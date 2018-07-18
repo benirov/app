@@ -26,7 +26,8 @@
         <div class="login-box-body">
         <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
         <form action="{{ url('/getUser') }}" method="post">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <!-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> -->
+            {{csrf_field ()}}
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email"/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
