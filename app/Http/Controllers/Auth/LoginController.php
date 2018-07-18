@@ -28,10 +28,10 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function showLoginForm()
-    {
-        return view('adminlte::auth.login');
-    }
+    // public function showLoginForm()
+    // {
+    //     return view('adminlte::auth.login');
+    // }
 
     public function getUser(Request $request){
 
@@ -68,7 +68,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+         $this->middleware('auth');
 
         // $this->middleware('guest', ['except' => 'logout']);
     }
