@@ -64,7 +64,7 @@ class UserController extends Controller
         $loginSesion = Login::class;
         $classCompany     = company::class;
 
-        return DB::transaction(function() use ($fields, $loginSesion, $dataCompany)
+        return DB::transaction(function() use ($fields, $loginSesion, $classCompany)
         {
             $user = User::create($fields);
             $lastIdUser = $user->id;
