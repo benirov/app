@@ -94,7 +94,7 @@
                 </form>
                 <br>
                 <center>
-                  <a href="{{ url('/login') }}" class="text-center">{{ trans('adminlte_lang::message.LogIn') }}</a>
+                  <a href="{{ url('/login') }}" class="text-center">{{ trans('message.LogIn') }}</a>
                 <center>
             </div><!-- /.form-box -->
         </div><!-- /.register-box -->
