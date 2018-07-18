@@ -34,8 +34,7 @@ class LoginController extends Controller
     }
 
     public function getUser(Request $request){
-        echo $request;
-        exit();
+        
 
       $rules =
       [
