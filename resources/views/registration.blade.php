@@ -30,13 +30,20 @@
                     <center><label for=""><h3><b>datos de usuario</b><h3></label></center>
                     <br>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <div class="row">
+                        <div class="form-group has-feedback">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label for="txtname">{{ trans('message.fullname') }}</label>
+                                <input id="txtname" type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label for="txtname">{{ trans('message.lastname') }}</label>
+                               <input type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
+                                <span class="glyphicon glyphicon-user form-control-feedback"></span> 
+
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group has-feedback">
                         <input type="text" class="form-control" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('name') }}"/>
