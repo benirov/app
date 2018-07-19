@@ -87,7 +87,7 @@
                         </div> -->
                         <div class="col-xs-4 col-xs-push-4">
                           <center>
-                              <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.register') }}</button>
+                              <button id="InsertUser" type="button" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.register') }}</button>
                           </center>
                         </div><!-- /.col -->
                     </div>
@@ -102,7 +102,9 @@
 
     @include('adminlte::layouts.partials.scripts_auth')
 
+
     @include('adminlte::auth.terms')
+    <script src="{{secure_asset('/js/registration.js')}}"></script>
 
     <script>
         $(function () {
