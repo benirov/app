@@ -22,7 +22,20 @@ $(document).ready(function()
 });
 
 function SendData(oData){
-	// $.when(postQuery('/users', oData, 0,)).then(funtion(sResp){
-	// 	if(sResp.data.status =)
-	// })
+	$.when(postQuery("./users", oFd, 0)).done(function (sResp)
+	{
+		console.log(sResp)
+		// if (sResp[0].HttpCode == 201)
+		// {
+		// 	notify("Registro realizado con exito, por favor verifique su correo electrÃ³nico para continuar con el proceso", "success");
+		// 	FormReset($("#AddProveedor"), $("*"));
+		// 	$("#txtEmpresa").select2('val', '');
+		// 	// $("#txtTipoProveedor").select2('val', '');
+		// 	// $("#txtCondProveedor").select2('val', '');
+		// }
+		// else
+		// {
+		// 	notify(sResp.Message, "warning");
+		// }
+	});
 }

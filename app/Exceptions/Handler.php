@@ -5,8 +5,13 @@ namespace App\Exceptions;
 use Exception;
 use App\Traits\ApiResponser;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -57,7 +62,42 @@ class Handler extends ExceptionHandler
             $model = strtolower(class_basename($exception->getModel()));
             return $this->errorResponse("No existe ninguna instacia de {$model} con el id especificado", 404);
         }
-        return parent::render($request, $exception);
+
+        if ($exception instanceof AuthenticationException) {
+            return $this->unauthenticated($request, $exception);
+        }
+
+
+        if ($exception instanceof AuthorizationException) {
+            return $this->errorResponse('No posee permisos para ejecutar esta acciòn', 403);
+        }
+
+        if ($exception instanceof NotFoundHttpException) {
+            return $this->errorResponse('No se encontro la URL especificada', 404);
+        }
+
+        if ($exception instanceof MethodNotAllowedHttpException) {
+            return $this->errorResponse('El metodo especificado en la peticion no es valido', 405);
+        }
+
+        if ($exception instanceof HttpException) {
+            return $this->errorResponse($exception->getMessage(), $exception->getStatusCode());
+        }
+
+        if ($exception instanceof QueryException) {
+
+            $code = $exception->ErrorInfo[1];
+            if($code == 1451){
+                return $this->errorResponse('No se puede eliminar de forma permanente el recurso porque esta relacionado con algun otro.', 409);    
+            }
+            
+        }
+
+        if(config('app.debug')){
+                return parent::render($request, $exception);
+        }
+        
+        return $this->errorResponse('Falla inesperada, intente luego', 500);
     }
 
     /**
@@ -70,7 +110,7 @@ class Handler extends ExceptionHandler
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         if ($request->expectsJson()) {
-            return response()->json(['error' => 'Unauthenticated.'], 401);
+            return $this->errorResponse('No auttenticado', 401);
         }
 
         return redirect()->guest(route('login'));
