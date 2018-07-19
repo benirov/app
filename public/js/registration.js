@@ -22,7 +22,7 @@ $(document).ready(function()
 });
 
 function SendData(oData){
-	$.when(postQuery('/users', oData, 0,)).then(funtion(sResp){
-		if(sResp.data.status =)
-	})
+	// $.when(postQuery('/users', oData, 0,)).then(funtion(sResp){
+	// 	if(sResp.data.status =)
+	// })
 }
