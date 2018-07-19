@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 trait ApiResponser
 {
 	private function successResponse($data, $code){
-		return reponse()->json($data, $code);
+		return response()->json($data, $code);
 	}
 
 	protected function errorResponse($message, $code){
-		return reponse()->json(['error'=> $message, 'code' => $code], $code);
+		return response()->json(['error'=> $message, 'code' => $code], $code);
 	}
 
 	protected function showAll(Collection $collection, $code = 200){
