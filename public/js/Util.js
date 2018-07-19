@@ -11,7 +11,8 @@ function notify(mensaje, tipo, modo, url)
             //case 0 es notificacion normal 
             $.notify({
                 // options
-                message: mensaje
+                message: mensaje,
+                icon: 'fa fa-check-circle',
             }{
                 type: tipo,
                 offset: 20,
@@ -20,7 +21,7 @@ function notify(mensaje, tipo, modo, url)
                 delay: 2500,
                 timer: 1000,
                 allow_dismiss: false,
-                icon: 'fa fa-check-circle',
+                
                 mouse_over: "pause",
                 animate: {
                     enter: 'animated fadeInDown',
