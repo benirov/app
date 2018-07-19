@@ -13,7 +13,7 @@ function notify(mensaje, tipo, modo, url)
                 // options
                 message: mensaje,
                 icon: 'fa fa-check-circle',
-            }{
+            },{
                 type: tipo,
                 offset: 20,
                 spacing: 10,
