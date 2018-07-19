@@ -1,6 +1,7 @@
 //Funcion para mostrar un mensaje de notificacion, los tipos son: success, info, danger, warning
 function notify(mensaje, tipo, modo, url)
 {
+    console.log(tipo);
 	modo = modo || 0;
 	url = url || '';
 	//modificada
