@@ -308,7 +308,7 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
     });
 }
 
-function postQuery(sUrl, oFd, LoadModal, bGen) 
+function postQuery(sUrl, oFd, LoadModal) 
 {
     LoadModal = LoadModal || 0;
     return $.ajax({
