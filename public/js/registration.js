@@ -18,7 +18,7 @@ $(document).ready(function()
 	 		}
 	 	})
 	 });
-	notify("pruebas", "success");
+	notify("pruebas", "success"); 
 });
 
 function SendData(oData){

@@ -25,7 +25,7 @@
             @endif
 
             <div class="register-box-body">
-                <form action="{{ url('/users') }}" method="post">
+                <form id="formUser" action="{{ url('/users') }}" method="post">
                   <div class="userInfo">
                     <center><label for=""><h3><b>datos de usuario</b><h3></label></center>
                     <br>
@@ -106,16 +106,6 @@
 
     @include('adminlte::auth.terms')
     <script src="{{secure_asset('/js/registration.js')}}"></script>
-
-    <script>
-        $(function () {
-            $('input').iCheck({
-                checkboxClass: 'icheckbox_square-blue',
-                radioClass: 'iradio_square-blue',
-                increaseArea: '20%' // optional
-            });
-        });
-    </script>
 
 </body>
 
