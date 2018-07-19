@@ -6,7 +6,7 @@ $(document).ready(function()
                 increaseArea: '20%' // optional
             });
 
-	 $("#InsertUser").click(fuction()
+	 $("#InsertUser").click(function()
 	 {
 	 	InputValidator($("#formUser"), function(bResp)
 	 	{
