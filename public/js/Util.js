@@ -11,7 +11,9 @@ function notify(mensaje, tipo, modo, url)
             //case 0 es notificacion normal 
             $.notify({
                 // options
-                message: mensaje,
+                message: mensaje
+            }{
+                type: tipo,
                 offset: 20,
                 spacing: 10,
                 z_index: 9999,
@@ -24,7 +26,6 @@ function notify(mensaje, tipo, modo, url)
                     enter: 'animated fadeInDown',
                     exit: 'animated fadeOutUp'
                 },
-                type: tipo,
             });
             break;
         case 1:
