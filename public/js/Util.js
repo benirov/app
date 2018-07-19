@@ -14,7 +14,6 @@ function notify(mensaje, tipo, modo, url)
             }, {
                 // settings
                 type: tipo,
-                allow_dismiss: true,
                 offset: 20,
                 spacing: 10,
                 z_index: 9999,
