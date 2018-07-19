@@ -20,7 +20,11 @@ function notify(mensaje, tipo, modo, url)
                 z_index: 9999,
                 delay: 2500,
                 timer: 1000,
-                icon: 'fa-check-circle',
+                allow_dismiss: false,
+                placement: {
+                    from: 'bottom',
+                    align: 'left'},
+                icon: 'fa fa-check-circle',
                 mouse_over: "pause",
                 animate: {
                     enter: 'animated fadeInDown',
@@ -52,6 +56,10 @@ function notify(mensaje, tipo, modo, url)
             });
             break;
     }
+
+    setTimeout(function() {
+        $.notifyClose('top-right');
+    }, 3000);
 }
 
 function SerializeForm(oObject) {
