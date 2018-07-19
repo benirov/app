@@ -10,14 +10,13 @@ function notify(mensaje, tipo, modo, url)
             //case 0 es notificacion normal 
             $.notify({
                 // options
-                message: mensaje
-            }, {
-                // settings
+                message: mensaje,
                 type: tipo,
                 offset: 20,
                 spacing: 10,
                 z_index: 9999,
-                
+                delay: 2500,
+                timer: 1000,
                 allow_dismiss: false,
                 icon: 'fa fa-check-circle',
                 mouse_over: "pause",
