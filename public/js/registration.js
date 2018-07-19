@@ -1,5 +1,4 @@
 $(document).ready(function()
 {
-	console.log("cargo");
-	console.log("public");
+	notify("pruebas", "succes");
 });
