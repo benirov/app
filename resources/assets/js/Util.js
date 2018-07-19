@@ -20,6 +20,7 @@ function notify(mensaje, tipo, modo, url)
                 z_index: 9999,
                 delay: 2500,
                 timer: 1000,
+                icon: 'fa-check-circle',
                 mouse_over: "pause",
                 animate: {
                     enter: 'animated fadeInDown',

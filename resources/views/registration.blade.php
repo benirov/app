@@ -101,6 +101,8 @@
     </div>
 
     @include('adminlte::layouts.partials.scripts_auth')
+    @include('adminlte::layouts.partials.contentplugin')
+    @extends('adminlte::layouts.landing')
 
 
     @include('adminlte::auth.terms')
