@@ -54,7 +54,8 @@ class Handler extends ExceptionHandler
         }
 
         if($exception instanceof ModelNotFoundException){
-            return $this->errorResponse("No existe ninguna instacia con el id especificado", 404);
+            $model = strtolower(class_basename($exception->getModel()));
+            return $this->errorResponse("No existe ninguna instacia de {$model} con el id especificado", 404);
         }
         return parent::render($request, $exception);
     }
