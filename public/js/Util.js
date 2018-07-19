@@ -258,3 +258,103 @@ var Expresiones =
     });
 
 }
+
+// Ajax functions(GET And Post)
+
+function getQuery(sUrl, sType, sData, bAsync, LoadModal) 
+{
+    sData = sData || '';
+    bAsync = bAsync || true;
+    
+    LoadModal = LoadModal || 0;
+    
+     return $.ajax({
+        type: "GET",
+        url: sUrl,
+        timeout: 60000,
+        dataType: sType,
+        data: sData,
+        async: bAsync,
+        beforeSend: function ()
+        {
+            if(LoadModal == 1)
+            {
+                $('#modal-loader').modal('show');
+            }
+        },
+        success: function (sResp)
+        {
+            
+        },
+        error: function(xmlhttprequest, textstatus, message)
+        {
+            if(textstatus==="timeout")
+            {
+                
+                Dialog("Se ha excedido el tiempo de respuesta", true, "fa fa-exclamation-circle");
+            }
+            else
+            {
+                
+            }
+        },
+        complete: function (sResp)
+        {
+            if(LoadModal == 1)
+            {
+                $('#modal-loader').modal('hide');
+            }
+        }
+    });
+}
+
+function postQuery(sUrl, oFd, LoadModal, bGen) 
+{
+    LoadModal = LoadModal || 0;
+    return $.ajax({
+        type: "POST",
+        url: sUrl,
+        dataType: "json",
+        data: oFd,
+        timeout: 60000,
+        contentType: false,
+        processData: false,
+        beforeSend: function () 
+        {
+            if(LoadModal == 1)
+            {
+                $('#modal-loader').modal('show');
+            }
+        },
+        success: function (sResp)
+        {
+            
+        },
+        error: function(xmlhttprequest, textstatus, message)
+        {
+            if(textstatus==="timeout")
+            {
+                
+                Dialog("Se ha excedido el tiempo de respuesta", true, "fa fa-exclamation-circle");
+            }
+            else
+            {
+                
+            }
+        },
+        complete: function () 
+        {
+           if(LoadModal == 1)
+            {
+                $('#modal-loader').modal('hide');
+            }
+        },
+        error: function () 
+        {
+           if(LoadModal == 1)
+            {
+                $('#modal-loader').modal('hide');
+            }
+        }
+    });
+}
