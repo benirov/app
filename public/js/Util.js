@@ -21,9 +21,6 @@ function notify(mensaje, tipo, modo, url)
                 delay: 2500,
                 timer: 1000,
                 allow_dismiss: false,
-                placement: {
-                    from: 'bottom',
-                    align: 'left'},
                 icon: 'fa fa-check-circle',
                 mouse_over: "pause",
                 animate: {
