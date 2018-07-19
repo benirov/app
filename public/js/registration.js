@@ -1,4 +1,4 @@
 $(document).ready(function()
 {
-	notify("pruebas", "succes");
+	notify("pruebas", "success");
 });
