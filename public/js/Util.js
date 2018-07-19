@@ -17,8 +17,7 @@ function notify(mensaje, tipo, modo, url)
                 offset: 20,
                 spacing: 10,
                 z_index: 9999,
-                delay: 2500,
-                timer: 1000,
+                
                 allow_dismiss: false,
                 icon: 'fa fa-check-circle',
                 mouse_over: "pause",
