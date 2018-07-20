@@ -27,17 +27,14 @@ function SendData(oData){
 		console.log(sResp)
 
 		console.log(sResp.code);
-		// if (sResp[0].HttpCode == 201)
-		// {
-		// 	notify("Registro realizado con exito, por favor verifique su correo electrÃ³nico para continuar con el proceso", "success");
-		// 	FormReset($("#AddProveedor"), $("*"));
-		// 	$("#txtEmpresa").select2('val', '');
-		// 	// $("#txtTipoProveedor").select2('val', '');
-		// 	// $("#txtCondProveedor").select2('val', '');
-		// }
-		// else
-		// {
-		// 	notify(sResp.Message, "warning");
-		// }
+		if (sResp.code == 201)
+		{
+			notify("Registro realizado con exito", "success", "user-check");
+			FormReset($("#formUser"));
+		}
+		else
+		{
+			notify(sResp.error, "warning", "times-circle");
+		}
 	});
 }

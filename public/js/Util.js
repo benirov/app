@@ -59,6 +59,12 @@ function notify(mensaje, tipo, icon, modo, url)
     }, 3000);
 }
 
+
+function FormReset(FormName)
+{
+    $(FormName)[0].reset();
+}
+
 function SerializeForm(oObject) {
     var myform = oObject;
     var disabled = myform.find(':input:disabled').removeAttr('disabled');
