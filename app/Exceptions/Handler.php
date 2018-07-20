@@ -54,9 +54,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if ($exception instanceof ValidationException) {
-            return $this->convertValidationExceptionToResponse($exception, $request);
-        }
+        // if ($exception instanceof ValidationException) {
+        //     return $this->convertValidationExceptionToResponse($exception, $request);
+        // }
 
         if($exception instanceof ModelNotFoundException){
             $model = strtolower(class_basename($exception->getModel()));
@@ -82,6 +82,10 @@ class Handler extends ExceptionHandler
 
         if ($exception instanceof HttpException) {
             return $this->errorResponse($exception->getMessage(), $exception->getStatusCode());
+        }
+
+        if ($exception instanceof ValidationException) {
+            return $this->errorResponse($exception->validator->errors()->getMessages(), $exception->getStatusCode());
         }
 
         if ($exception instanceof QueryException) {
