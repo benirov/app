@@ -8,7 +8,7 @@ $(document).ready(function()
 
 	 $("#InsertUser").click(function()
 	 {
-	 	EvalRegV2($("#formUser"), function(bResp)
+	 	EvalReg($("#formUser"), function(bResp)
 	 	{
 	 		if(bResp)
 	 		{
