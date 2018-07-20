@@ -25,6 +25,8 @@ function SendData(oData){
 	$.when(postQuery($("#formUser").attr('action') , oData, 0)).done(function (sResp)
 	{
 		console.log(sResp)
+
+		console.log(sResp.code);
 		// if (sResp[0].HttpCode == 201)
 		// {
 		// 	notify("Registro realizado con exito, por favor verifique su correo electrÃ³nico para continuar con el proceso", "success");
