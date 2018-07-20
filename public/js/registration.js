@@ -14,6 +14,8 @@ $(document).ready(function()
 	 		{
 	 			if($("#txtpassword").val().trim() !=  $("#txtpasswordconfirmation").val().trim())
 	 			{
+	 				notify("Contraseñas no son iguales","warning", "exclamation-triangle");
+	 				return false;
 
 	 			}
 	 			var oData = BuildForm(SerializeForm($("#formUser")));
