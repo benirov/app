@@ -19,7 +19,7 @@
     .required {
         color: #a94442;
     }
-</style>>
+</style>
 
 <body class="hold-transition register-page">
     <div id="app">
