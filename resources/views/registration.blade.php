@@ -7,8 +7,8 @@
 @section('content')
 
 <style type="text/css">
-    box {
-    width: 50% !important; 
+    .login-box, .register-box {
+         width: 50% !important; 
     }
 </style>>
 
