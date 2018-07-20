@@ -351,93 +351,64 @@ var Expresiones =
             {
                 if(Expresiones.hasOwnProperty(clase))
                 {
-                    if($(oObject).val().trim() != '')
+                    if($(object).val().trim() != '')
                     {
-                        if($(oObject).val().trim().match(Expresiones[clase].Reg))
+                        if($(object).val().trim().match(Expresiones[clase].Reg))
                         {
-                            $("span[for="+$(oObject).attr('id')+"]").addClass("required").html('');
-                            $(oObject).removeClass('borderRed');
+                            $("span[for="+$(object).attr('id')+"]").addClass("required").html('');
+                            $(object).removeClass('borderRed');
                             
                             
                         }
                         else
                         {
-                            $(oObject).addClass('borderRed');
-                            $("span[for="+$(oObject).attr('id')+"]").addClass("required").html(Expresiones[clase].Mensaje)
+                            $(object).addClass('borderRed');
+                            $("span[for="+$(object).attr('id')+"]").addClass("required").html(Expresiones[clase].Mensaje)
                         }
                     }
                     else
                     {
-                        $(oObject).removeClass('borderRed');
-                        $("span[for="+$(oObject).attr('id')+"]").addClass("required").html('');
+                        $(object).removeClass('borderRed');
+                        $("span[for="+$(object).attr('id')+"]").addClass("required").html('');
                     }
                     
                 }
             });
 
-
-
-
-
-
-         /*$.each(Expresiones, function(index, clase)
-         {
-            console.log("clase: "+clase);
-            if($(Texts[i]).hasClass(Expresiones[clase].Reg) == true && $(Texts[i]).val().trim() != '')
-            {
-                if($(Texts[i]).hasClass('RegCorreo') == true)
-                {
-                    $(Texts[i]).val($(Texts[i]).val().toLowerCase());
-                }
-                // console.log($(Texts[i]).val() + 'id '+ $(Texts[i]).attr('id'));
-                if ($(Texts[i]).val().trim().match(Expresiones[clase].Reg))
-                {
-                    $("span[for="+$(Texts[i]).attr('id')+"]").removeClass("required").html('');
-                }
-                else
-                {
-                    $("span[for="+$(Texts[i]).attr('id')+"]").addClass("required").html(Expresiones[clase].Mensaje).fadeIn(500).delay(10000).fadeOut(500);
-                    $(Texts[i])/*.css({"border": "red 1px solid"});.addClass('borderRed');
-                    respuesta = false;
-                    return false;
-                }
-            }
-            else
-            {
-            }
-         });*/
     });
 
     TextArea.each(function(i, object) 
     {
-        // $.each(RexClass, function(index, clase)
-        // {
-            if($(TextArea[i]).hasClass(Expresiones[clase].Reg) == true && $(TextArea[i]).val().trim() != '')
+        
+            var Class = $(object).attr("class").split(" ");
+            $.each(Class, function(index, clase)
             {
-                if($(TextArea[i]).hasClass('RegCorreo') == true)
+                if(Expresiones.hasOwnProperty(clase))
                 {
-                    $(TextArea[i]).val($(TextArea[i]).val().toLowerCase());
+                    if($(object).val().trim() != '')
+                    {
+                        if($(object).val().trim().match(Expresiones[clase].Reg))
+                        {
+                            $("span[for="+$(object).attr('id')+"]").addClass("required").html('');
+                            $(object).removeClass('borderRed');
+                            
+                            
+                        }
+                        else
+                        {
+                            $(object).addClass('borderRed');
+                            $("span[for="+$(object).attr('id')+"]").addClass("required").html(Expresiones[clase].Mensaje)
+                        }
+                    }
+                    else
+                    {
+                        $(object).removeClass('borderRed');
+                        $("span[for="+$(object).attr('id')+"]").addClass("required").html('');
+                    }
+                    
                 }
-                
-                // console.log($(Texts[i]).val() + 'id '+ $(Texts[i]).attr('id'));
-                if ($(TextArea[i]).val().trim().match(Expresiones[clase]))
-                {
-                    $("span[for="+$(TextArea[i]).attr('id')+"]").removeClass("required").html('');
-                }
-                else
-                {
-                    $("span[for="+$(TextArea[i]).attr('id')+"]").addClass("required").html(Mensajes[clase]).fadeIn(500).delay(10000).fadeOut(500);
-                    $(TextArea[i])/*.css({"border": "red 1px solid"});*/.addClass('borderRed');
-                    respuesta = false;
-                    return false;
-                }
-            }
-            else
-            {
-            }
-        // });
+            });
     });
-    console.log("4:" + respuesta);
     if( requerido > 0)
     {
         notify("Campos marcados en rojo son requeridos","warning");
