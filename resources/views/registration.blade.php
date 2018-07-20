@@ -127,7 +127,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtnamecompany">{{ trans('message.nickcompany') }}</label>
+                                <label for="txtnamecompany"><b>{{ trans('message.nickcompany') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-building"></i></span>
                                      <input id="txtnamecompany" type="text" class="form-control  Requerido" placeholder="{{ trans('message.nickcompany') }}" name="namecompany" value="{{ old('name') }}" required/>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txturl">{{ trans('message.url') }}</label>
+                                <label for="txturl"><b>{{ trans('message.url') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-globe"></i></span>
                                      <input id="txturl" type="text" class="form-control  Requerido" placeholder="{{ trans('message.url') }}" name="url" value="{{ old('url') }}" required/>
