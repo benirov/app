@@ -47,14 +47,17 @@
                                 <span for="txtname" class="help-block"></span>
                             </div>
                         </div>
-
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="form-group  has-feedback">
-                                <label for="txtname">{{ trans('message.fullname') }}</label>
-                                <input id="txtname" type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
-                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <div class="form-group">
+                                <label for="txtlastname">{{ trans('message.lastname') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input id="txtlastname" type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
+                                 </div>
+                                <span for="txtname" class="help-block"></span>
                             </div>
                         </div>
+
                         <div class="form-group  has-feedback  col-md-6 col-sm-6 col-xs-12">
                             <label for="txtname">{{ trans('message.lastname') }}</label>
                            <input type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
