@@ -24,7 +24,7 @@
 <body class="hold-transition register-page">
     <div id="app">
         <div class="container-fluid">
-            <div class="">
+            <div class="row">
                 <div class="register-logo">
                     <b>Registrate</b>
                 </div>
