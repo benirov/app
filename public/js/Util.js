@@ -346,8 +346,43 @@ var Expresiones =
     // elements = formulario.find(':input[type="text"], input[type="password"], input[type="tel"], input[type="number"]');
     Texts.each(function(i, object) 
     {
-        // $.each(Expresiones, function(index, clase)
-        // {
+        var Class = $(object).attr("class").split(" ");
+            $.each(Class, function(index, clase)
+            {
+                if(Expresiones.hasOwnProperty(clase))
+                {
+                    if($(oObject).val().trim() != '')
+                    {
+                        if($(oObject).val().trim().match(Expresiones[clase].Reg))
+                        {
+                            $("span[for="+$(oObject).attr('id')+"]").addClass("required").html('');
+                            $(oObject).removeClass('borderRed');
+                            
+                            
+                        }
+                        else
+                        {
+                            $(oObject).addClass('borderRed');
+                            $("span[for="+$(oObject).attr('id')+"]").addClass("required").html(Expresiones[clase].Mensaje)
+                        }
+                    }
+                    else
+                    {
+                        $(oObject).removeClass('borderRed');
+                        $("span[for="+$(oObject).attr('id')+"]").addClass("required").html('');
+                    }
+                    
+                }
+            });
+
+
+
+
+
+
+         /*$.each(Expresiones, function(index, clase)
+         {
+            console.log("clase: "+clase);
             if($(Texts[i]).hasClass(Expresiones[clase].Reg) == true && $(Texts[i]).val().trim() != '')
             {
                 if($(Texts[i]).hasClass('RegCorreo') == true)
@@ -362,7 +397,7 @@ var Expresiones =
                 else
                 {
                     $("span[for="+$(Texts[i]).attr('id')+"]").addClass("required").html(Expresiones[clase].Mensaje).fadeIn(500).delay(10000).fadeOut(500);
-                    $(Texts[i])/*.css({"border": "red 1px solid"});*/.addClass('borderRed');
+                    $(Texts[i])/*.css({"border": "red 1px solid"});.addClass('borderRed');
                     respuesta = false;
                     return false;
                 }
@@ -370,7 +405,7 @@ var Expresiones =
             else
             {
             }
-        // });
+         });*/
     });
 
     TextArea.each(function(i, object) 

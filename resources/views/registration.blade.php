@@ -11,6 +11,10 @@
          width: 50% !important; 
          border-radius: 10px;
     }
+    .borderRed
+    {
+        border-color: #a94442!important;
+    }
 
     .required {
         color: #a94442;
