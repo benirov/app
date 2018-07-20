@@ -86,7 +86,7 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof ValidationException) {
-            echo "AuthenticationException";
+            echo "ValidationException";
             return $this->errorResponse($exception->validator->errors()->getMessages(), 422);
         }
 
