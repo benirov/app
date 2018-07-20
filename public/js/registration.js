@@ -12,7 +12,7 @@ $(document).ready(function()
 	 	{
 	 		if(bResp)
 	 		{
-	 			if($("#txtpassword").val().trim() =!  $("#txtpasswordconfirmation").val().trim())
+	 			if($("#txtpassword").val().trim() !=  $("#txtpasswordconfirmation").val().trim())
 	 			{
 
 	 			}
