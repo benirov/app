@@ -18,7 +18,6 @@ $(document).ready(function()
 	 		}
 	 	})
 	 });
-	notify("pruebas", "success"); 
 });
 
 function SendData(oData){
