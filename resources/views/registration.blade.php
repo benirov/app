@@ -54,40 +54,68 @@
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input id="txtlastname" type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
                                  </div>
-                                <span for="txtname" class="help-block"></span>
+                                <span for="txtlastname" class="help-block"></span>
                             </div>
                         </div>
-
-                        <div class="form-group  has-feedback  col-md-6 col-sm-6 col-xs-12">
-                            <label for="txtname">{{ trans('message.lastname') }}</label>
-                           <input type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="txtage">{{ trans('message.age') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input id="txtage" type="text" class="form-control" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
+                                 </div>
+                                <span for="txtage" class="help-block"></span>
+                            </div>
                         </div>
-                        
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="txtemail">{{ trans('message.email') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                     <input id="txtemail" type="email" class="form-control" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('email') }}" required/>
+                                 </div>
+                                <span for="txtemail" class="help-block"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('name') }}"/>
-                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <div class="row">
+                         <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="txtpassword">{{ trans('message.password') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                     <input id="txtpassword" type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" required/>
+                                 </div>
+                                <span for="txtpassword" class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="txtpasswordconfirmation">{{ trans('message.password') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                     <input id="txtpasswordconfirmation" type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation" required/>
+                                 </div>
+                                <span for="txtpasswordconfirmation" class="help-block"></span>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group has-feedback">
-                        <input type="email" class="form-control" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('email') }}" required/>
-                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" required/>
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                        <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation"/>
-                        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-                    </div>
-                    <div class="form-group has-feedback">
-                      <label for="typeUser"><b>{{ trans('message.typeuser') }}</b></label>
-                        <select type="password" class="form-control"  name="typeUser">
-                          <option value="1">Administrador</option>
-                          <option value="2">Cliente</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="txttypeuser">{{ trans('message.typeuser') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                     <select id="txttypeuser" class="form-control"  name="typeUser">
+                                          <option value="1">Administrador</option>
+                                          <option value="2">Cliente</option>
+                                    </select>
+                                 </div>
+                                <span for="txttypeuser" class="help-block"></span>
+                            </div>
+                        </div>
                     </div>
                   </div>
                   <div class=infoCompany>
