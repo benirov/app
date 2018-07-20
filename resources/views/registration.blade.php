@@ -6,6 +6,12 @@
 
 @section('content')
 
+<style type="text/css">
+    box {
+    width: 50% !important; 
+    }
+</style>>
+
 <body class="hold-transition register-page">
     <div id="app">
         <div class="register-box">
