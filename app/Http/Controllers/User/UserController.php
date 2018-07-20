@@ -87,7 +87,7 @@ class UserController extends ApiController
             $company = $classCompany::create($dataCompany);
 
             // return response()->json(['data' => $user], 201);
-            return $this->showOne($users, 201);
+            return $this->showOne($user, 201);
         });
     }
 
