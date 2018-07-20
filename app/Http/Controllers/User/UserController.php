@@ -56,7 +56,7 @@ class UserController extends ApiController
         'typeUser' => 'required',
       ];
 
-      return $this->validate($request, $rules);
+      $this->validate($request, $rules);
         $fields = $request->all();
         // $fields['password'] =  bcrypt($request->password);
         $fields['tokenUser'] =  User::generateToken();

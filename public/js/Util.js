@@ -643,7 +643,7 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
                 
             }
         },
-        complete: function (sResp)
+        complete: function (sResp) 
         {
             if(LoadModal == 1)
             {
