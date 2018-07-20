@@ -20,7 +20,7 @@ function notify(mensaje, tipo, icon, modo, url)
                 z_index: 9999,
                 delay: 2500,
                 timer: 1000,
-                allow_dismiss: false,
+                allow_dismiss: true,
                 
                 mouse_over: "pause",
                 animate: {
