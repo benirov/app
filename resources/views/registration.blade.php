@@ -9,6 +9,7 @@
 <style type="text/css">
     .login-box, .register-box {
          width: 50% !important; 
+         border-radius: 10px;
     }
 
     .required {
