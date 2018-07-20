@@ -85,7 +85,7 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof ValidationException) {
-            echo $this->errorResponse($exception->validator->errors()->getMessages(), 422);
+            return $this->errorResponse($exception->validator->errors()->getMessages(), 422);
         }
 
         if ($exception instanceof QueryException) { 
