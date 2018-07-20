@@ -51,7 +51,7 @@
                                 <label for="txtname"><b>{{ trans('message.fullname') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input id="txtname" type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                                    <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
                                  </div>
                                 <span for="txtname" class="help-block"></span>
                             </div>
@@ -61,7 +61,7 @@
                                 <label for="txtlastname"><b>{{ trans('message.lastname') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input id="txtlastname" type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
+                                    <input id="txtlastname" type="text" class="form-control  RegApellido" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
                                  </div>
                                 <span for="txtlastname" class="help-block"></span>
                             </div>
@@ -73,7 +73,7 @@
                                 <label for="txtage"><b>{{ trans('message.age') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                    <input id="txtage" type="text" class="form-control" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
+                                    <input id="txtage" type="text" class="form-control  RegNumsimple" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
                                  </div>
                                 <span for="txtage" class="help-block"></span>
                             </div>
@@ -83,7 +83,7 @@
                                 <label for="txtemail"><b>{{ trans('message.email') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                     <input id="txtemail" type="email" class="form-control" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('email') }}" />
+                                     <input id="txtemail" type="email" class="form-control  Requerido  RegCorreo" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('email') }}" />
                                  </div>
                                 <span for="txtemail" class="help-block"></span>
                             </div>
@@ -95,7 +95,7 @@
                                 <label for="txtpassword"><b>{{ trans('message.password') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                     <input id="txtpassword" type="password" class="form-control  Requerido" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
+                                     <input id="txtpassword" type="password" class="form-control  Requerido  RegClave" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
                                  </div>
                                 <span for="txtpassword" class="help-block"></span>
                             </div>
@@ -105,7 +105,7 @@
                                 <label for="txtpasswordconfirmation"><b>{{ trans('message.password') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                     <input id="txtpasswordconfirmation" type="password" class="form-control  Requerido" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation" />
+                                     <input id="txtpasswordconfirmation" type="password" class="form-control  Requerido  RegClave" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation" />
                                  </div>
                                 <span for="txtpasswordconfirmation" class="help-block"></span>
                             </div>
@@ -135,7 +135,7 @@
                                 <label for="txtnamecompany"><b>{{ trans('message.nickcompany') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                                     <input id="txtnamecompany" type="text" class="form-control  Requerido" placeholder="{{ trans('message.nickcompany') }}" name="namecompany" value="{{ old('name') }}" required/>
+                                     <input id="txtnamecompany" type="text" class="form-control  Requerido  RegDescrip" placeholder="{{ trans('message.nickcompany') }}" name="namecompany" value="{{ old('name') }}" required/>
                                  </div>
                                 <span for="txtnamecompany" class="help-block"></span>
                             </div>
@@ -145,7 +145,7 @@
                                 <label for="txturl"><b>{{ trans('message.url') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                     <input id="txturl" type="text" class="form-control  Requerido" placeholder="{{ trans('message.url') }}" name="url" value="{{ old('url') }}" required/>
+                                     <input id="txturl" type="text" class="form-control  Requerido  RegNombreDominio" placeholder="{{ trans('message.url') }}" name="url" value="{{ old('url') }}" required/>
                                  </div>
                                 <span for="txturl" class="help-block"></span>
                             </div>
