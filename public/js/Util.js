@@ -697,8 +697,9 @@ function postQuery(sUrl, oFd, LoadModal)
                 $('#modal-loader').modal('hide');
             }
         },
-        error: function () 
+        error: function (error) 
         {
+            console.log(error);
            if(LoadModal == 1)
             {
                 $('#modal-loader').modal('hide');
