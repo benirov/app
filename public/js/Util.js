@@ -699,6 +699,7 @@ function postQuery(sUrl, oFd, LoadModal)
         },
         error: function (error) 
         {
+            console.log(error);
             if(error.status == 422)
             {
                     notify(error.responseJSON.error.name,   "warning", "exclamation-triangle");
