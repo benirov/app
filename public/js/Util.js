@@ -700,14 +700,19 @@ function postQuery(sUrl, oFd, LoadModal)
         error: function (error) 
         {
             console.log(error);
+            
             if(error.status == 422)
             {
-                    notify(error.responseJSON.error.name,   "warning", "exclamation-triangle");
-            }else
-            {
-                notify(error.responseJSON.error.name,   "warning", "exclamation-triangle");
+                $.each(error.responseJSON.error, function(index, name)
+                {
+                    notify(name,   "info", "exclamation-triangle");
+                });
             }
-            console.log(error);
+            else
+            {
+                notify("Ocurrio un error, vuelve a intentarlo",   "warning", "exclamation-triangle");
+            }
+            // console.log(error);
            // if(LoadModal == 1)
            //  {
            //      $('#modal-loader').modal('hide');
