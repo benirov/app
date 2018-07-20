@@ -8,7 +8,7 @@
 
 <style type="text/css">
     .login-box, .register-box {
-         width: 50% !important; 
+         width: 700px !important; 
          border-radius: 10px;
     }
     .borderRed
