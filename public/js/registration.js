@@ -12,6 +12,10 @@ $(document).ready(function()
 	 	{
 	 		if(bResp)
 	 		{
+	 			if($("#txtpassword").val().trim() =!  $("#txtpasswordconfirmation").val().trim())
+	 			{
+
+	 			}
 	 			var oData = BuildForm(SerializeForm($("#formUser")));
 	 			SendData(oData);
 
