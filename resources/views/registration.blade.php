@@ -38,6 +38,17 @@
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="txtname">{{ trans('message.fullname') }}</label>
+                                 <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input id="txtname" type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                                 </div>
+                                <span for="txtname" class="help-block"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group  has-feedback">
                                 <label for="txtname">{{ trans('message.fullname') }}</label>
                                 <input id="txtname" type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
