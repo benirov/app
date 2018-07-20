@@ -1,9 +1,10 @@
 //Funcion para mostrar un mensaje de notificacion, los tipos son: success, info, danger, warning
-function notify(mensaje, tipo, modo, url)
+function notify(mensaje, tipo, icon, modo, url)
 {
     console.log(tipo);
 	modo = modo || 0;
 	url = url || '';
+    icon = icon || 'check';
 	//modificada
     switch (modo)
 	{
@@ -12,7 +13,7 @@ function notify(mensaje, tipo, modo, url)
             $.notify({
                 // options
                 message: mensaje,
-                icon: 'fa fa-check-circle',
+                icon: 'fa fa-'+icon,
             },{
                 type: tipo,
                 offset: 20,
@@ -411,7 +412,7 @@ var Expresiones =
     });
     if( requerido > 0)
     {
-        notify("Campos marcados en rojo son requeridos","warning");
+        notify("Campos marcados en rojo son requeridos","warning", "exclamation-triangle");
     }
     callback(respuesta);
 }
