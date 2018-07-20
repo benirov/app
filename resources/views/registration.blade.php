@@ -41,7 +41,7 @@
                 @endif
                 <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                     <div class="register-box-body">
-                        <form id="formUser" action="{{ url('/users') }}" method="post">
+                        <form id="formUser" action="{{ secure_url('/users') }}" method="post">
                           <div class="userInfo">
                             <center><label for=""><h3><b>datos de usuario</b><h3></label></center>
                             <br>

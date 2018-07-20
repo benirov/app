@@ -21,7 +21,8 @@ $(document).ready(function()
 });
 
 function SendData(oData){
-	$.when(postQuery($("#formUser").attr('action'), oData, 0)).done(function (sResp)
+	console.log("ruta : "+$("#formUser").attr('action'));
+	$.when(postQuery($("#formUser").attr('action') , oData, 0)).done(function (sResp)
 	{
 		console.log(sResp)
 		// if (sResp[0].HttpCode == 201)
