@@ -699,11 +699,18 @@ function postQuery(sUrl, oFd, LoadModal)
         },
         error: function (error) 
         {
-            console.log(error);
-           if(LoadModal == 1)
+            if(error.status == 422)
             {
-                $('#modal-loader').modal('hide');
+                    notify(error.responseJSON.error.name,   "warning", "exclamation-triangle");
+            }else
+            {
+                notify(error.responseJSON.error.name,   "warning", "exclamation-triangle");
             }
+            console.log(error);
+           // if(LoadModal == 1)
+           //  {
+           //      $('#modal-loader').modal('hide');
+           //  }
         }
     });
 }
