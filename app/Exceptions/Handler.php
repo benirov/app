@@ -64,6 +64,7 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof AuthenticationException) {
+            echo "AuthenticationException";
             return $this->unauthenticated($request, $exception);
         }
 
@@ -85,10 +86,11 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof ValidationException) {
+            echo "AuthenticationException";
             return $this->errorResponse($exception->validator->errors()->getMessages(), 422);
         }
 
-        if ($exception instanceof QueryException) {
+        if ($exception instanceof QueryException) { 
 
             $code = $exception->ErrorInfo[1];
             if($code == 1451){
@@ -114,7 +116,7 @@ class Handler extends ExceptionHandler
     protected function unauthenticated($request, AuthenticationException $exception)
     {
         if ($request->expectsJson()) {
-            return $this->errorResponse('No auttenticado', 401);
+            return $this->errorResponse('No autenticado', 401);
         }
 
         return redirect()->guest(route('login'));
