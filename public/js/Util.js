@@ -78,7 +78,7 @@ function BuildForm(sSerialized)
 }
 
 
-function EvalRegV2(formulario ,callback) 
+function EvalReg(formulario ,callback) 
 {
     // console.log(formulario);
     $("label").removeClass("required");

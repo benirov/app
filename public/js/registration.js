@@ -8,7 +8,7 @@ $(document).ready(function()
 
 	 $("#InsertUser").click(function()
 	 {
-	 	InputValidator($("#formUser"), function(bResp)
+	 	EvalRegV2($("#formUser"), function(bResp)
 	 	{
 	 		if(bResp)
 	 		{

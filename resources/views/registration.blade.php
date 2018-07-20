@@ -43,7 +43,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtname">{{ trans('message.fullname') }}</label>
+                                <label for="txtname"><b>{{ trans('message.fullname') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input id="txtname" type="text" class="form-control" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtlastname">{{ trans('message.lastname') }}</label>
+                                <label for="txtlastname"><b>{{ trans('message.lastname') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input id="txtlastname" type="text" class="form-control" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
@@ -65,7 +65,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtage">{{ trans('message.age') }}</label>
+                                <label for="txtage"><b>{{ trans('message.age') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                     <input id="txtage" type="text" class="form-control" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtemail">{{ trans('message.email') }}</label>
+                                <label for="txtemail"><b>{{ trans('message.email') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                                      <input id="txtemail" type="email" class="form-control" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('email') }}" />
@@ -87,7 +87,7 @@
                     <div class="row">
                          <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtpassword">{{ trans('message.password') }}</label>
+                                <label for="txtpassword"><b>{{ trans('message.password') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                      <input id="txtpassword" type="password" class="form-control  Requerido" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
-                                <label for="txtpasswordconfirmation">{{ trans('message.password') }}</label>
+                                <label for="txtpasswordconfirmation"><b>{{ trans('message.password') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                      <input id="txtpasswordconfirmation" type="password" class="form-control  Requerido" placeholder="{{ trans('adminlte_lang::message.retrypepassword') }}" name="password_confirmation" />
@@ -109,7 +109,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-xs-push-3">
                             <div class="form-group">
-                                <label for="txttypeuser">{{ trans('message.typeuser') }}</label>
+                                <label for="txttypeuser"><b>{{ trans('message.typeuser') }}</b></label>
                                  <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users-cog"></i></span>
                                      <select id="txttypeuser" class="form-control  Requerido"  name="typeUser">
@@ -124,7 +124,6 @@
                   </div>
                   <div class=infoCompany>
                     <center><label for=""><h3><b>datos de empresa</b><h3></label></center>
-                    <br>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="form-group">
