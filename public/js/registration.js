@@ -12,7 +12,7 @@ $(document).ready(function()
 	 	{
 	 		if(bResp)
 	 		{
-	 			var oData = buildForm(SerializeForm("#formUser"));
+	 			var oData = BuildForm(SerializeForm("#formUser"));
 	 			SendData(Data);
 
 	 		}

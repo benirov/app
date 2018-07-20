@@ -74,7 +74,7 @@
                                         <label for="txtage"><b>{{ trans('message.age') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input id="txtage" type="text" class="form-control  RegNumsimple" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
+                                            <input id="txtage" type="number" class="form-control  RegNumsimple" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
                                          </div>
                                         <span for="txtage" class="help-block"></span>
                                     </div>
