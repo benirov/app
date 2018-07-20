@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12 col-xs-push-3">
+                                <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txttypeuser"><b>{{ trans('message.typeuser') }}</b></label>
                                          <div class="input-group">
@@ -164,7 +164,7 @@
                                         </div>
                                     </label>
                                 </div> -->
-                                <div class="col-xs-4 col-xs-push-4">
+                                <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
                                   <center>
                                       <button id="InsertUser" type="button" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.register') }}</button>
                                   </center>
