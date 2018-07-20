@@ -64,7 +64,6 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof AuthenticationException) {
-            echo "AuthenticationException";
             return $this->unauthenticated($request, $exception);
         }
 
@@ -86,8 +85,7 @@ class Handler extends ExceptionHandler
         }
 
         if ($exception instanceof ValidationException) {
-            echo "ValidationException";
-            return $this->errorResponse($exception->validator->errors()->getMessages(), 422);
+            echo $this->errorResponse($exception->validator->errors()->getMessages(), 422);
         }
 
         if ($exception instanceof QueryException) { 

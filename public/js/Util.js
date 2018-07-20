@@ -677,6 +677,9 @@ function postQuery(sUrl, oFd, LoadModal)
         },
         error: function(xmlhttprequest, textstatus, message)
         {
+            console.log(message);
+            console.log(xmlhttprequest);
+            
             if(textstatus==="timeout")
             {
                 
