@@ -42,7 +42,7 @@ class LoginController extends Controller
         'password' => 'required|min:6',
       ];
 
-      $validation = $this->validate($request, $rules);
+      $validation = Validator::make($request, $rules);
       if($validation->fails())
       {
         return redirect()->back()
