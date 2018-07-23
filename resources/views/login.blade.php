@@ -28,11 +28,11 @@
         <form action="{{ secure_url('/getUser') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email"/>
+                <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" required/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password"/>
+                <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" required/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
@@ -44,7 +44,7 @@
         <br>
         <!-- <a href="{{ url('/password/reset') }}">{{ trans('adminlte_lang::message.forgotpassword') }}</a><br> -->
         <center>
-          <a href="{{ url('/register') }}" class="text-center">{{ trans('adminlte_lang::message.registermember') }}</a>
+          <a href="{{ url('/registration') }}" class="text-center">{{ trans('adminlte_lang::message.registermember') }}</a>
         </center>
 
     </div><!-- /.login-box-body -->
@@ -52,6 +52,8 @@
     </div><!-- /.login-box -->
     </div>
     @include('adminlte::layouts.partials.scripts_auth')
+    @include('adminlte::layouts.partials.contentplugin')
+    <script src="{{secure_asset('/js/login.js')}}"></script>
 
     <script>
         $(function () {

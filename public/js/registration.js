@@ -30,9 +30,9 @@ function SendData(oData){
 	console.log("ruta : "+$("#formUser").attr('action'));
 	$.when(postQuery($("#formUser").attr('action') , oData, 0)).done(function (sResp)
 	{
-		console.log(sResp)
+		// console.log(sResp)
 
-		console.log(sResp.code);
+		// console.log(sResp.code);
 		if (sResp.code == 201)
 		{
 			notify("Registro realizado con exito", "success", "user");
