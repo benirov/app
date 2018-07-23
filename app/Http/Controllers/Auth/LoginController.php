@@ -55,7 +55,7 @@ class LoginController extends Controller
       // $fields['password'] =  bcrypt($request->password);
       $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]));
       // return $login;
-      if($login){
+      if($login[0]->Error == 0){
         $request->session()->put('User', $login[0]->idUser);
         $request->session()->put('Master', $login[0]->IdMaster);
         $request->session()->put('nameUser', $login[0]->nameUser);
@@ -66,7 +66,7 @@ class LoginController extends Controller
       else
       {
         return redirect('/login')
-      ->withErrors( $validation->errors()->add('bd', 'No se ecnontro informacion del usuario ingresado'))
+      ->withErrors( $validation->errors()->add('bd', $login[0]->message))
       ->withInput(); 
       }
 
