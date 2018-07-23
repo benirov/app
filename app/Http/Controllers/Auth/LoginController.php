@@ -43,12 +43,11 @@ class LoginController extends Controller
       ];
 
       $validation = $this->validate($request, $rules);
-      if($validation)
+      if($validation->fails())
       {
-        
-      }else
-      {
-        return $validation;
+        return redirect()->back()
+      ->withErrors( $validator->errors() )
+      ->withInput(); 
       }
 
       $fields = $request->all();
