@@ -53,7 +53,7 @@ class LoginController extends Controller
         $request->session()->put('nameUser',1);
         $request->session()->put('emailUser',1);
 
-        var_dump($login->IdMaster);
+        var_dump($login);
         // return redirect('/home');
          // return redirect()->action('HomeController@getHome');
       }
