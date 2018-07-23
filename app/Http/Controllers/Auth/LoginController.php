@@ -46,13 +46,9 @@ class LoginController extends Controller
       $validation = Validator::make($request->all(), $rules);
       if($validation->fails())
       {
-        echo "aqui";
         return redirect('/login')
       ->withErrors( $validation->errors() )
       ->withInput(); 
-      }else
-      {
-        echo "no";
       }
 
       $fields = $request->all();
