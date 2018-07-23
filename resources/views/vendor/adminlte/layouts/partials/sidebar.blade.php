@@ -5,7 +5,7 @@
     <section class="sidebar">
 
         <!-- Sidebar user panel (optional) -->
-        @if (! Auth::guest())
+        
             <div class="user-panel">
                 <div class="pull-left image">
                     <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
@@ -15,7 +15,7 @@
                     <!-- Status -->
                 </div>
             </div>
-        @endif
+        
 
         <!-- search form (Optional) -->
         <form action="#" method="get" class="sidebar-form">
