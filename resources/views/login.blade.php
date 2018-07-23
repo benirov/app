@@ -9,7 +9,7 @@
     <div id="app">
         <div class="login-box">
             <div class="login-logo">
-                <a href=""><b>Iniciar</b> SESION</a>
+                <b>Iniciar</b> SESION
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -36,7 +36,7 @@
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
-                <div class="col-xs-5 col-xs-push-3">
+                <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
                 </div><!-- /.col -->
             </div>
