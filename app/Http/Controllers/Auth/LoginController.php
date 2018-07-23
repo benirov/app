@@ -45,7 +45,7 @@ class LoginController extends Controller
       $this->validate($request, $rules);
       $fields = $request->all();
       // $fields['password'] =  bcrypt($request->password);
-      $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]))->toJson();
+      $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]))->first();
       // return $login;
       if($login){
         $request->session()->put('User',2);
@@ -53,7 +53,7 @@ class LoginController extends Controller
         $request->session()->put('nameUser',1);
         $request->session()->put('emailUser',1);
 
-        echo $login;
+        echo $login->email;
         // return redirect('/home');
          // return redirect()->action('HomeController@getHome');
       }
