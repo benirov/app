@@ -70,6 +70,6 @@ class LoginController extends Controller
     {
          $this->middleware('auth');
 
-        $this->middleware('guest', ['except' => 'logout']);
+        // $this->middleware('guest', ['except' => 'logout']);
     }
 }
