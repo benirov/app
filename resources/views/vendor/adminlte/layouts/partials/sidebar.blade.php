@@ -11,7 +11,7 @@
                     <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>{{ Session::get('nameUser'); }}</p>
+                    <p>{{ Session::get('nameUser') }}</p>
                     <!-- Status -->
                 </div>
             </div>
