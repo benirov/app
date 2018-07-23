@@ -45,9 +45,12 @@ class LoginController extends Controller
       $validation = $this->validate($request, $rules);
       if($validation)
       {
+        
+      }else
+      {
         return $validation;
       }
-      
+
       $fields = $request->all();
       // $fields['password'] =  bcrypt($request->password);
       $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]));
