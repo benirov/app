@@ -65,7 +65,9 @@ class LoginController extends Controller
       }
       else
       {
-        echo "no hay nada";
+        return redirect('/login')
+      ->withErrors( $validation->errors()->add('bd', 'No se ecnontro informacion del usuario ingresado'))
+      ->withInput(); 
       }
 
     }
