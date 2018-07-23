@@ -48,14 +48,12 @@ class LoginController extends Controller
       $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]));
       // return $login;
       if($login){
-        $request->session()->put('User',2);
-        $request->session()->put('Master',1);
-        $request->session()->put('nameUser',1);
-        $request->session()->put('emailUser',1);
-
-        echo $login[0]->email;
+        $request->session()->put('User', $login[0]->idUser);
+        $request->session()->put('Master', $login[0]->IdMaster);
+        $request->session()->put('nameUser', $login[0]->nameUser);
+        $request->session()->put('emailUser', $login[0]->email);
         // return redirect('/home');
-         // return redirect()->action('HomeController@getHome');
+         return redirect()->action('HomeController@getHome');
       }
 
     }
