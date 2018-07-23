@@ -1,6 +1,3 @@
-<?php
-header('Access-Control-Allow-Origin: *'); 
-?>
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
