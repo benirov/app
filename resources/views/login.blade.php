@@ -53,7 +53,6 @@
     </div>
     @include('adminlte::layouts.partials.scripts_auth')
     @include('adminlte::layouts.partials.contentplugin')
-    <script src="{{secure_asset('/js/login.js')}}"></script>
 
     <script>
         $(function () {

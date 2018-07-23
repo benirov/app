@@ -42,7 +42,12 @@ class LoginController extends Controller
         'password' => 'required|min:6',
       ];
 
-      $this->validate($request, $rules);
+      $validation = $this->validate($request, $rules);
+      if($validation)
+      {
+        return $validation;
+      }
+      
       $fields = $request->all();
       // $fields['password'] =  bcrypt($request->password);
       $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]));
