@@ -63,6 +63,10 @@ class LoginController extends Controller
         // return redirect('/home');
          return redirect()->action('HomeController@getHome');
       }
+      else
+      {
+        echo "no hay nada";
+      }
 
     }
 
