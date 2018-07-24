@@ -45,13 +45,16 @@
             </li>
             @if($menu)
                 @php
-                $menu = '';
-                $menuArrayChildrem = [];
-                    foreach($menu as $infoMenu){
-                        if($menu->parent != 0)
-                        array_push($menuArrayChildrem, $infoMenu);
-                    };
-                 echo $menuArrayChildrem;
+                    $menuArrayChildrem = [];
+                @endphp
+                @foreach($menu as $infoMenu)
+                        if($infoMenu->parent != 0)
+                            @php 
+                                array_push($menuArrayChildrem, $infoMenu);
+                            @endphp
+                @endforeach
+                @php
+                   echo  $menuArrayChildrem;
                 @endphp
             @endif
         </ul><!-- /.sidebar-menu -->
