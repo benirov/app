@@ -124,7 +124,7 @@
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
+                                <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                                 <p>
                                     {{ Session::get('nameUser') }}
                                     <small>{{ trans('adminlte_lang::message.login') }} Nov. 2012</small>
