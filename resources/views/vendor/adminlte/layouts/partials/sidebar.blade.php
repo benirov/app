@@ -54,7 +54,7 @@
                             @endphp
                 @endforeach
                 @php
-                   echo  $menuArrayChildrem;
+                   print_r($menuArrayChildrem);
                 @endphp
             @endif
         </ul><!-- /.sidebar-menu -->
