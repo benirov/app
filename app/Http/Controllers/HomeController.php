@@ -9,7 +9,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\User;
 /**
  * Class HomeController
  * @package App\Http\Controllers
@@ -47,7 +46,7 @@ class HomeController extends Controller
     }
 
     public function getHome(){
-        $menu = User::getUserMenu();
-      return view('/home')->with('menu', $menu);
+        // $menu = User::getUserMenu();
+      return view('/home')->with('menu', User\UserController::getUserMenu());
     }
 }
