@@ -27,10 +27,18 @@
         <p class="login-box-msg"> {{ trans('adminlte_lang::message.siginsession') }} </p>
         <form action="{{ secure_url('/getUser') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="form-group has-feedback">
+                <div class="form-group">
+                    <label for="txtname"><b>{{ trans('message.fullname') }}</b></label>
+                     <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                     </div>
+                    <span for="txtname" class="help-block"></span>
+                </div>
+            <!-- <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" required/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
+            </div> -->
             <div class="form-group has-feedback">
                 <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" required/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
