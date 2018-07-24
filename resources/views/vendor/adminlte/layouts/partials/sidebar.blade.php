@@ -56,11 +56,10 @@
                 @endforeach
 
                 @foreach($menuArrayChildrem as $Menu)
-
+                    @php $idParent = $Menu->parent; @endphp
                     @foreach($menu as $Menuparent)
-                    
-                        @if($Menuparent->id == $loop->parent->$Menu->parent )
-                            @php 
+                    @php 
+                        @if($Menuparent->id ==  $idParent)
                                 echo "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
                                 </span></a></li>
                                 <ul class='treeview-menu'>
