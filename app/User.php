@@ -41,6 +41,16 @@ class User extends Authenticatable
     {
       return str_random(100);
     }
+
+     public static function getUserMenu()
+    {
+         $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
+            {
+                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd = {Session::get("Master")}');
+            })->get();
+
+         return $userMenu; 
+    }
 //     DROP PROCEDURE IF EXISTS sp_insertUser
 // DELIMETER ;
 //    CREATE PROCEDURE sp_insertUser(
