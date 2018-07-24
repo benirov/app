@@ -140,7 +140,7 @@ class UserController extends ApiController
     }
 
 
-    function getMenuUser()
+    function getUserMenu()
     {
          $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
             {

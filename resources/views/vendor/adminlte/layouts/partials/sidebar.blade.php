@@ -43,8 +43,8 @@
                     <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
                 </ul>
             </li>
-            @if($menu)
-                @foreach($menu as $infoMenu)
+            @if($userMenu)
+                @foreach($userMenu as $infoMenu)
                     <li><a href="#"><i class='fa fa-link'></i> <span>{{$infoMenu->name}}</span></a></li>
                 @endforeach
         </ul><!-- /.sidebar-menu -->
