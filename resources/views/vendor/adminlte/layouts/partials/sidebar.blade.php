@@ -55,26 +55,33 @@
                         @endif
                 @endforeach
 
+
+                 @php $AllMenu = ''; @endphp
                 @foreach($menuArrayChildrem as $Menu)
                     @php $idParent = $Menu->parent; @endphp
                     @foreach($menu as $Menuparent)
-                        @php 
+                        @php
+
+                            ${"MenuParent" . $loop->index} = "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
+                                </span></a></li>";
+
                             if($Menuparent->id ==  $idParent)
                             {
-                                echo "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
-                                </span></a></li>
-                                <ul class='treeview-menu'>
+                                ${"MenuParent" . $loop->index} .= "<ul class='treeview-menu'>
                                     <li><a href='#'>pruebas</a></li>
                                 </ul>";
                             };
+
+                            $AllMenu .= ${"MenuParent" . $loop->index};
                                 
                         @endphp
+
                     @endforeach
 
                         
                 @endforeach
                 <!-- bsucar los hijos e imprimirlos -->
-
+                    {{ $AllMenu }}
                 
             @endif
         </ul><!-- /.sidebar-menu -->
