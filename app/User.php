@@ -52,19 +52,6 @@ class User extends Authenticatable
 
     //      return $userMenu; 
     // }
-//     DROP PROCEDURE IF EXISTS sp_insertUser
-// DELIMETER ;
-//    CREATE PROCEDURE sp_insertUser(
-//        in _name VARCHAR(15),
-//        in _email VARCHAR(30),
-//        in _password VARCHAR(40),
-//        in _typeUser int(1),
-//        in _tokenUser VARCHAR(190),
-//        in _permittingUser int(7),
-//        in _url int(7),
-//    );
-//    BEGIN
-// //
 
 
     /**
