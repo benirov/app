@@ -52,7 +52,7 @@
                         array_push($menuArrayChildrem, $infoMenu);
                     };
                  echo $menuArrayChildrem;
-                @phpend
+                @endphp
             @endif
         </ul><!-- /.sidebar-menu -->
     </section>
