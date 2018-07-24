@@ -47,6 +47,7 @@
                 @foreach($menu as $infoMenu)
                     <li><a href="#"><i class='fa fa-link'></i> <span>{{$infoMenu->name}}</span></a></li>
                 @endforeach
+            @endif
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
