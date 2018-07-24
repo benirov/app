@@ -138,4 +138,13 @@ class UserController extends ApiController
     {
         //
     }
+
+
+    function getMenuUser()
+    {
+        return $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
+            {
+                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd' = Session::get('Master'));
+            })->get();
+    }
 }
