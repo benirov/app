@@ -52,6 +52,7 @@
                             @php 
                                 var_dump($menuArrayChildrem, $infoMenu);
                             @endphp
+                        @endif
                 @endforeach
                 @php
                    print_r($menuArrayChildrem);
