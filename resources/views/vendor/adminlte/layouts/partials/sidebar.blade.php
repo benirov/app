@@ -61,18 +61,25 @@
                     @php $idParent = $Menu->parent; @endphp
                     @foreach($menu as $Menuparent)
                         @php
+                            if(${"MenuParent" . $loop->index} != '')
+                            {
 
-                            ${"MenuParent" . $loop->index} = "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
+                            }
+                            else
+                            {
+                                ${"MenuParent" . $loop->index} = "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
                                 </span></a></li>";
 
-                            if($Menuparent->id ==  $idParent)
-                            {
-                                ${"MenuParent" . $loop->index} .= "<ul class='treeview-menu'>
-                                    <li><a href='#'>pruebas</a></li>
-                                </ul>";
-                            };
+                                if($Menuparent->id ==  $idParent)
+                                {
+                                    ${"MenuParent" . $loop->index} .= "<ul class='treeview-menu'>
+                                        <li><a href='#'>pruebas</a></li>
+                                    </ul>";
+                                };
 
-                            $AllMenu .= ${"MenuParent" . $loop->index};
+                                $AllMenu .= ${"MenuParent" . $loop->index};
+                            }
+                            
                                 
                         @endphp
 
@@ -81,7 +88,7 @@
                         
                 @endforeach
                 <!-- bsucar los hijos e imprimirlos -->
-                    {{ $AllMenu }}
+                @php $AllMenu; @endphp
                 
             @endif
         </ul><!-- /.sidebar-menu -->
