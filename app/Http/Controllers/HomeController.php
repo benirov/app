@@ -47,7 +47,7 @@ class HomeController extends Controller
     }
 
     public function getHome(){
-        $menu = User::getMenuUser();
+        $menu = UserController::getMenuUser();
       return view('/home')->with('menu', $menu);
     }
 }
