@@ -44,9 +44,15 @@
                 </ul>
             </li>
             @if($menu)
-                @foreach($menu as $infoMenu)
-                    <li><a href="#"><i class='fa fa-link'></i> <span>{{$infoMenu->name}}</span></a></li>
-                @endforeach
+                @php
+                $menu = '';
+                $menuArrayChildrem = [];
+                    foreach($menu as $infoMenu)
+                        if($menu->parent != 0)
+                        array_push($menuArrayChildrem, $infoMenu);
+                    @endforeach
+                 echo $menuArrayChildrem;   
+                @phpend
             @endif
         </ul><!-- /.sidebar-menu -->
     </section>
