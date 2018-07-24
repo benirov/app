@@ -39,7 +39,7 @@
                 <div class="form-group">
                     <label for="txtpassword"><b>{{ trans('message.password') }}</b></label>
                      <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="txtpassword" type="password" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.password') }}" name="password" required/>
                      </div>
                     <span for="txtpassword" class="help-block"></span>
