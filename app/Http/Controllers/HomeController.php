@@ -9,7 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Http\Controllers\User;
+use App\Http\Controllers\User\UserController;
 /**
  * Class HomeController
  * @package App\Http\Controllers
