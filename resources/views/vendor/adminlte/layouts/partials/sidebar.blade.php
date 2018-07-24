@@ -48,7 +48,7 @@
                     $menuArrayChildrem = [];
                 @endphp
                 @foreach($menu as $infoMenu)
-                        @if($infoMenu->parent ?= 0)
+                        @if($infoMenu->parent != 0)
                             @php 
                                 var_dump($menuArrayChildrem, $infoMenu);
                             @endphp
