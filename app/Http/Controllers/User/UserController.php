@@ -146,7 +146,7 @@ class UserController extends ApiController
         echo Session::get("Master");
          $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
             {
-                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd', '=', 1);
+                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd = {Session::get("Master")}');
             })->toSql();
          dd($userMenu);
 
