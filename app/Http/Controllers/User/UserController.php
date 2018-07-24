@@ -8,6 +8,7 @@ use App\Http\Controllers\ApiController;
 use App\User;
 use App\Login;
 use App\company;
+use Session;
 
 class UserController extends ApiController
 {
