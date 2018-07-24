@@ -148,7 +148,7 @@ class UserController extends ApiController
             {
                 $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd', '=', Session::get("Master"));
             })->toSql();
-         dd($userMenu)
+         dd($userMenu);
 
          // return $userMenu; 
     }
