@@ -28,21 +28,30 @@
         <form action="{{ secure_url('/getUser') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="txtname"><b>{{ trans('message.fullname') }}</b></label>
+                    <label for="txtname"><b>{{ trans('message.email') }}</b></label>
                      <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="txtemail" type="email" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('name') }}" required/>
                      </div>
-                    <span for="txtname" class="help-block"></span>
+                    <span for="txtemail" class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="txtpassword"><b>{{ trans('message.password') }}</b></label>
+                     <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input id="txtpassword" type="password" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.password') }}" name="password" required/>
+                     </div>
+                    <span for="txtpassword" class="help-block"></span>
                 </div>
             <!-- <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="{{ trans('adminlte_lang::message.email') }}" name="email" required/>
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div> -->
-            <div class="form-group has-feedback">
+            <!-- <div class="form-group has-feedback">
                 <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" required/>
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.buttonsign') }}</button>
