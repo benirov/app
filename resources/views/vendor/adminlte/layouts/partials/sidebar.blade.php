@@ -50,8 +50,8 @@
                     foreach($menu as $infoMenu){
                         if($menu->parent != 0)
                         array_push($menuArrayChildrem, $infoMenu);
-                    }
-                 echo $menuArrayChildrem
+                    };
+                 echo $menuArrayChildrem;
                 @phpend
             @endif
         </ul><!-- /.sidebar-menu -->
