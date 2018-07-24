@@ -70,17 +70,11 @@
                         @endif
                     @endforeach
 
-                        <!-- @if($infoMenu->parent != 0)
-                            @php 
-                                var_dump($menuArrayChildrem, $infoMenu);
-                            @endphp
-                        @endif -->
+                        
                 @endforeach
                 <!-- bsucar los hijos e imprimirlos -->
 
-                <!-- @php
-                   print_r($menuArrayChildrem);
-                @endphp -->
+                
             @endif
         </ul><!-- /.sidebar-menu -->
     </section>
