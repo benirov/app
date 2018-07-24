@@ -49,9 +49,9 @@
                 $menuArrayChildrem = [];
                     foreach($menu as $infoMenu)
                         if($menu->parent != 0)
-                        array_push($menuArrayChildrem, $infoMenu);
+                        array_push($menuArrayChildrem, $infoMenu)
                     @endforeach
-                 echo $menuArrayChildrem;   
+                 echo $menuArrayChildrem   
                 @phpend
             @endif
         </ul><!-- /.sidebar-menu -->
