@@ -141,7 +141,7 @@ class UserController extends ApiController
     }
 
 
-     public static function getUserMenu()
+     public function getUserMenu()
     {
         echo Session::get("Master");
          $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
