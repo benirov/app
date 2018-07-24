@@ -50,7 +50,7 @@
                 @foreach($menu as $infoMenu)
                         @if($infoMenu->parent != 0)
                             @php 
-                                var_dump($menuArrayChildrem, $infoMenu);
+                                array_push($menuArrayChildrem, $infoMenu);
                             @endphp
                         @endif
                 @endforeach
