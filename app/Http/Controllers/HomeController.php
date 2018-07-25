@@ -57,6 +57,7 @@ class HomeController extends Controller
 
     public function redirect()
     {
+        dd(Session::get('sessionActive'));
       if(Session::get('sessionActive'))
       {
         return redirect()->action('HomeController@getHome');
