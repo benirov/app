@@ -28,7 +28,7 @@ class verifySession
         if(!Session::get("sessionActive")){
             return redirect('/login'); 
         }
-        if()
+        // if()
         return $next($request);
     }
 }
