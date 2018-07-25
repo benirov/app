@@ -57,7 +57,7 @@
 
                             @foreach($menu as $infoMenuChildrem)
                                 @if($infoMenuChildrem->parent != 0)
-                                    @if(idParent ==  $infoMenuChildrem->parent)
+                                    @if($idParent ==  $infoMenuChildrem->parent)
                                         @php
                                             $menuParent .= "<li><a href='#'>pruebas</a></li>";
                                         @endphp
