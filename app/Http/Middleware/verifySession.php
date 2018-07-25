@@ -24,10 +24,10 @@ class verifySession
     public function handle($request, Closure $next)
     {
         if(session()->get('sessionActive')){
-            dd('logueado');    
+            dd($request);    
         }
         else{
-         dd('no logueado');       
+         dd('no logueado')       
         }
         return $next($request);
     }
