@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Login;
+use Session;
 
 class LoginController extends Controller
 {
@@ -75,13 +76,10 @@ class LoginController extends Controller
 
     public function redirect()
     {
-      if()
+      if(Session::get('sessionActive'))
       {
-        Session::get('sessionActive'){
-          return redirect()->action('HomeController@getHome');
-        }
+        return redirect()->action('HomeController@getHome');
       }
-
     }
 
     /**
