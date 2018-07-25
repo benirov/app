@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\contracts\Auth\Guard;
 use Illuminate\Support\Facades\Auth;
-use session
+use session;
 
 class verifySession
 {
