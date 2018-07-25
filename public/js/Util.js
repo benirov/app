@@ -624,7 +624,7 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
         {
             if(LoadModal == 1)
             {
-                $('#modal-loader').modal('show');
+                $('#modal-loader').show();
             }
         },
         success: function (sResp)
@@ -633,6 +633,10 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
         },
         error: function(xmlhttprequest, textstatus, message)
         {
+            if(LoadModal == 1)
+            {
+                $('#modal-loader').hide();
+            }
             if(textstatus==="timeout")
             {
                 
@@ -668,7 +672,7 @@ function postQuery(sUrl, oFd, LoadModal)
         {
             if(LoadModal == 1)
             {
-                $('#modal-loader').modal('show');
+                $('.container-modal').show();
             }
         },
         success: function (sResp)
@@ -677,6 +681,10 @@ function postQuery(sUrl, oFd, LoadModal)
         },
         error: function(xmlhttprequest, textstatus, message)
         {
+            if(LoadModal == 1)
+            {
+                $('.container-modal').hide();
+            }
             console.log(message);
             console.log(xmlhttprequest);
             
@@ -694,11 +702,15 @@ function postQuery(sUrl, oFd, LoadModal)
         {
            if(LoadModal == 1)
             {
-                $('#modal-loader').modal('hide');
+                $('.container-modal').hide();
             }
         },
         error: function (error) 
         {
+            if(LoadModal == 1)
+            {
+                $('.container-modal').hide();
+            }
             console.log(error);
             
             if(error.status == 422)

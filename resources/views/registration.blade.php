@@ -24,6 +24,7 @@
 <body class="hold-transition register-page">
     <div id="app">
         <div class="container-fluid">
+          @include('adminlte::layouts.partials.modal')
             <div class="row">
                 <div class="register-logo">
                     <b>Registrate</b>
