@@ -69,6 +69,8 @@
                                             @endphp
                                         @endif
                                     @endif
+                                @else
+                                @php echo $menuParent = ''; @endphp 
                                 @endif
                             @endforeach
                         @php
