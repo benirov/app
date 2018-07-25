@@ -50,6 +50,7 @@
                 @foreach($menu as $infoMenuParent)
                 @php
                     $menuParent = '';
+                    $idParent = $infoMenuParent->id;
                 @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
