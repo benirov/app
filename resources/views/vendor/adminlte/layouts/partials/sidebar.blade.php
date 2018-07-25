@@ -48,6 +48,7 @@
                 $CursorMenu = [];
             @endphp
                 @foreach($menu as $infoMenuParent)
+                @php echo $infoMenuParent->id; @endphp 
                     @php $idParent = $infoMenuParent->id; @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
