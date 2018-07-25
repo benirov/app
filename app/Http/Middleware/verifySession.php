@@ -24,7 +24,7 @@ class verifySession
     public function handle($request, Closure $next)
     {
         if(session()->get('sessionActive')){
-            dd($request)    
+            dd($request)
         }
         else{
             dd($request)
