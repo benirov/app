@@ -16,7 +16,7 @@ body {
 }*/
 
 .container-modal {
-  display: block;
+  display: none;
   /*background: rgba(0, 0, 0, 0.3);*/
   background-color: blue;
   opacity: 1
