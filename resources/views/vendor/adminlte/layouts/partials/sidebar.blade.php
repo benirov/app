@@ -54,7 +54,7 @@
                 @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
-                                $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
+                                $menuParent = "<li class="treeview"><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
                                 </span></a></li>";
                                 
                             @endphp
@@ -74,7 +74,7 @@
                                 @endif
                             @endforeach
                             @if($menuChildren != '')
-                                @php $menuChildren = '<ul>'.$menuChildren.'</ul>'; 
+                                @php $menuChildren = '<ul class="treeview-menu">'.$menuChildren.'</ul>'; 
                                 $menuParent .= $menuChildren;
                                 @endphp
                             @endif
