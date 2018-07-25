@@ -55,7 +55,7 @@
                          @if($infoMenuParent->parent == 0)
                             @php
                                 $menuParent = "<li class='treeview'><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
-                                </span></a></li>";
+                                </span></a>";
                                 
                             @endphp
                         @endif
@@ -78,6 +78,10 @@
                                 $menuParent .= $menuChildren;
                                 @endphp
                             @endif
+                            @php 
+                                $menuParent .= '</li>';
+                            @endphp
+                            
                         @php
                         array_push($CursorMenu, $idParent);
                         @endphp
