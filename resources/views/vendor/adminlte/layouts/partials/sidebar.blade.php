@@ -44,52 +44,31 @@
                 </ul>
             </li>
             @if($menu)
-                @php
-                    $menuArrayChildrem = [];
-                @endphp
-                @foreach($menu as $infoMenu)
-                        @if($infoMenu->parent != 0)
-                            @php 
-                                array_push($menuArrayChildrem, $infoMenu);
+                @foreach($menu as $infoMenuParent)
+                        @if($infoMenuParent->parent == 0)
+                            @php
+                                $menuParent = '';
+                                $idParent = '';
+                                $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
+                                </span></a></li>";
+                                $idParent = $Menuparent->id;
                             @endphp
                         @endif
+
+                            @foreach($menu as $infoMenuChildrem)
+                                @if($infoMenuChildrem->parent != 0)
+                                    @if(idParent ==  $infoMenuChildrem->parent)
+                                        @php
+                                            $menuParent .= "<li><a href='#'>pruebas</a></li>";
+                                        @endphp
+                                @endif
+                            @endforeach
+
+                            @php
+                                echo $menuParent;
+                            @endphp
+
                 @endforeach
-
-
-                 @php $AllMenu = ''; @endphp
-                @foreach($menuArrayChildrem as $Menu)
-                    @php $idParent = $Menu->parent; @endphp
-                    @foreach($menu as $Menuparent)
-                        @php
-                            if(${"MenuParent" . $loop->index} != '')
-                            {
-
-                            }
-                            else
-                            {
-                                ${"MenuParent" . $loop->index} = "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
-                                </span></a></li>";
-
-                                if($Menuparent->id ==  $idParent)
-                                {
-                                    ${"MenuParent" . $loop->index} .= "<ul class='treeview-menu'>
-                                        <li><a href='#'>pruebas</a></li>
-                                    </ul>";
-                                };
-
-                                $AllMenu .= ${"MenuParent" . $loop->index};
-                            }
-                            
-                                
-                        @endphp
-
-                    @endforeach
-
-                        
-                @endforeach
-                <!-- bsucar los hijos e imprimirlos -->
-                @php $AllMenu; @endphp
-                
             @endif
         </ul><!-- /.sidebar-menu -->
     </section>
