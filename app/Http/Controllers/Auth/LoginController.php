@@ -73,6 +73,17 @@ class LoginController extends Controller
 
     }
 
+    public function redirect()
+    {
+      if()
+      {
+        Session::get('sessionActive'){
+          return redirect()->action('HomeController@getHome');
+        }
+      }
+
+    }
+
     /**
      * Where to redirect users after login.
      *
@@ -87,6 +98,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+      $this->redirect();
          // $this->middleware('auth');
 
         // $this->middleware('guest', ['except' => 'logout']);
