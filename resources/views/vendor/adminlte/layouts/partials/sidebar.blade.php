@@ -74,7 +74,9 @@
                                 @endif
                             @endforeach
                             @if($menuChildren != '')
-                                @php $menuChildren = '<ul>'.$menuChildren.'</ul>'; @endphp
+                                @php $menuChildren = '<ul>'.$menuChildren.'</ul>'; 
+                                $menuParent .= $menuChildren;
+                                @endphp
                             @endif
                         @php
                         array_push($CursorMenu, $idParent);
