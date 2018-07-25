@@ -48,13 +48,14 @@
                 $CursorMenu = [];
             @endphp
                 @foreach($menu as $infoMenuParent)
-                        @if($infoMenuParent->parent == 0)
+                    $idParent = $infoMenuParent->id; @endphp
+                        @php @if($infoMenuParent->parent == 0)
                             @php
                                 $menuParent = '';
-                                $idParent = '';
+                                
                                 $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
                                 </span></a></li>";
-                                $idParent = $infoMenuParent->id;
+                                
                             @endphp
                         @endif
 
