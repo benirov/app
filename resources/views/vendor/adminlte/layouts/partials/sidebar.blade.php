@@ -51,7 +51,7 @@
                     @php $idParent = $infoMenuParent->id; @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
-                            @php echo "paso una sola vez"; @endphp 
+                            echo "paso una sola vez";
                                 $menuParent = '';
                                 
                                 $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
