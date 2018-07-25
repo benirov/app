@@ -44,6 +44,9 @@
                 </ul>
             </li>
             @if($menu)
+            @php
+                $CursorMenu = [];
+            @endphp
                 @foreach($menu as $infoMenuParent)
                         @if($infoMenuParent->parent == 0)
                             @php
@@ -56,14 +59,20 @@
                         @endif
 
                             @foreach($menu as $infoMenuChildrem)
-                                @if($infoMenuChildrem->parent != 0)
-                                    @if($idParent ==  $infoMenuChildrem->parent)
-                                        @php
-                                            $menuParent .= "<li><a href='#'>pruebas</a></li>";
-                                        @endphp
+                                @if(!in_array($idParent, $CursorMenu))
+                                    @if($infoMenuChildrem->parent != 0)
+                                        @if($idParent ==  $infoMenuChildrem->parent)
+                                            @php
+                                                $menuParent .= "<li><a href='#'>pruebas</a></li>";
+                                            @endphp
+                                        @endif
                                     @endif
                                 @endif
                             @endforeach
+                        @php
+                        array_push($CursorMenu, $idParent);
+                        @endphp
+
 
                             @php
                                 echo $menuParent;
