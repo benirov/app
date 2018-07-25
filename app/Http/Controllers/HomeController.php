@@ -33,6 +33,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $this->redirect();
         return view('/login');
     }
 
@@ -43,6 +44,7 @@ class HomeController extends Controller
 
     public function getViewLogin()
     {
+        $this->redirect();
         return view('/login');
     }
 
@@ -50,5 +52,13 @@ class HomeController extends Controller
         $menu = new User\UserController;
         $menus =  $menu->getUserMenu();
       return view('/home')->with('menu', $menus);
+    }
+
+    public function redirect()
+    {
+      if(Session::get('sessionActive'))
+      {
+        return redirect()->action('HomeController@getHome');
+      }
     }
 }
