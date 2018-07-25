@@ -33,7 +33,7 @@ body {
   border-radius: 15px;
   -webkit-animation: rotation 1s infinite;
           animation: rotation 1s infinite;
-      margin-top: -25rem
+      margin-top: -40rem
 }
 .container-modal .shape {
   position: absolute;
