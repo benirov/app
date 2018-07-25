@@ -23,7 +23,13 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        dd(\Auth::user()->id);
+        // if(session()->get('sessionActive'){
+        //     dd('logueado');    
+        // }
+        // else{
+        //  dd('no logueado');       
+        // }
+        dd(\Auth::user());
         return $next($request);
     }
 }
