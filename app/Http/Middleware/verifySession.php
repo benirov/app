@@ -24,8 +24,8 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        dd($request->path());
-        if(Session::get("sessionActive") && $request->pathInfo == '/login'){
+        // dd($request->path());
+        if(Session::get("sessionActive") && $request->path() == '/home'){
             return redirect('/home'); 
         }
         if(!Session::get("sessionActive")){
