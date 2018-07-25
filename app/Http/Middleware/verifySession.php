@@ -24,9 +24,11 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
+        // dd($request);
         if(!Session::get("sessionActive")){
             return redirect('/login'); 
         }
+        if()
         return $next($request);
     }
 }
