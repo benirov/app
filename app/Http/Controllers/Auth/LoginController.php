@@ -94,11 +94,11 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
+    // public function __construct()
+    // {
       // $this->redirect();
          // $this->middleware('auth');
 
         // $this->middleware('guest', ['except' => 'logout']);
-    }
+    // }
 }

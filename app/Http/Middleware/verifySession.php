@@ -10,11 +10,11 @@ use Session;
 class verifySession
 {
 
-    private $auth;
+    // private $auth;
 
-    public function __construc(Guard $auth){
-        $this->auth =$auth;
-    }
+    // public function __construc(Guard $auth){
+    //     $this->auth =$auth;
+    // }
     /**
      * Handle an incoming request.
      *
