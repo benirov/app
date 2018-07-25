@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -62,6 +63,7 @@ class LoginController extends Controller
         $request->session()->put('emailUser', $login[0]->email);
         $request->session()->put('sessionActive', true);
          $login[0]->nameUser = \Auth::user()->id;
+          Auth::user() = $login[0]->nameUser;
         // return redirect('/home');
          return redirect()->action('HomeController@getHome');
       }

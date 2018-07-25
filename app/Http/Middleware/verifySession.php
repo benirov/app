@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 
 class verifySession
 {
@@ -22,7 +23,7 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        dd(\Auth::user());
+        dd(Auth::user());
         return $next($request);
     }
 }
