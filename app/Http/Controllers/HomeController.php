@@ -62,7 +62,7 @@ class HomeController extends Controller
         echo Session::get('sessionActive');
         // return redirect()->action('HomeController@getHome');
         $this->getHome();
-        exit();
+        // exit();
       }
     }
 }
