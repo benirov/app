@@ -61,6 +61,7 @@
                                         @php
                                             $menuParent .= "<li><a href='#'>pruebas</a></li>";
                                         @endphp
+                                    @endif
                                 @endif
                             @endforeach
 
