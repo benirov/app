@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\contracts\Auth\Guard;
 use Illuminate\Support\Facades\Auth;
-use session;
+use Session;
 
 class verifySession
 {
@@ -24,9 +24,12 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        if(!session('sessionActive')){
-            dd(session('sessionActive'));
+        if(!Session::get("sessionActive")){
+            dd(Session::get("sessionActive"));
          // return redirect('/login');   
+        }else
+        {
+            dd(Session::get("sessionActive"));
         }
         return $next($request);
     }
