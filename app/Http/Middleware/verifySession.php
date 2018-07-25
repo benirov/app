@@ -22,7 +22,7 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        dd(\Auth::user()->id);
+        dd(\Auth::user());
         return $next($request);
     }
 }
