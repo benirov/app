@@ -624,7 +624,7 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
         {
             if(LoadModal == 1)
             {
-                $('#modal-loader').show();
+                $('.container-modal').show();
             }
         },
         success: function (sResp)
@@ -635,7 +635,7 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
         {
             if(LoadModal == 1)
             {
-                $('#modal-loader').hide();
+                $('.container-modal').hide();
             }
             if(textstatus==="timeout")
             {
@@ -651,7 +651,7 @@ function getQuery(sUrl, sType, sData, bAsync, LoadModal)
         {
             if(LoadModal == 1)
             {
-                $('#modal-loader').modal('hide');
+                $('.container-modal').hide();
             }
         }
     });

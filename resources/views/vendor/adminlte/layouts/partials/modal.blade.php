@@ -1,5 +1,5 @@
 <!-- div Loader -->
-	<div id="modalLoader" class="container-modal hidden">
+	<div class="container-modal hidden">
     	<center>
 	      <div class="content-modal">
 	        <div class="shape shape-1"></div>
