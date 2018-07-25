@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
 
 Route::group(['middleware' => 'verifySession'], function () {
        
      Route::get('/home', 'HomeController@getHome')->name('home');
+   });
+
+Route::group(['middleware' => 'verifyLogin'], function () {
+       
+     Route::get('/', 'HomeController@getHome')->name('login');
+     Route::get('/login', 'HomeController@getViewLogin')->name('login');
    });
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
@@ -29,5 +32,4 @@ Route::get('/registration', 'HomeController@getViewRegistration')->name('registr
 // Route::get('/login', 'HomeController@getViewLogin')->name('login');
 Route::post('users', 'User\UserController@store');
 Route::post('getUser', 'Auth\LoginController@getUser');
-Route::get('/login', 'HomeController@getViewLogin')->name('login');
 
