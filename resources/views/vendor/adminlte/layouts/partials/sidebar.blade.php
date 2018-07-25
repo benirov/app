@@ -48,7 +48,9 @@
                 $CursorMenu = [];
             @endphp
                 @foreach($menu as $infoMenuParent)
-                    @php $idParent = $infoMenuParent->id; @endphp
+                @php
+                    menuParent = '';
+                @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
                             echo "paso una sola vez";
