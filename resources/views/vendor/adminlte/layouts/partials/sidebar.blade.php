@@ -59,9 +59,8 @@
                                 
                             @endphp
                         @endif
-
+                            @php $menuChildren = ''; @endphp
                             @foreach($menu as $infoMenuChildrem)
-                                @php $menuChildren = ''; @endphp
                                 @if(!in_array($idParent, $CursorMenu))
                                     @if($infoMenuChildrem->parent != 0)
                                         @if($idParent ==  $infoMenuChildrem->parent)
