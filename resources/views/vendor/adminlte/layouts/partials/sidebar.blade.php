@@ -49,13 +49,11 @@
             @endphp
                 @foreach($menu as $infoMenuParent)
                 @php
-                    menuParent = '';
+                    $menuParent = '';
                 @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
                             echo "paso una sola vez";
-                                $menuParent = '';
-                                
                                 $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
                                 </span></a></li>";
                                 
