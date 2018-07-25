@@ -57,10 +57,12 @@ class HomeController extends Controller
 
     public function redirect()
     {
-        echo Session::get('sessionActive');
       if(Session::get('sessionActive'))
       {
-        return redirect()->action('HomeController@getHome');
+        echo Session::get('sessionActive');
+        // return redirect()->action('HomeController@getHome');
+        $this->getHome();
+        exit();
       }
     }
 }
