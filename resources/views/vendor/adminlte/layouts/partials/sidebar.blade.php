@@ -49,9 +49,9 @@
                             @php
                                 $menuParent = '';
                                 $idParent = '';
-                                $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$Menuparent->name
+                                $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
                                 </span></a></li>";
-                                $idParent = $Menuparent->id;
+                                $idParent = $infoMenuParent->id;
                             @endphp
                         @endif
 
