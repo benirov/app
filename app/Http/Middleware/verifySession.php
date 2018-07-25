@@ -23,7 +23,7 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        if(session()->get('sessionActive'){
+        if(session()->get('sessionActive')){
             dd('logueado');    
         }
         else{
