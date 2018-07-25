@@ -54,7 +54,6 @@
                 @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
-                            echo "paso una sola vez";
                                 $menuParent = "<li><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
                                 </span></a></li>";
                                 
@@ -62,11 +61,12 @@
                         @endif
 
                             @foreach($menu as $infoMenuChildrem)
+                                @php $menuChildren = ''; @endphp
                                 @if(!in_array($idParent, $CursorMenu))
                                     @if($infoMenuChildrem->parent != 0)
                                         @if($idParent ==  $infoMenuChildrem->parent)
                                             @php
-                                                $menuParent .= "<li><a href='#'>pruebas</a></li>";
+                                                $menuChildren .= "<li><a href='#'>pruebas</a></li>";
                                             @endphp
                                         @endif
                                     @endif
@@ -74,6 +74,9 @@
                                 @php echo $menuParent = ''; @endphp 
                                 @endif
                             @endforeach
+                            @if($menuChildren != '')
+                                @php $menuChildren = '<ul>'.$menuChildren.'</ul>'; @endphp
+                            @endif
                         @php
                         array_push($CursorMenu, $idParent);
                         @endphp
