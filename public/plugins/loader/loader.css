@@ -18,7 +18,7 @@ body {
 .container-modal {
   display: none;
   /*background: rgba(0, 0, 0, 0.3);*/
-  background-color: blue;
+  
   opacity: 1
     
   
@@ -33,7 +33,7 @@ body {
   border-radius: 15px;
   -webkit-animation: rotation 1s infinite;
           animation: rotation 1s infinite;
-      margin-top: -40rem
+      padding: 40px;
 }
 .container-modal .shape {
   position: absolute;
