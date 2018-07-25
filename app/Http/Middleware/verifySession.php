@@ -23,12 +23,8 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        if(session()->get('sessionActive')){
-            dd($request);
-        }
-        else{
-            dd($request);
-         // dd('no logueado')       
+        if(!session()->get('sessionActive')){
+         return redirect('/login');   
         }
         return $next($request);
     }
