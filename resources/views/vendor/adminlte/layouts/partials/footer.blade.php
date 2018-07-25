@@ -1,5 +1,18 @@
 <!-- Main Footer -->
 <footer class="main-footer">
+	<!-- div Loader -->
+	<div id="modalLoader" class="container-modal hidden">
+    <center>
+      <div class="content-modal">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+      </div>
+    </center>
+  </div>
+
+
     <!-- To the right -->
     <div class="pull-right hidden-xs">
         <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}
