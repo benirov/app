@@ -63,7 +63,7 @@ class LoginController extends Controller
         $request->session()->put('emailUser', $login[0]->email);
         $request->session()->put('sessionActive', true);
          $login[0]->nameUser = \Auth::user()->id;
-          Auth::user() = $login[0]->nameUser;
+          // Auth::user() = $login[0]->nameUser;
         // return redirect('/home');
          return redirect()->action('HomeController@getHome');
       }

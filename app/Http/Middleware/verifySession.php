@@ -23,7 +23,7 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        dd(Auth::user());
+        dd(auth()->user()->name);
         return $next($request);
     }
 }
