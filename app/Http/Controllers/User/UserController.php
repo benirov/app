@@ -169,7 +169,7 @@ class UserController extends ApiController
         $usersType = DB::table('tblMaster')
             ->join('tblMasterDetail')
             ->select('tblMaster.id', 'tblMasterDetail.name')
-            ->where('tblMasterDetail.fkIdMaster', '=', 1);
+            ->where('tblMasterDetail.fkIdMaster', '=', 1)
             ->toSql();
 
             dd($usersType);
