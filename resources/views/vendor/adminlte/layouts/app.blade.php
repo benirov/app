@@ -30,6 +30,7 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="skin-blue sidebar-mini">
+    @include('adminlte::layouts.partials.modal')
 <div id="app">
     <div class="wrapper">
 
@@ -50,7 +51,7 @@ desired effect
     </div><!-- /.content-wrapper -->
 
     @include('adminlte::layouts.partials.controlsidebar')
-    @include('adminlte::layouts.partials.modal')
+
 
     @include('adminlte::layouts.partials.footer')
 
