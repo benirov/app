@@ -164,16 +164,15 @@ class UserController extends ApiController
         //          ->where('tblMasterDetail.fkIdMaster', '=', 1);
         // })
         // ->toSql();
-
-        $usersType = masterdetail::where('fkIdMaster', '=', 1)->toSql();
-
+        
 
 
-        // $usersType = DB::table('tblMaster')
-        //     ->join('tblMasterDetail')
-        //     ->select('tblMaster.id', 'tblMasterDetail.name')
-        //     ->where('tblMasterDetail.fkIdMaster', '=', 1)
-        //     ->toSql();
+
+        $usersType = DB::table('tblMaster')
+            ->join('tblMasterDetail')
+            ->select('tblMaster.id', 'tblMasterDetail.name')
+            ->where('tblMasterDetail.fkIdMaster', '=', 1)
+            ->toSql();
 
             dd($usersType);
 
