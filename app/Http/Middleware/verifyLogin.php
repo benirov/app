@@ -16,7 +16,7 @@ class verifyLogin
      */
     public function handle($request, Closure $next)
     {
-        if(Session::get("sessionActive")){
+        if(isset(Session::get("sessionActive")) && Session::get("sessionActive")){
             return redirect('/home'); 
         }
         return $next($request);
