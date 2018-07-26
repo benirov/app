@@ -162,7 +162,7 @@ class UserController extends ApiController
             $join->on('tblMaster.id', '=', 'tblMasterDetail.name')
                  ->where('tblMasterDetail.fkIdMaster', '=', 1);
         })
-        ->get();
+        ->toSql();
 
 
 
