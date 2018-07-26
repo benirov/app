@@ -12,12 +12,12 @@
 */
 
 
-Route::group(['middleware' => 'verifySession'], function () {
+// Route::group(['middleware' => 'verifySession'], function () {
        
-     Route::get('/home', 'HomeController@getHome')->name('home');
-   });
+//      Route::get('/home', 'HomeController@getHome')->name('home');
+//    });
 
-
+Route::get('/home', 'HomeController@getHome')->name('home');
 Route::get('/', 'HomeController@getHome')->name('login');
 Route::get('/login', 'HomeController@getViewLogin')->name('login');
 
