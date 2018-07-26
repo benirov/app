@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://localhost'),
+    'url' => env('APP_URL', 'https://young-coast-20991.herokuapp.com'),
 
     /*
     |--------------------------------------------------------------------------
