@@ -165,7 +165,7 @@ class UserController extends ApiController
         // })
         // ->toSql();
 
-        masterdetail::where('fkIdMaster', '=', 1)->toSql();
+        $usersType = masterdetail::where('fkIdMaster', '=', 1)->toSql();
 
 
 
