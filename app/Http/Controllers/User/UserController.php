@@ -156,7 +156,7 @@ class UserController extends ApiController
     {
         $one = 1;
         $usersType = DB::table('tblMaster')
-            ->join('tblMasterDetail', 'tblMasterDetail.fkIdMaster = '.$one.'','')
+            ->join('tblMasterDetail', $one,'=', 'tblMasterDetail.fkIdMaster')
             
             ->select('tblMaster.id', 'tblMasterDetail.name')
             ->toSql();
