@@ -105,8 +105,13 @@
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-users-cog"></i></span>
                                              <select id="txttypeuser" class="form-control  Requerido"  name="typeUser">
-                                                  <option value="1">Administrador</option>
-                                                  <option value="2">Cliente</option>
+                                                        @foreach ($typeUser as $users)
+                                                                <option value="{{ $users->id }}">{{ $users->name }}</option>
+                                                            <p>This is user {{ $user->id }}</p>
+                                                        @endforeach
+
+                                                  <!-- <option value="1">Administrador</option>
+                                                  <option value="2">Cliente</option> -->
                                             </select>
                                          </div>
                                         <span for="txttypeuser" class="help-block"></span>

@@ -27,3 +27,6 @@ Route::get('/registration', 'HomeController@getViewRegistration')->name('registr
 Route::post('users', 'User\UserController@store');
 Route::post('getUser', 'Auth\LoginController@getUser');
 
+// vista de logs
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+

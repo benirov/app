@@ -42,7 +42,11 @@ class HomeController extends Controller
     {
         Cookie::forget('XSRF-TOKEN');
         Cookie::forget('laravel_session');
-        return view('/registration');
+
+        $User = new User\UserController;
+        $TypeUser =  $User->getUserMenu();
+
+        return view('/registration')->with('typeUser', $menu);
     }
 
     public function getViewLogin()
