@@ -20,7 +20,7 @@ class verifyLogin
         $session = Session::get("sessionActive");
         if(isset($session))
         {
-            if(Session::get("sessionActive")){
+            if($session){
                 return redirect('/home');     
             }
             
