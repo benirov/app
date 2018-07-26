@@ -44,9 +44,9 @@ class HomeController extends Controller
         Cookie::forget('laravel_session');
 
         $User = new User\UserController;
-        $TypeUser =  $User->getUserMenu();
+        $TypeUser =  $User->getTypeUsers();
 
-        return view('/registration')->with('typeUser', $menu);
+        return view('/registration')->with('typeUser', $TypeUser);
     }
 
     public function getViewLogin()
