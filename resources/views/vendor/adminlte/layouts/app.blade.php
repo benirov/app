@@ -30,8 +30,8 @@ desired effect
 |---------------------------------------------------------|
 -->
 <body class="skin-blue sidebar-mini">
-    @include('adminlte::layouts.partials.modal')
 <div id="app">
+    @include('adminlte::layouts.partials.modal')
     <div class="wrapper">
 
     @include('adminlte::layouts.partials.mainheader')
