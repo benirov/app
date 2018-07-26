@@ -175,6 +175,6 @@ return [
     |
     */
 
-    'http_only' => true,
+    'https_only' => true,
 
 ];
