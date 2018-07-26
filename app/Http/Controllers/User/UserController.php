@@ -158,9 +158,9 @@ class UserController extends ApiController
             ->join('tblMasterDetail', 'tblMasterDetail.fkIdMaster', '=', '1')
             
             ->select('tblMaster.id', 'tblMasterDetail.name')
-            ->toSql();
+            ->get();
 
-            dd($usersType);
+            // dd($usersType);
 
         return $usersType;
     }
