@@ -32,7 +32,7 @@ class verifyLogin
                 }    
             
         }
-        dd($request);
+        // dd($request);
         return $next($request);
     }
 }
