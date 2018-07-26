@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Session;
+use Session;
 
 class verifyLogin
 {
@@ -16,7 +17,7 @@ class verifyLogin
      */
     public function handle($request, Closure $next)
     {
-        if(Session::has("sessionActive") && Session::get("sessionActive")){
+        if(Session::has("sessionActive")){
             return redirect('/home'); 
         }
         return $next($request);
