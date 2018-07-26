@@ -156,21 +156,21 @@ class UserController extends ApiController
     {
         // $one = 1;
 
-        // DB::table('tblMaster')
-        // ->join('tblMasterDetail', function($join)
-        // {
-        //     $join->on('users.id', '=', 'contacts.user_id')
-        //          ->where('contacts.user_id', '>', 5);
-        // })
-        // ->get();
-
-
-
         $usersType = DB::table('tblMaster')
-            ->join('tblMasterDetail')
-            ->select('tblMaster.id', 'tblMasterDetail.name')
-            ->where('tblMasterDetail.fkIdMaster', '=', 1)
-            ->toSql();
+        ->join('tblMasterDetail', function($join)
+        {
+            $join->on('tblMaster.id', '=', 'tblMasterDetail.name')
+                 ->where('tblMasterDetail.fkIdMaster', '=', 1);
+        })
+        ->get();
+
+
+
+        // $usersType = DB::table('tblMaster')
+        //     ->join('tblMasterDetail')
+        //     ->select('tblMaster.id', 'tblMasterDetail.name')
+        //     ->where('tblMasterDetail.fkIdMaster', '=', 1)
+        //     ->toSql();
 
             dd($usersType);
 
