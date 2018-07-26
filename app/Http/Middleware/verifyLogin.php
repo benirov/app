@@ -17,22 +17,13 @@ class verifyLogin
      */
     public function handle($request, Closure $next)
     {
-        // $session = Session::get("sessionActive");
-        // if(isset($session))
-        // {
-        //     if($session){
-        //         return redirect('/home');     
-        //     }
+
+        // if(isset($_SESSION['sessionActive'])){
+        //     if($_SESSION['sessionActive']){
+        //         return redirect('/home'); 
+        //         }    
             
         // }
-
-        if(isset($_SESSION['sessionActive'])){
-            if($_SESSION['sessionActive']){
-                return redirect('/home'); 
-                }    
-            
-        }
-        // dd($request);
         return $next($request);
     }
 }
