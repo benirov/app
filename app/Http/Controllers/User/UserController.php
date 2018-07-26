@@ -51,8 +51,8 @@ class UserController extends ApiController
       [
         'email' => 'required|email|unique:tblUsers',
         'name' => 'required',
-        'namecompany' => 'required|min:6|unique:tblCompany',
-        'url' => 'required|min:6|unique:tblCompany',
+        'namecompany' => 'required|min:6',
+        'url' => 'required|min:6|',
         'password' => 'required|min:6|confirmed',
         'typeUser' => 'required',
       ];
@@ -143,7 +143,6 @@ class UserController extends ApiController
 
      public function getUserMenu()
     {
-        echo "aqui";
         // echo Session::get("Master");
          $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
             {
