@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
+use Illuminate\Support\Facades\Cookie;
 use Session;
 /**
  * Class HomeController
@@ -39,6 +40,8 @@ class HomeController extends Controller
 
     public function getViewRegistration()
     {
+        Cookie::forget('XSRF-TOKEN');
+        Cookie::forget('laravel_session');
         return view('/registration');
     }
 
