@@ -9,6 +9,7 @@ use App\User;
 use App\Login;
 use App\company;
 use Illuminate\Support\Facades\Session;
+use App\masterdetail;
 
 class UserController extends ApiController
 {
@@ -156,13 +157,15 @@ class UserController extends ApiController
     {
         // $one = 1;
 
-        $usersType = DB::table('tblMaster')
-        ->join('tblMasterDetail', function($join)
-        {
-            $join->on('tblMaster.id', '=', 'tblMasterDetail.name')
-                 ->where('tblMasterDetail.fkIdMaster', '=', 1);
-        })
-        ->toSql();
+        // $usersType = DB::table('tblMaster')
+        // ->join('tblMasterDetail', function($join)
+        // {
+        //     $join->on('tblMaster.id', '=', 'tblMasterDetail.name')
+        //          ->where('tblMasterDetail.fkIdMaster', '=', 1);
+        // })
+        // ->toSql();
+
+        masterdetail::where('fkIdMaster', '=', 1)->toSql();
 
 
 
