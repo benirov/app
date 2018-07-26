@@ -1,7 +1,7 @@
 <?php
 
-// header("Access-Control-Allow-Origin: https://young-coast-20991.herokuapp.com/");
-header('Access-Control-Allow-Origin: *'); 
+header("Access-Control-Allow-Origin: https://young-coast-20991.herokuapp.com/");
+// header('Access-Control-Allow-Origin: *'); 
 
 /**
  * Laravel - A PHP Framework For Web Artisans
