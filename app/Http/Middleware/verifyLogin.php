@@ -18,12 +18,12 @@ class verifyLogin
     public function handle($request, Closure $next)
     {
 
-        // if(isset($_SESSION['sessionActive'])){
-        //     if($_SESSION['sessionActive']){
-        //         return redirect('/home'); 
-        //         }    
+        if(isset($_SESSION['sessionActive'])){
+            if($_SESSION['sessionActive']){
+                return redirect('/home'); 
+                }    
             
-        // }
+        }
         return $next($request);
     }
 }

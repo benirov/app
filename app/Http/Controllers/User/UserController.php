@@ -141,14 +141,14 @@ class UserController extends ApiController
     }
 
 
-    //  public function getUserMenu()
-    // {
-    //     // echo Session::get("Master");
-    //      $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
-    //         {
-    //             $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd = '.Session::get("Master").'');
-    //         })->get();
+     public function getUserMenu()
+    {
+        // echo Session::get("Master");
+         $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
+            {
+                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd = '.Session::get("Master").'');
+            })->get();
 
-    //      return $userMenu; 
-    // }
+         return $userMenu; 
+    }
 }
