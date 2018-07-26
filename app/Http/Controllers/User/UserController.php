@@ -166,7 +166,7 @@ class UserController extends ApiController
         // ->toSql();
 
 
-            $usersType = DB::select('SELECT m.id  AS id, dm.name AS name FROM tblMaster m INNER JOIN tblMasterDetail dm ON dm.fkIdMaster = 1');
+            $usersType = DB::select('SELECT m.id  AS id, m.name AS name FROM tblMasterDetail m WHERE m.fkIdMaster = 1');
 
         // $usersType = DB::table('tblMaster')
         //     ->join('tblMasterDetail')
