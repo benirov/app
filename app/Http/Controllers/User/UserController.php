@@ -51,8 +51,8 @@ class UserController extends ApiController
       [
         'email' => 'required|email|unique:tblUsers',
         'name' => 'required',
-        'namecompany' => 'required|min:6',
-        'url' => 'required|min:6|',
+        'namecompany' => ['required','min:6', 'unique:tblCompany,name'],
+        'url' => ['required','min:6', 'unique:tblCompany,url'],
         'password' => 'required|min:6|confirmed',
         'typeUser' => 'required',
       ];
