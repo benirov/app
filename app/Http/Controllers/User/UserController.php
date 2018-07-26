@@ -154,7 +154,7 @@ class UserController extends ApiController
 
     public function getTypeUsers()
     {
-        $one = 1
+        $one = 1;
         $usersType = DB::table('tblMaster')
             ->join('tblMasterDetail', 'tblMasterDetail.fkIdMaster = '.$one.'','')
             
