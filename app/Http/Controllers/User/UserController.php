@@ -154,15 +154,15 @@ class UserController extends ApiController
 
     public function getTypeUsers()
     {
-        $one = 1;
+        // $one = 1;
 
-        DB::table('tblMaster')
-        ->join('tblMasterDetail', function($join)
-        {
-            $join->on('users.id', '=', 'contacts.user_id')
-                 ->where('contacts.user_id', '>', 5);
-        })
-        ->get();
+        // DB::table('tblMaster')
+        // ->join('tblMasterDetail', function($join)
+        // {
+        //     $join->on('users.id', '=', 'contacts.user_id')
+        //          ->where('contacts.user_id', '>', 5);
+        // })
+        // ->get();
 
 
 
@@ -174,6 +174,6 @@ class UserController extends ApiController
 
             dd($usersType);
 
-        return $usersType;
+        // return $usersType;
     }
 }
