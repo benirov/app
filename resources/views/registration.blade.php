@@ -6,26 +6,6 @@
 
 @section('content')
 
-<style type="text/css">
-    .login-box, .register-box {
-         width: 700px !important; 
-         border-radius: 10px;
-    }
-    .borderRed
-    {
-        border-color: #a94442!important;
-    }
-
-    .required {
-        color: #a94442;
-    }
-
-    .input-group .input-group-addon{
-      background-color: #2196F3!important;
-      color: #ffffff!important;
-  }
-</style>
-
 <body class="hold-transition register-page">
     <div id="app">
         <div class="container-fluid">

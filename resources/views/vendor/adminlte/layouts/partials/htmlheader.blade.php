@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link href="{{ secure_asset('/css/all.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('/css/soft.css') }}" rel="stylesheet" />
     <link href= "{{secure_asset('css/fontawesome.css')}}" rel="stylesheet" rel="stylesheet" />
     <link href="{{ secure_asset('/plugins/loader/loader.css') }}" rel="stylesheet" />
 
