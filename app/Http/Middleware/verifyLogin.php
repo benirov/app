@@ -26,8 +26,8 @@ class verifyLogin
             
         // }
 
-        if(isset(_SESSION['sessionActive'])){
-            if(_SESSION['sessionActive']){
+        if(isset($_SESSION['sessionActive'])){
+            if($_SESSION['sessionActive']){
                 return redirect('/home'); 
                 }    
             
