@@ -1,5 +1,5 @@
 <!-- div Loader -->
-	<div class="container-modal">
+	<div class="row container-modal">
     	<center>
 	      <div class="content-modal">
 	        <div class="shape shape-1"></div>
