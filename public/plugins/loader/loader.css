@@ -17,23 +17,38 @@ body {
 
 .container-modal {
   display: none;
-  /*background: rgba(0, 0, 0, 0.3);*/
+  background: rgba(0, 0, 0, 0.3);
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgba(0, 0, 0, 0.3);
   
-  opacity: 1
+  opacity: 1;
+  position: fixed;
+    text-align: center;
+    margin-top: 180px;
+    margin-left: 50%;
+    z-index: 1020;
     
   
 }
 
 .content-modal
 {
-  width: 30px;
-  height: 30px
-  border-bottom: ;
-  padding: 45px
-  border-radius: 15px;
-  -webkit-animation: rotation 1s infinite;
-          animation: rotation 1s infinite;
-      padding: 40px;
+
+  width: 50px;
+    height: 50px;
+    padding: 45px;
+     border-radius: 15px;
+    -webkit-animation: rotation 1s infinite;
+    animation: rotation 1s infinite;
+    
 }
 .container-modal .shape {
   position: absolute;
