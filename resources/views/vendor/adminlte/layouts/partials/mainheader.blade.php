@@ -2,12 +2,12 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ url('/home') }}" class="logo">
+    <label href="{{ url('/home') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <!-- <span class="logo-mini"><b>A</b>LT</span> -->
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE Laravel </span>
-    </a>
+        <span class="logo-lg"><b>{{Session::get('nameCompany')}}</b></span>
+    </label>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -146,6 +146,10 @@
                             <li class="user-footer">
                                 <div class="pull-left">
                                     <a href="{{ url('/settings') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>
+                                </div>
+
+                                <div class="pull-left">
+                                    <a href="" class="btnbinnacle btn btn-default btn-flat">{{ trans('adminlte_lang::message.binnacle') }}</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"

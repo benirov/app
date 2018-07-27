@@ -131,4 +131,5 @@ return [
     'url'                     => 'Direccion url',
     'typeuser'                => 'Tipo de usuario',
     'age'                     => 'Edad',
+    'binnacle'                => 'Bitácora',
 ];

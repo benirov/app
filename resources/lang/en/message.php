@@ -133,5 +133,6 @@ return [
     'url'                     => 'Url Direction',
     'typeuser'                => 'Type of user',
     'age'                     => 'Age',
+    'binnacle'                => 'Binnacle',
 
 ];

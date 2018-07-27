@@ -60,8 +60,13 @@ class LoginController extends Controller
       if($login[0]->Error == 0){
         $request->session()->put('User', $login[0]->idUser);
         $request->session()->put('Master', $login[0]->IdMaster);
+        $request->session()->put('MasterDetail', $login[0]->MasterDetail);
         $request->session()->put('nameUser', $login[0]->nameUser);
         $request->session()->put('emailUser', $login[0]->email);
+        $request->session()->put('profileName', $login[0]->profileName);
+        $request->session()->put('permissionUser', $login[0]->permissionUser);
+        $request->session()->put('nameCompany', $login[0]->nameCompany);
+        $request->session()->put('urlCompany', $login[0]->urlCompany);
         $request->session()->put('sessionActive', true);
          return redirect()->action('HomeController@getHome');
       }
