@@ -9,6 +9,7 @@
     <link href="{{ secure_asset('/css/soft.css') }}" rel="stylesheet" />
     <link href= "{{secure_asset('css/fontawesome.css')}}" rel="stylesheet" rel="stylesheet" />
     <link href="{{ secure_asset('/plugins/loader/loader.css') }}" rel="stylesheet" />
+    <link href="{{ secure_asset('/plugins/timeline/timeline.css') }}" rel="stylesheet" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
