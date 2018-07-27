@@ -62,7 +62,8 @@ class UserController extends ApiController
         $fields = $request->all();
         // $fields['password'] =  bcrypt($request->password);
         $fields['tokenUser'] =  User::generateToken();
-        $fields['fkIdMaster'] =  $fields['typeUser'];
+        $fields['fkIdMaster'] =  1;
+        $fields['fkIdDetailMaster'] =  $fields['typeUser'];
 
         $loginSesion = Login::class;
         $classCompany     = company::class;
