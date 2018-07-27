@@ -19,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
 
-     const typeUser = '1';
+      const typeUser = '1';
 
     protected $fillable = [
         'email',
@@ -27,7 +27,8 @@ class User extends Authenticatable
         'lastname',
         'age',
         'tokenUser',
-        'fkIdMaster'
+        'fkIdMaster',
+        'fkIdDetailMaster'
     ];
 
     public function User(){
