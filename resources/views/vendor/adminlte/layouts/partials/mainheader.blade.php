@@ -144,14 +144,14 @@
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                <div class="pull-left">
+                                <div class="col-xs-4 text-center">
                                     <a href="{{ url('/settings') }}" class="btn btn-default btn-flat">{{ trans('adminlte_lang::message.profile') }}</a>
                                 </div>
 
-                                <div class="pull-left">
+                                <div class="col-xs-4 text-center">
                                     <button class="btn btn-default btn-flat" type="button" data-toggle="modal" data-target="#modalBinnacle">{{trans('message.binnacle')}}</button>
                                 </div>
-                                <div class="pull-right">
+                                <div class="col-xs-4 text-center">
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
                                        onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
