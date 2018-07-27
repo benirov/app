@@ -3,13 +3,40 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{trans('message.binnancle')}}</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{trans('message.binnacle')}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        aqui
+        <ul class="timeline">
+                
+                
+                <li class="timeline-inverted">
+                    <div class="timeline-badge warning"><i class="fa fa-bullseye"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Jammsen-rE</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>killed m0nk3y-rE with G36C</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge danger"><i class="fa fa-crosshairs"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Jammsen-rE</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>gave m0nk3y-rE a headshot with G36C</p>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
