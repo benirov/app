@@ -52,7 +52,7 @@ desired effect
 
     @include('adminlte::layouts.partials.controlsidebar')
 
-
+    @include('adminlte::layouts.partials.modalbinnacle')
     @include('adminlte::layouts.partials.footer')
 
 </div><!-- ./wrapper -->

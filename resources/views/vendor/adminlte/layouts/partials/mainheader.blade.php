@@ -149,7 +149,7 @@
                                 </div>
 
                                 <div class="pull-left">
-                                    <a href="" class="btnbinnacle btn btn-default btn-flat">{{ trans('adminlte_lang::message.binnacle') }}</a>
+                                    <button class="btn btn-default btn-flat" type="button" data-toggle="modal" data-target="#modalBinnacle">trans('adminlte_lang::message.binnacle') }}</button>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
