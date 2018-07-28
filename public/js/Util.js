@@ -739,6 +739,23 @@ $("#btnModalBinnacle").on("click", function()
     console.log("aqui");
     $.when(getQuery('https://young-coast-20991.herokuapp.com/getUserBinnacle', 'json', '', true, false)).done(function(sResp)
     {
-        console.log(sResp);
-    })
+        $.each(sResp, fucntion(i, val)
+        {
+            $("#timeline").append('<li class="timeline-inverted">'+
+                                    '<div class="timeline-badge info"><i class="fa fa-icon"></i></div>'+
+                                    '<div class="timeline-panel">'+
+                                    '<div class="timeline-heading">'+
+                                        '<h4 class="timeline-title">'+val.name+'</h4>'+
+                                        '<p><b>'+val.time+'</b></p>'+
+                                    '</div>'+
+                                    '<div class="timeline-body">'+
+                                        '<p>'+val.action+'</p>'+
+                                    '</div>';
+
+                );
+            val.
+        });
+        $('#modalBinnacle').modal('show');
+        // console.log(sResp);
+    });
 })
