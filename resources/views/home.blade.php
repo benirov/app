@@ -20,3 +20,5 @@
 		</div>
 	</div>
 @endsection
+
+@include('adminlte::layouts.partials.contentplugin')
