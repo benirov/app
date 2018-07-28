@@ -59,9 +59,11 @@ desired effect
 </div>
 @section('scripts')
     @include('adminlte::layouts.partials.scripts')
-    @include('adminlte::layouts.partials.scripts_auth')
-    @include('adminlte::layouts.partials.contentplugin')
 @show
 
 </body>
+
+@include('adminlte::layouts.partials.scripts_auth')
+@include('adminlte::layouts.partials.contentplugin')
+
 </html>
