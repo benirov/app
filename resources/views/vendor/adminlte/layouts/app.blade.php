@@ -63,7 +63,6 @@ desired effect
 
 </body>
 
-@include('adminlte::layouts.partials.scripts_auth')
-@include('adminlte::layouts.partials.contentplugin')
+
 
 </html>
