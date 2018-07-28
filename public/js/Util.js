@@ -739,7 +739,7 @@ $("#btnModalBinnacle").on("click", function()
     console.log("aqui");
     $.when(getQuery('https://young-coast-20991.herokuapp.com/getUserBinnacle', 'json', '', true, false)).done(function(sResp)
     {
-        $.each(sResp, fucntion(i, val)
+        $.each(sResp, function(i, val)
         {
             $("#timeline").append('<li class="timeline-inverted">'+
                                     '<div class="timeline-badge info"><i class="fa fa-icon"></i></div>'+
