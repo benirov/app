@@ -732,3 +732,12 @@ function postQuery(sUrl, oFd, LoadModal)
         }
     });
 }
+
+
+$("#btnModalBinnacle").on("click", function()
+{
+    $.when(getQuery('https://young-coast-20991.herokuapp.com/binnacle', 'json', '', true, false)).done(function(sResp)
+    {
+        console.log(sResp);
+    })
+})

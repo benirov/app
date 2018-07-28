@@ -28,3 +28,4 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
 
 Route::resource('users', 'User\UserController');
 Route::resource('getUser', 'Auth\LoginController');
+

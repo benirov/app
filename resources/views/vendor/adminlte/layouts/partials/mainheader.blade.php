@@ -149,7 +149,7 @@
                                 </div>
 
                                 <div class="col-xs-4 text-center">
-                                    <button class="btn btn-default btn-flat" type="button" data-toggle="modal" data-target="#modalBinnacle">{{trans('message.binnacle')}}</button>
+                                    <button id="btnModalBinnacle" class="btn btn-default btn-flat" type="button" data-toggle="modal">{{trans('message.binnacle')}}</button>
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"

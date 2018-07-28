@@ -26,6 +26,7 @@ Route::get('/registration', 'HomeController@getViewRegistration')->name('registr
 // Route::get('/login', 'HomeController@getViewLogin')->name('login');
 Route::post('users', 'User\UserController@store');
 Route::post('getUser', 'Auth\LoginController@getUser');
+Route::get('getUserBinnacle', 'Binnacle\BinnacleController@getBinnacle');
 
 // vista de logs
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
