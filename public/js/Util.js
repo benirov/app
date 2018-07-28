@@ -736,8 +736,7 @@ function postQuery(sUrl, oFd, LoadModal)
 
 $("#btnModalBinnacle").on("click", function()
 {
-    console.log("aqui");
-    $.when(getQuery('https://young-coast-20991.herokuapp.com/getUserBinnacle', 'json', '', true, false)).done(function(sResp)
+    $.when(getQuery('https://young-coast-20991.herokuapp.com/getUserBinnacle', 'json', '', true, true)).done(function(sResp)
     {
         $.each(sResp, function(i, val)
         {
