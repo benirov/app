@@ -94,7 +94,8 @@ class BinnacleController extends Controller
 
     public function getBinnacle()
     {
-        $binnacle = DB::select('call sp_getUserBinnacle(?)', Session::get("User"));
+        $binnacle = DB::select('call sp_getUserBinnacle(?)', Session::get("User"))->toSql;
+        dd($binnacle);
         return $binnacle;
     }
 
