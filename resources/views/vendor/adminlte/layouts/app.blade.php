@@ -61,6 +61,9 @@ desired effect
     @include('adminlte::layouts.partials.scripts')
 @show
 
+@include('adminlte::layouts.partials.scripts_auth')
+@include('adminlte::layouts.partials.contentplugin')
+
 </body>
 
 
