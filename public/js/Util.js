@@ -750,10 +750,7 @@ $("#btnModalBinnacle").on("click", function()
                                     '</div>'+
                                     '<div class="timeline-body">'+
                                         '<p>'+val.action+'</p>'+
-                                    '</div>';
-
-                );
-            val.
+                                    '</div>');
         });
         $('#modalBinnacle').modal('show');
         // console.log(sResp);
