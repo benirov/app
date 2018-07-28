@@ -738,6 +738,7 @@ $("#btnModalBinnacle").on("click", function()
 {
     $.when(getQuery('https://young-coast-20991.herokuapp.com/getUserBinnacle', 'json', '', true, true)).done(function(sResp)
     {
+        $(".timeline").html('');
         $.each(sResp, function(i, val)
         {
             $(".timeline").append('<li class="timeline-inverted">'+
