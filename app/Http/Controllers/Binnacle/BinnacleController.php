@@ -96,7 +96,7 @@ class BinnacleController extends Controller
     {
     	// $login = DB::select('call sp_getUser(?, ?)', array($fields['email'], $fields["password"]));
         $binnacle = DB::select('call sp_getUserBinnacle(?)', array(Session::get("User")));
-        dd($binnacle);
+        // dd($binnacle);
         return $binnacle;
     }
 
