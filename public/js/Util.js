@@ -741,7 +741,7 @@ $("#btnModalBinnacle").on("click", function()
         $.each(sResp, function(i, val)
         {
             $(".timeline").append('<li class="timeline-inverted">'+
-                                    '<div class="timeline-badge info"><i class="fa fa-icon"></i></div>'+
+                                    '<div class="timeline-badge info"><i class="fa fa-info"></i></div>'+
                                     '<div class="timeline-panel">'+
                                     '<div class="timeline-heading">'+
                                         '<h4 class="timeline-title">'+val.name+'</h4>'+
