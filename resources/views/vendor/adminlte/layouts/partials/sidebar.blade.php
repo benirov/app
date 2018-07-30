@@ -54,7 +54,7 @@
                 @endphp
                          @if($infoMenuParent->parent == 0)
                             @php
-                                $menuParent = "<li class='treeview'><a href='#'><i class='fa fa-link'></i> <span>$infoMenuParent->name
+                                $menuParent = "<li class='treeview'><a href='#'><i class=''.$infoMenuParent->icon.''></i> <span>$infoMenuParent->name
                                 </span><i class='fa fa-angle-left pull-right'></i></a>";
                                 
                             @endphp
@@ -65,7 +65,8 @@
                                     @if($infoMenuChildrem->parent != 0)
                                         @if($idParent ==  $infoMenuChildrem->parent)
                                             @php
-                                                $menuChildren .= "<li><a href='#'>pruebas</a></li>";
+                                                $menuChildren .= "<li><a href='#'><i class=''.$infoMenuChildrem->icon.''></i><span>$infoMenuChildrem->name
+                                </span></a></li>";
                                             @endphp
                                         @endif
                                     @endif
