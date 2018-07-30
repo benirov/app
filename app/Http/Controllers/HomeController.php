@@ -11,6 +11,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
+// use Illuminate\Support\Facades\A;
 use Session;
 /**
  * Class HomeController
@@ -45,22 +46,21 @@ class HomeController extends Controller
 
         $User = new User\UserController;
         $TypeUser =  $User->getTypeUsers();
-
-        env('TITLE_PAGE', 'Registrate en la plataforma para que puedas disfrutar de sus beneficios');
+        config(['app.pagetitle' => 'Registrate en la plataforma para que puedas disfrutar de sus beneficios']);
 
         return view('/registration')->with('typeUser', $TypeUser);
     }
 
     public function getViewLogin()
     {
-        env('TITLE_PAGE', 'Inicia sesion para tener el control de tus datos');
+        config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
         return view('/login');
     }
 
     public function getHome(){
         $menu = new User\UserController;
         $menus =  $menu->getUserMenu();
-        env('TITLE_PAGE', 'Aqui podras visualizar');
+        config(['app.pagetitle' => 'Aqui podras visualizar']);
       return view('/home')->with('menu', $menus);
     }
 }

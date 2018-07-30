@@ -27,6 +27,8 @@ return [
 
     'env' => env('APP_ENV', 'production'),
 
+    'pagetitle' => env('TITLE_PAGE'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
