@@ -36,6 +36,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if(isset(Session::get("Master")))
+        {
+            $this->getHome();
+        }
+        config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
         return view('/login');
     }
 
@@ -53,6 +58,10 @@ class HomeController extends Controller
 
     public function getViewLogin()
     {
+        if(isset(Session::get("Master")))
+        {
+            $this->getHome();
+        }
         config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
         return view('/login');
     }
