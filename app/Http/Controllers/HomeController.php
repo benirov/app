@@ -36,10 +36,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(session_status() == PHP_SESSION_ACTIVE)
-        {
-            $this->getHome();
-        }
         config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
         return view('/login');
     }
@@ -58,11 +54,6 @@ class HomeController extends Controller
 
     public function getViewLogin()
     {
-        
-        if(session_status() == PHP_SESSION_ACTIVE)
-        {
-            $this->getHome();
-        }
         config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
         return view('/login');
     }

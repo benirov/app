@@ -18,8 +18,8 @@ Route::group(['middleware' => 'verifySession'], function () {
      Route::get('/home', 'HomeController@getHome')->name('home');
    });
 
-Route::get('/', 'HomeController@getViewLogin')->name('login');
-Route::get('/login', 'HomeController@getViewLogin')->name('login');
+Route::get('/', 'HomeController@getViewLogin')->name('login')->middleware('verifyLogin');
+Route::get('/login', 'HomeController@getViewLogin')->name('login')->middleware('verifyLogin');
 
 Route::get('/registration', 'HomeController@getViewRegistration')->name('registration');
 
