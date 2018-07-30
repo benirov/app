@@ -36,7 +36,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(isset($_SESSION["sessionActive"]))
+        if(session_status() == PHP_SESSION_ACTIVE)
         {
             $this->getHome();
         }
@@ -58,7 +58,8 @@ class HomeController extends Controller
 
     public function getViewLogin()
     {
-        if(isset($_SESSION["sessionActive"]))
+        
+        if(session_status() == PHP_SESSION_ACTIVE)
         {
             $this->getHome();
         }
