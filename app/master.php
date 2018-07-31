@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class master extends Model
 {
 
-    protected $table = 'tblMaster';
+    protected $table = 'tblMasters';
      protected $fillable =
      [
        'typeUser',

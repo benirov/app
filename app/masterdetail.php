@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class masterdetail extends Model
 {
-    protected $table = 'tblMasterDetail';
+    protected $table = 'tblMastersDetail';
 
     protected $fillable =
     [

@@ -52,8 +52,8 @@ class UserController extends ApiController
       [
         'email' => 'required|email|unique:tblUsers',
         'name' => 'required',
-        'namecompany' => ['required','min:6', 'unique:tblCompany,name'],
-        'url' => ['required','min:6', 'unique:tblCompany,url'],
+        'namecompany' => ['required','min:6', 'unique:tblCompanies,name'],
+        'url' => ['required','min:6', 'unique:tblCompanies,url'],
         'password' => 'required|min:6|confirmed',
         'typeUser' => 'required',
       ];
@@ -139,16 +139,17 @@ class UserController extends ApiController
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user -> delete();
+        return $this->deletedModel(201); 
     }
 
 
      public function getUserMenu()
     {
-        // echo Session::get("Master");
-         $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)
+         $userMenu = DB::table('tblUsersMenu')->whereIn('id', function($query)
             {
-                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUser.fkIdMd = '.Session::get("Master").'');
+                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUser')->whereRaw('tblProfileUsers.fkIdMd = '.Session::get("Master").'');
             })->get();
          // dd($userMenu);
 
@@ -157,27 +158,7 @@ class UserController extends ApiController
 
     public function getTypeUsers()
     {
-        // $one = 1;
-
-        // $usersType = DB::table('tblMaster')
-        // ->join('tblMasterDetail', function($join)
-        // {
-        //     $join->on('tblMaster.id', '=', 'tblMasterDetail.name')
-        //          ->where('tblMasterDetail.fkIdMaster', '=', 1);
-        // })
-        // ->toSql();
-
-
-            $usersType = DB::select('SELECT m.id  AS id, m.name AS name FROM tblMasterDetail m WHERE m.fkIdMaster = 1');
-
-        // $usersType = DB::table('tblMaster')
-        //     ->join('tblMasterDetail')
-        //     ->select('tblMaster.id', 'tblMasterDetail.name')
-        //     ->where('tblMasterDetail.fkIdMaster', '=', 1)
-        //     ->toSql();
-
-            // dd($usersType);
-
+            $usersType = DB::select('SELECT m.id  AS id, m.name AS name FROM tblMastersDetail m WHERE m.fkIdMaster = 1');
         return $usersType;
     }
 }

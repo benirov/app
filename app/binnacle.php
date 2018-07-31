@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class binnacle extends Model
 {
 
-  protected $table = 'tblBinnacle';
+  protected $table = 'tblBinnacles';
   public $timestamps = false;
 
   protected $fillable = [

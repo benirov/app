@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class profileuser extends Model
 {
-    protected $table = 'tblProfileUser';
+    protected $table = 'tblProfileUsers';
 
     protected $fillable =
     [
