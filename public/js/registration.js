@@ -68,7 +68,7 @@ function getDataconfiguration()
 			// console.log(sRespSex[data]);
 			console.log(sRespSex[0].data);
 
-			$.each(sRespSex['data'], function(i, val){
+			$.each(sRespSex[0].data, function(i, val){
 				console.log(val);
 				$("#txtsex").append('<option value'+val.id+'>'+val.name+'</option>');
 			});
