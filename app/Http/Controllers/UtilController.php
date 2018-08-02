@@ -86,7 +86,7 @@ class UtilController extends Controller
 
     public function getDataSex()
     {
-        $datasex = DB::table('tblMastersDetail')->where('fkIdMaster', 4)->get();
+        $datasex = DB::table('tblMastersDetail')->where('fkIdMaster', 4)->where('status', 1)->get();
 
 
         return $datasex;
@@ -95,7 +95,7 @@ class UtilController extends Controller
 
     public function getDataCivilStatus()
     {
-        $datacivilstatus = DB::table('tblMastersDetail')->where('fkIdMaster', 5)->get();
+        $datacivilstatus = DB::table('tblMastersDetail')->where('fkIdMaster', 5)->where('status', 1)->get();
 
 
         return $datacivilstatus;        
@@ -103,7 +103,7 @@ class UtilController extends Controller
 
     public function getDataTipoDoc()
     {
-        $dataTipoDoc = DB::table('tblMastersDetail')->where('fkIdMaster', 3)->get();
+        $dataTipoDoc = DB::table('tblMastersDetail')->where('fkIdMaster', 3)->where('status', 1)->get();
 
 
         return $dataTipoDoc;        
