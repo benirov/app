@@ -32,7 +32,7 @@ Route::get('/registration', 'HomeController@getViewRegistration')->name('registr
 Route::post('users', 'User\UserController@store');
 Route::post('getUser', 'Auth\LoginController@getUser');
 Route::get('getUserBinnacle', 'Binnacle\BinnacleController@getBinnacle');
-Route::get('getdatasex', 'UtilController@getDataSex');
+Route::get('Util/getdatasex', 'UtilController@getDataSex');
 
 // vista de logs
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
