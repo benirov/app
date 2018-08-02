@@ -140,6 +140,6 @@ return [
     'children'                => 'Nro. hijos',
     'city'                    => 'Ciudad',
     'direction'               => 'Dirección',
-    'phone'               => 'telefono',
+    'phone'                   => 'telefono',
     'cellphone'               => 'Celular',
 ];

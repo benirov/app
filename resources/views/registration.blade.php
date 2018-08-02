@@ -67,7 +67,7 @@
                                         <label for="txttypedoc"><b>{{ trans('message.typedocument') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-id-card"></i></span>
-                                              <select id="txttypedoc" class="form-control  Requerido"  name="typedoc">
+                                              <select id="txttypedoc" class="form-control  Requerido select2"  name="typedoc">
                                               </select>
                                          </div>
                                         <span for="txttypedoc" class="help-block"></span>
@@ -104,7 +104,7 @@
                                         <label for="txtsex"><b>{{ trans('message.sex') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
-                                              <select id="txtsex" class="form-control  Requerido"  name="typedoc">
+                                              <select id="txtsex" class="form-control  Requerido select2"  name="typedoc">
                                               </select>
                                          </div>
                                         <span for="txtsex" class="help-block"></span>
@@ -120,7 +120,7 @@
                                         <label for="txtcivilstatus"><b>{{ trans('message.civilstatus') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-user-friends"></i></span>
-                                              <select id="txtcivilstatus" class="form-control  Requerido"  name="CivilStatus">
+                                              <select id="txtcivilstatus" class="form-control  Requerido select2"  name="CivilStatus">
                                               </select>
                                          </div>
                                         <span for="txtcivilstatus" class="help-block"></span>
@@ -157,7 +157,7 @@
                                         <label for="txtcity"><b>{{ trans('message.city') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <select id="txtcity" class="form-control  Requerido"  name="city">
+                                            <select id="txtcity" class="form-control  Requerido select2"  name="city">
                                               </select>
                                          </div>
                                         <span for="txtcity"" class="help-block"></span>
