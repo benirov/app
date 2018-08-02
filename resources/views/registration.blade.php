@@ -8,6 +8,11 @@
 <style type="text/css">
   .sans-serif {
     font-family: fa5-proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    a::after {
+      content: "\f007";
+      font-family: 'Font Awesome\ 5 Free';
+    }
 </style>
 
 <body class="hold-transition register-page">
