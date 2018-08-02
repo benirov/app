@@ -64,6 +64,11 @@ function getDataconfiguration()
 		   getQuery('Util/getdatatipodoc', 'json', '', true, 1)
 		).done(function (sRespSex, sRespCivilStatus, sRespTipoDoc)
 		{
+
+			$.each(sRespSex, function(){
+				console.log(sRespSex);
+				$("#txtsex").append('<option value'+sRespSex.id+'>'+sRespSex.name+'</option>');
+			});
 			console.log(sRespSex);
 			console.log(sRespCivilStatus);
 			console.log(sRespTipoDoc);
