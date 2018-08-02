@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UtilController extends Controller
 {
@@ -84,7 +85,10 @@ class UtilController extends Controller
 
     public function getDataSex()
     {
-        $user = DB::table('users')->where('name', 'John')->get();
+        $user = DB::table('tblMasterDetail')->where('fkIdMaster', 4)->toSql();
+
+        dd($user);
+
 
         return $user;
 
