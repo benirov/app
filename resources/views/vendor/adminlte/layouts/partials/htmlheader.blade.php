@@ -7,7 +7,8 @@
 
     <link href="{{ secure_asset('/css/all.css') }}" rel="stylesheet" />
     <link href="{{ secure_asset('/css/soft.css') }}" rel="stylesheet" />
-    <link href= "{{secure_asset('css/fontawesome.css')}}" rel="stylesheet" rel="stylesheet" />
+    <!-- <link href= "{{secure_asset('css/fontawesome.css')}}" rel="stylesheet" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="{{ secure_asset('/plugins/loader/loader.css') }}" rel="stylesheet" />
     <link href="{{ secure_asset('/plugins/timeline/timeline.css') }}" rel="stylesheet" />
 
