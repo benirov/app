@@ -90,7 +90,7 @@ class UtilController extends ApiController
         $datasex = DB::table('tblMastersDetail')->where('fkIdMaster', 4)->where('status', 1)->get();
 
 
-        return $this->successResponse($datasex, 200);
+        return $this->showAll($datasex, 200);
 
     }
 
@@ -99,7 +99,7 @@ class UtilController extends ApiController
         $datacivilstatus = DB::table('tblMastersDetail')->where('fkIdMaster', 5)->where('status', 1)->get();
 
 
-        return $this->successResponse($datacivilstatus, 200);        
+        return $this->showAll($datacivilstatus, 200);        
     }
 
     public function getDataTipoDoc()
@@ -107,7 +107,7 @@ class UtilController extends ApiController
         $dataTipoDoc = DB::table('tblMastersDetail')->where('fkIdMaster', 3)->where('status', 1)->get();
 
 
-        return $this->successResponse($dataTipoDoc, 200);       
+        return $this->showAll($dataTipoDoc, 200);       
     }
 
     public function getDataCity()
@@ -115,7 +115,7 @@ class UtilController extends ApiController
         $dataCity = DB::table('tblCities')->where('status', 1)->get();
 
 
-        return $this->successResponse($dataCity, 200);       
+        return $this->showAll($dataCity, 200);       
     }
 
 
