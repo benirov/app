@@ -65,7 +65,8 @@ function getDataconfiguration()
 		).done(function (sRespSex, sRespCivilStatus, sRespTipoDoc)
 		{
 
-			console.log(sRespSex['data']);
+			console.log(sRespSex[data]);
+			console.log(sRespSex[0].data);
 
 			$.each(sRespSex['data'], function(i, val){
 				console.log(val);
