@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+	getDataconfiguration();
 
 	$.ajaxSetup({
         headers: {
@@ -50,4 +51,20 @@ function SendData(oData){
 			notify(sResp.error, "warning", "times-circle");
 		}
 	});
+}
+
+function getDataconfiguration()
+{
+	let url = 'http://young-coast-20991.herokuapp.com/'
+
+	$.when(getQuery('Util/getdatasex', 'json', '', true, 1),
+		   getQuery('Util/getdatacivilstatus', 'json', '', true, 1),
+		   getQuery('Util/getdatatipodoc', 'json', '', true, 1)
+		).done(function (sRespSex, sRespCivilStatus, sRespTipoDoc)
+		{
+			console.log(sRespSex);
+			console.log(sRespCivilStatus);
+			console.log(sRespTipoDoc);
+
+		});
 }
