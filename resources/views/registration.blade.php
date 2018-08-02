@@ -180,12 +180,12 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <label for="txtcity"><b>{{ trans('message.cel') }}</b></label>
+                                        <label for="txtcellphone"><b>{{ trans('message.cellphone') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
-                                            <input id="txtcel" type="number" class="form-control  Requerido  " placeholder="{{ trans('message.cel') }}" name="cel" />
+                                            <input id="txtcellphone" type="number" class="form-control  Requerido  " placeholder="{{ trans('message.cellphone') }}" name="cellphone" />
                                          </div>
-                                        <span for="txtcity"" class="help-block"></span>
+                                        <span for="txtcellphone"" class="help-block"></span>
                                     </div>
                                 </div>
                             </div>

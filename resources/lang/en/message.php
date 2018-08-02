@@ -142,5 +142,7 @@ return [
     'children'                => '# Children',
     'city'                    => 'City',
     'direction'               => 'Direction',
+    'phone'                   => 'phone',
+    'cellphone'               => 'cell phone',
 
 ];
