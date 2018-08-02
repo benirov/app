@@ -132,4 +132,8 @@ return [
     'typeuser'                => 'Tipo de usuario',
     'age'                     => 'Edad',
     'binnacle'                => 'Bitácora',
+    'typedocument'            => 'Tipo documento',
+    'document'                => 'nro. Documento',
+    'birth'                   => 'Fecha de nacimiento',
+    'sex'                     => 'Sexo',
 ];

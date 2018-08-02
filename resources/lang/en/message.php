@@ -134,5 +134,9 @@ return [
     'typeuser'                => 'Type of user',
     'age'                     => 'Age',
     'binnacle'                => 'Binnacle',
+    'typedocument'            => 'Document type',
+    'document'                => '# Document',
+    'birth'                   => 'Birthdate',
+    'sex'                     => 'Sex',
 
 ];

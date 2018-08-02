@@ -42,7 +42,7 @@
                                         <label for="txtname"><b>{{ trans('message.fullname') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('name') }}" required/>
+                                            <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="nameclient" value="{{ old('nameclient') }}" required/>
                                          </div>
                                         <span for="txtname" class="help-block"></span>
                                     </div>
@@ -52,12 +52,66 @@
                                         <label for="txtlastname"><b>{{ trans('message.lastname') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input id="txtlastname" type="text" class="form-control  RegApellido" placeholder="{{ trans('message.lastname') }}" name="lastname" value="{{ old('name') }}"/>
+                                            <input id="txtlastname" type="text" class="form-control  RegApellido" placeholder="{{ trans('message.lastname') }}" name="lastnameclient" value="{{ old('lastnameclient') }}"/>
                                          </div>
                                         <span for="txtlastname" class="help-block"></span>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Datos de documentos -->
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txttypedoc"><b>{{ trans('message.typedocument') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-id-card"></i></span>
+                                              <select id="txttypedoc" class="form-control  Requerido"  name="typedoc">
+                                              </select>
+                                         </div>
+                                        <span for="txttypedoc" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtdocument"><b>{{ trans('message.document') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-id-card"></i></span>
+                                            <input id="txtdocument" type="text" class="form-control   Requerido RegNumsimple" placeholder="{{ trans('message.document') }}" name="lastname"/>
+                                         </div>
+                                        <span for="txtdocument" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- fecha de nacimiento y sexo-->
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtbirth"><b>{{ trans('message.birth') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+                                              <input id="txtbirth" type="text" class="form-control   Requerido" placeholder="{{ trans('message.document') }}" name="birth"/>
+                                         </div>
+                                        <span for="txtbirth" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtsex"><b>{{ trans('message.sex') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
+                                              <select id="txtsex" class="form-control  Requerido"  name="typedoc">
+                                              </select>
+                                         </div>
+                                        <span for="txtsex" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
