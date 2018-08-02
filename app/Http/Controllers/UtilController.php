@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
-class UtilController extends Controller
+class UtilController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -89,7 +89,7 @@ class UtilController extends Controller
         $datasex = DB::table('tblMastersDetail')->where('fkIdMaster', 4)->where('status', 1)->get();
 
 
-        return $datasex;
+        return $this->showAll($datasex);
 
     }
 
@@ -98,7 +98,7 @@ class UtilController extends Controller
         $datacivilstatus = DB::table('tblMastersDetail')->where('fkIdMaster', 5)->where('status', 1)->get();
 
 
-        return $datacivilstatus;        
+        return $this->showAll($datacivilstatus);        
     }
 
     public function getDataTipoDoc()
@@ -106,7 +106,15 @@ class UtilController extends Controller
         $dataTipoDoc = DB::table('tblMastersDetail')->where('fkIdMaster', 3)->where('status', 1)->get();
 
 
-        return $dataTipoDoc;        
+        return $this->showAll($dataTipoDoc);       
+    }
+
+    public function getDataCity()
+    {
+        $dataTipoDoc = DB::table('tblCities')->where('status', 1)->get();
+
+
+        return $this->showAll($dataTipoDoc);       
     }
 
 
