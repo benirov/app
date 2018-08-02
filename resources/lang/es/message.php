@@ -136,4 +136,8 @@ return [
     'document'                => 'nro. Documento',
     'birth'                   => 'Fecha de nacimiento',
     'sex'                     => 'Sexo',
+    'civilstatus'             => 'Estado civil',
+    'children'                => 'Nro. hijos',
+    'city'                    => 'Ciudad',
+    'direction'               => 'Dirección',
 ];

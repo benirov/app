@@ -138,5 +138,9 @@ return [
     'document'                => '# Document',
     'birth'                   => 'Birthdate',
     'sex'                     => 'Sex',
+    'civilstatus'             => 'Civil status',
+    'children'                => '# Children',
+    'city'                    => 'City',
+    'direction'               => 'Direction',
 
 ];

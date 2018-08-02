@@ -8,11 +8,6 @@
 <style type="text/css">
   .sans-serif {
     font-family: fa5-proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
-
-    a::after {
-      content: "\f007";
-      font-family: 'Font Awesome\ 5 Free';
-    }
 </style>
 
 <body class="hold-transition register-page">
@@ -117,17 +112,36 @@
                                 </div>
                             </div>
 
+                            <!-- Estado civil e hijos-->
+
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <label for="txtage"><b>{{ trans('message.age') }}</b></label>
+                                        <label for="txtcivilstatus"><b>{{ trans('message.civilstatus') }}</b></label>
                                          <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input id="txtage" type="number" class="form-control  RegNumsimple" placeholder="{{ trans('message.age') }}" name="age" value="{{ old('age') }}"/>
+                                            <span class="input-group-addon"><i class="fas fa-user-friends"></i></span>
+                                              <select id="txtcivilstatus" class="form-control  Requerido"  name="CivilStatus">
+                                              </select>
                                          </div>
-                                        <span for="txtage" class="help-block"></span>
+                                        <span for="txtcivilstatus" class="help-block"></span>
                                     </div>
                                 </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtchildren"><b>{{ trans('message.children') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-child"></i></span>
+                                              <select id="txtchildren" class="form-control  Requerido RegNumsimple"  name="children">
+                                              </select>
+                                         </div>
+                                        <span for="txtchildren" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- correo y ciudad -->
+
+                            <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txtemail"><b>{{ trans('message.email') }}</b></label>
@@ -138,7 +152,58 @@
                                         <span for="txtemail" class="help-block"></span>
                                     </div>
                                 </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtcity"><b>{{ trans('message.city') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <select id="txtcity" class="form-control  Requerido"  name="city">
+                                              </select>
+                                         </div>
+                                        <span for="txtcity"" class="help-block"></span>
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- telefono -->
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtphone"><b>{{ trans('message.phone') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
+                                             <input id="txtphone" type="number" class="form-control  Requerido  " placeholder="{{ trans('message.phone') }}" name="phone" />
+                                         </div>
+                                        <span for="txtphone" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtcity"><b>{{ trans('message.cel') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
+                                            <input id="txtcel" type="number" class="form-control  Requerido  " placeholder="{{ trans('message.cel') }}" name="cel" />
+                                         </div>
+                                        <span for="txtcity"" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtdirection"><b>{{ trans('message.direction') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
+                                            <input id="txtdirection" type="number" class="form-control  Requerido  RegDireccion" placeholder="{{ trans('message.direction') }}" name="cel" />
+                                         </div>
+                                        <span for="txtdirection"" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <div class="row">
                                  <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
