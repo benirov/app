@@ -30,4 +30,5 @@ Route::resource('users', 'User\UserController');
 Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
 Route::resource('Util/getsextype', 'UtilController@getDataSex');
+Route::resource('Util', 'UtilController');
 
