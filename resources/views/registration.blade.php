@@ -185,7 +185,7 @@
                                             <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
                                             <input id="txtcellphone" type="number" class="form-control  Requerido  " placeholder="{{ trans('message.cellphone') }}" name="cellphone" />
                                          </div>
-                                        <span for="txtcellphone"" class="help-block"></span>
+                                        <span for="txtcellphone" class="help-block"></span>
                                     </div>
                                 </div>
                             </div>
