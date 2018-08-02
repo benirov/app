@@ -198,7 +198,7 @@
                                             <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
                                             <input id="txtdirection" type="number" class="form-control  Requerido  RegDireccion" placeholder="{{ trans('message.direction') }}" name="cel" />
                                          </div>
-                                        <span for="txtdirection"" class="help-block"></span>
+                                        <span for="txtdirection" class="help-block"></span>
                                     </div>
                                 </div>
                             </div>
