@@ -87,7 +87,7 @@ class UtilController extends Controller
     {
         $user = DB::table('tblMastersDetail')->where('fkIdMaster', 4)->toSql();
 
-        dd($user);
+        dd("pruebas");
 
 
         return $user;
