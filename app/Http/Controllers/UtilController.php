@@ -85,7 +85,7 @@ class UtilController extends Controller
 
     public function getDataSex()
     {
-        $user = DB::table('tblMasterDetail')->where('fkIdMaster', 4)->toSql();
+        $user = DB::table('tblMastersDetail')->where('fkIdMaster', 4)->toSql();
 
         dd($user);
 
