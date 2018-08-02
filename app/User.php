@@ -21,8 +21,6 @@ class User extends Authenticatable
      * @var array
      */
 
-      const typeUser = '1';
-
     protected $fillable = [
         'email',
         'name',

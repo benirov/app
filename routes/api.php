@@ -27,5 +27,6 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
 // Route::post('insertUser', 'UserController@store');
 
 Route::resource('users', 'User\UserController');
+Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
 

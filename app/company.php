@@ -17,11 +17,14 @@ class company extends Model
   protected $fillable = [
       'name',
       'url',
-      'fkIdUser'
+      'phone',
+      'contac',
+      'logo',
+      'email',
   ];
 
-  public function User(){
-    return $this->belongsTo(User::class);
-  }
+  // public function User(){
+  //   return $this->belongsTo(User::class);
+  // }
     //
 }

@@ -36,7 +36,52 @@ class CompanyController extends ApiController
      */
     public function store(Request $request)
     {
-        return company::create($request);
+        $rules =
+      [
+        // Compañia
+        'namecompany' => ['required','min:6', 'unique:tblCompanies,name'],
+        'phonecompany' => 'required|min:6',
+        'contactcompany' => 'required||min:6|',
+        'emailcompany' => ['required','min:6', 'email'.'unique:tblCompanies,email'],
+        'url' => ['required','min:6', 'unique:tblCompanies,url'],
+        
+        // Clientes
+        'typedoc' => ['required'],
+        'document' => ['required','min:6', 'unique:tblClients,document'],
+        'nameclient' => 'required|min:6|',
+        'lastnameclient' => 'required|min:6|',
+        'password' => 'required|min:6|confirmed',
+        'sexclient' => 'required',
+        'civilstatus' => 'required',
+        'emailclient' => ['required','min:6', 'email'.'unique:tblClients,email'],
+        'phoneclient' => 'required',
+        'direction' => 'required',
+
+        
+      ];
+
+      $this->validate($request, $rules);
+        $fields = $request->all();
+        // $fields['password'] =  bcrypt($request->password);
+        $fields['tokenUser'] =  User::generateToken();
+        $fields['fkIdDetailMaster'] =  $fields['typeUser'];
+
+        $Users = User::class;
+
+        return DB::transaction(function() use ($fields, $Users)
+        {
+            $company = Company::create($fields);
+            $lastcompany = $company->id;
+            
+            $fields['fkIdCompanies'] =  $lastcompany;
+
+            
+
+            $Client = $Users::create($fields);
+
+            // return response()->json(['data' => $user], 201);
+            return $this->showOne($Client, 201);
+        });
     }
 
     /**

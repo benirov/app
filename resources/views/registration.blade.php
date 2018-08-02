@@ -5,6 +5,10 @@
 @endsection
 
 @section('content')
+<style type="text/css">
+  .sans-serif {
+    font-family: fa5-proxima-nova,"Helvetica Neue",Helvetica,Arial,sans-serif;
+</style>
 
 <body class="hold-transition register-page">
     <div id="app">
@@ -27,9 +31,9 @@
                 @endif
                 <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                     <div class="register-box-body">
-                        <form id="formUser" action="{{ secure_url('/users') }}" method="post">
+                        <form id="formUser" action="{{ secure_url('/company') }}" method="post">
                           <div class="userInfo">
-                            <center><label for=""><h3><b>datos de usuario</b><h3></label></center>
+                            <center><label class="sans-serif"  for=""><h3><b>datos de cliente</b><h3></label></center>
                             <br>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="row">
