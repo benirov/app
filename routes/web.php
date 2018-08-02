@@ -33,6 +33,8 @@ Route::post('users', 'User\UserController@store');
 Route::post('getUser', 'Auth\LoginController@getUser');
 Route::get('getUserBinnacle', 'Binnacle\BinnacleController@getBinnacle');
 Route::get('Util/getdatasex', 'UtilController@getDataSex');
+Route::get('Util/getdatacivilstatus', 'UtilController@getDataCivilStatus');
+Route::get('Util/getdatatipodoc', 'UtilController@getDataTipoDoc');
 
 // vista de logs
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

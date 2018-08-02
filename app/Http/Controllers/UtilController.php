@@ -93,5 +93,21 @@ class UtilController extends Controller
 
     }
 
+    public function getDataCivilStatus()
+    {
+        $datacivilstatus = DB::table('tblMastersDetail')->where('fkIdMaster', 5)->get();
+
+
+        return $datacivilstatus;        
+    }
+
+    public function getDataTipoDoc()
+    {
+        $dataTipoDoc = DB::table('tblMastersDetail')->where('fkIdMaster', 3)->get();
+
+
+        return $dataTipoDoc;        
+    }
+
 
 }
