@@ -41,10 +41,10 @@ class CompanyController extends ApiController
         $rules =
       [
         // Compañia
-        'namecompany' => ['required','min:6', 'unique:tblCompanies,name'],
+        'namecompany' => ['required','min:6', 'unique:tblCompanies,namecompany'],
         'phonecompany' => 'required|min:6',
         'contact' => 'required||min:6|',
-        'emailcompany' => ['required','min:6', 'email','unique:tblCompanies,email'],
+        'emailcompany' => ['required','min:6', 'email','unique:tblCompanies,emailcompany'],
         'url' => ['required','min:6', 'unique:tblCompanies,url'],
         
         // Clientes
