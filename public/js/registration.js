@@ -83,7 +83,7 @@ function getDataconfiguration()
 			});
 
 			$.each(sRespTipoCity[0].data, function(i, val){
-				$("#txtsex").append('<option value'+val.id+'>'+val.name+'</option>');
+				$("#txtcity").append('<option value'+val.id+'>'+val.name+'</option>');
 			});
 
 		});
