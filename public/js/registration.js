@@ -46,7 +46,7 @@ function SendData(oData){
 		if (sResp.code == 201)
 		{
 			notify("Registro realizado con exito", "success", "user");
-			FormReset($("#formUser"));
+			// FormReset($("#formUser"));
 		}
 		else
 		{
