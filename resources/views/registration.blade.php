@@ -131,7 +131,7 @@
                                         <label for="txtchildren"><b>{{ trans('message.children') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-child"></i></span>
-                                             <input id="txtchildren" type="number" class="form-control RegNumsimple" placeholder="{{ trans('message.children') }}" name="birth"/>
+                                             <input id="txtchildren" type="number" class="form-control RegNumsimple" placeholder="{{ trans('message.children') }}" name="children"/>
                                          </div>
                                         <span for="txtchildren" class="help-block"></span>
                                     </div>
