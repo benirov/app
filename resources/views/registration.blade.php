@@ -159,7 +159,7 @@
                                             <select id="txtcity" class="form-control  Requerido select2"  name="city">
                                               </select>
                                          </div>
-                                        <span for="txtcity"" class="help-block"></span>
+                                        <span for="txtcity" class="help-block"></span>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                                         <label for="txtphone"><b>{{ trans('message.phone') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-phone-square"></i></span>
-                                             <input id="txtphone" type="number" class="form-control  Requerido  " placeholder="{{ trans('message.phone') }}" name="phone" />
+                                             <input id="txtphone" type="number" class="form-control  Requerido" placeholder="{{ trans('message.phone') }}" name="phone" />
                                          </div>
                                         <span for="txtphone" class="help-block"></span>
                                     </div>
