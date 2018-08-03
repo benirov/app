@@ -241,7 +241,7 @@
                                         <label for="txttypeuser"><b>{{ trans('message.typeuser') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-users-cog"></i></span>
-                                             <select id="txttypeuser" class="form-control  Requerido"  name="typeUser">
+                                             <select id="txttypeuser" class="form-control  Requerido  select2"  name="typeUser">
                                                         @foreach ($typeUser as $users)
                                                                 <option value="{{ $users->id }}">{{ $users->name }}</option>
                                                             <p>This is user {{ $user->id }}</p>
