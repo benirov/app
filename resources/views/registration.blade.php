@@ -271,24 +271,49 @@
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <label for="txturl"><b>{{ trans('message.url') }}</b></label>
-                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-globe"></i></span>
-                                             <input id="txturl" type="text" class="form-control  Requerido  RegNombreDominio" placeholder="{{ trans('message.url') }}" name="url" value="{{ old('url') }}" required/>
-                                         </div>
-                                        <span for="txturl" class="help-block"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-group">
                                         <label for="txtcontact"><b>{{ trans('message.contact') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                             <input id="txtcontact" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.contact') }}" name="contact" required/>
                                          </div>
                                         <span for="txtcontact" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtemailcompany"><b>{{ trans('message.email') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-at"></i></span>
+                                             <input id="txtemailcompany" type="text" class="form-control  Requerido  RegCorreo" placeholder="{{ trans('message.nickcompany') }}" name="emailcompany" required/>
+                                         </div>
+                                        <span for="txtemailcompany" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtphonecompany"><b>{{ trans('message.phone') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input id="txtphonecompany" type="text" class="form-control  Requerido" placeholder="{{ trans('message.phone') }}" name="phonecompany" required/>
+                                         </div>
+                                        <span for="txtphonecompany" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txturl"><b>{{ trans('message.url') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-globe"></i></span>
+                                             <input id="txturl" type="text" class="form-control  Requerido  RegNombreDominio" placeholder="{{ trans('message.url') }}" name="url" value="{{ old('url') }}" required/>
+                                         </div>
+                                        <span for="txturl" class="help-block"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
