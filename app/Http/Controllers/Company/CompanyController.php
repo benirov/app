@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Company;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 use App\company;
+use App\User;
+use App\client;
 
 class CompanyController extends ApiController
 {
@@ -57,6 +59,10 @@ class CompanyController extends ApiController
         'phoneclient' => 'required',
         'direction' => 'required',
 
+        // claves foraneas
+
+
+
         
       ];
 
@@ -66,18 +72,31 @@ class CompanyController extends ApiController
         $fields['tokenUser'] =  User::generateToken();
         $fields['fkIdDetailMaster'] =  $fields['typeUser'];
 
-        $Users = User::class;
+        // claves foraneas para cliente
 
-        return DB::transaction(function() use ($fields, $Users)
+        $fields['fkIdMdCivilStatus'] =  $fields['civilstatus'];
+        $fields['fkIdMdsex'] =  $fields['sexclient'];
+        $fields['fkIdCity'] =  $fields['city'];
+        $fields['fkIdTipoDoc'] =  $fields['typedoc'];
+        $fields['fkIdTypeClient'] =  $fields['typeUser'];
+
+        // $Client = Client::class;
+        // $Users = User::class;
+
+        return DB::transaction(function() use ($fields)
         {
             $company = Company::create($fields);
-            $lastcompany = $company->id;
+            // $lastcompany = $company->id;
             
-            $fields['fkIdCompanies'] =  $lastcompany;
+            $fields['fkIdCompanies'] =  $company->id;
 
             
 
-            $Client = $Users::create($fields);
+            $Client = Client::create($fields);
+
+            $fields['fkIdClient'] =  $Client->id;
+
+            $User = User::create($fields);
 
             // return response()->json(['data' => $user], 201);
             return $this->showOne($Client, 201);

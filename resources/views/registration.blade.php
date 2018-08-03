@@ -287,7 +287,7 @@
                                         <label for="txtemailcompany"><b>{{ trans('message.email') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-at"></i></span>
-                                             <input id="txtemailcompany" type="text" class="form-control  Requerido  RegCorreo" placeholder="{{ trans('message.nickcompany') }}" name="emailcompany" required/>
+                                             <input id="txtemailcompany" type="text" class="form-control  Requerido  RegCorreo" placeholder="{{ trans('message.email') }}" name="emailcompany" required/>
                                          </div>
                                         <span for="txtemailcompany" class="help-block"></span>
                                     </div>
