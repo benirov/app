@@ -279,7 +279,8 @@
                                         <span for="txturl" class="help-block"></span>
                                     </div>
                                 </div>
-                                 <div class="row">
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txtcontact"><b>{{ trans('message.contact') }}</b></label>
@@ -300,7 +301,6 @@
                                         <span for="txtlogo" class="help-block"></span>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                           </div>
                           <br>
