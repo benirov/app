@@ -255,29 +255,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="txtcontact"><b>{{ trans('message.contact') }}</b></label>
-                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input id="txtcontact" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.contact') }}" name="contact" required/>
-                                         </div>
-                                        <span for="txtcontact" class="help-block"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="txtlogo"><b>{{ trans('message.logo') }}</b></label>
-                                         <div class="input-group">
-                                            <span class="input-group-addon"><i class="far fa-file-image"></i></span>
-                                            <input id="txtlogo" type="file" class="form-control" placeholder="{{ trans('message.logo') }}" name="logo" value="{{ old('lastnameclient') }}"/>
-                                         </div>
-                                        <span for="txtlogo" class="help-block"></span>
-                                    </div>
-                                </div>
-                            </div>
                           </div>
                           <div class=infoCompany>
                             <center><label for=""><h3><b>datos de empresa</b><h3></label></center>
@@ -302,6 +279,28 @@
                                         <span for="txturl" class="help-block"></span>
                                     </div>
                                 </div>
+                                 <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtcontact"><b>{{ trans('message.contact') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <input id="txtcontact" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.contact') }}" name="contact" required/>
+                                         </div>
+                                        <span for="txtcontact" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtlogo"><b>{{ trans('message.logo') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="far fa-file-image"></i></span>
+                                            <input id="txtlogo" type="file" class="form-control" placeholder="{{ trans('message.logo') }}" name="logo" value="{{ old('lastnameclient') }}"/>
+                                         </div>
+                                        <span for="txtlogo" class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                           </div>
                           <br>
