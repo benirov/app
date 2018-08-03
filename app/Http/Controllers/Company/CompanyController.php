@@ -44,7 +44,7 @@ class CompanyController extends ApiController
         'namecompany' => ['required','min:6', 'unique:tblCompanies,name'],
         'phonecompany' => 'required|min:6',
         'contactcompany' => 'required||min:6|',
-        'emailcompany' => ['required','min:6', 'email'.'unique:tblCompanies,email'],
+        'emailcompany' => ['required','min:6', 'email','unique:tblCompanies,email'],
         'url' => ['required','min:6', 'unique:tblCompanies,url'],
         
         // Clientes
@@ -55,7 +55,7 @@ class CompanyController extends ApiController
         'password' => 'required|min:6|confirmed',
         'sexclient' => 'required',
         'civilstatus' => 'required',
-        'emailclient' => ['required','min:6', 'email'.'unique:tblClients,email'],
+        'emailclient' => ['required','min:6', 'email','unique:tblClients,email'],
         'phoneclient' => 'required',
         'direction' => 'required',
 
