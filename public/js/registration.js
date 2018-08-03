@@ -71,19 +71,19 @@ function getDataconfiguration()
 
 			$.each(sRespSex[0].data, function(i, val){
 				console.log(val);
-				$("#txtsex").append('<option value'+val.id+'>'+val.name+'</option>');
+				$("#txtsex").append('<option value="'+val.id+'">'+val.name+'</option>');
 			});
 
 			$.each(sRespCivilStatus[0].data, function(i, val){
-				$("#txtcivilstatus").append('<option value'+val.id+'>'+val.name+'</option>');
+				$("#txtcivilstatus").append('<option value="'+val.id+'">'+val.name+'</option>');
 			});
 
 			$.each(sRespTipoDoc[0].data, function(i, val){
-				$("#txttypedoc").append('<option value'+val.id+'>'+val.name+'</option>');
+				$("#txttypedoc").append('<option value="'+val.id+'">'+val.name+'</option>');
 			});
 
 			$.each(sRespTipoCity[0].data, function(i, val){
-				$("#txtcity").append('<option value'+val.id+'>'+val.name+'</option>');
+				$("#txtcity").append('<option value="'+val.id+'">'+val.name+'</option>');
 			});
 
 		});
