@@ -226,7 +226,17 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 col-md-offset-3 col-sm-6 col-xs-12">
+                              <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="txtusername"><b>{{ trans('message.username') }}</b></label>
+                                         <div class="input-group">
+                                            <span class="input-group-addon"><i class="fas fa-male"></i></span>
+                                            <input id="txtusername" type="text" class="form-control  Requerido  RegUsuario" placeholder="{{ trans('message.username') }}" name="nameclient" required/>
+                                         </div>
+                                        <span for="txtusername" class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txttypeuser"><b>{{ trans('message.typeuser') }}</b></label>
                                          <div class="input-group">

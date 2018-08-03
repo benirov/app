@@ -144,5 +144,6 @@ return [
     'direction'               => 'Direction',
     'phone'                   => 'phone',
     'cellphone'               => 'cell phone',
+    'username'                => 'username',
 
 ];
