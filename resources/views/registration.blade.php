@@ -131,8 +131,7 @@
                                         <label for="txtchildren"><b>{{ trans('message.children') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-child"></i></span>
-                                              <select id="txtchildren" class="form-control  Requerido RegNumsimple"  name="children">
-                                              </select>
+                                             <input id="txtchildren" type="number" class="form-control   Requerido RegNumsimple" placeholder="{{ trans('message.document') }}" name="birth"/>
                                          </div>
                                         <span for="txtchildren" class="help-block"></span>
                                     </div>
