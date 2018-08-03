@@ -143,4 +143,6 @@ return [
     'phone'                   => 'telefono',
     'cellphone'               => 'Celular',
     'username'                => 'Nombre de usuario',
+    'contact'                 => 'Contacto',
+    'logo'                    => 'Logo',
 ];
