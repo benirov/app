@@ -61,8 +61,9 @@ function getDataconfiguration()
 
 	$.when(getQuery('Util/getdatasex', 'json', '', true, 1),
 		   getQuery('Util/getdatacivilstatus', 'json', '', true, 1),
-		   getQuery('Util/getdatatipodoc', 'json', '', true, 1)
-		).done(function (sRespSex, sRespCivilStatus, sRespTipoDoc)
+		   getQuery('Util/getdatatipodoc', 'json', '', true, 1),
+		   getQuery('Util/getdatacity', 'json', '', true, 1)
+		).done(function (sRespSex, sRespCivilStatus, sRespTipoDoc, sRespTipoCity)
 		{
 
 			// console.log(sRespSex[data]);
@@ -72,9 +73,18 @@ function getDataconfiguration()
 				console.log(val);
 				$("#txtsex").append('<option value'+val.id+'>'+val.name+'</option>');
 			});
-			// console.log(sRespSex);
-			console.log(sRespCivilStatus);
-			console.log(sRespTipoDoc);
+
+			$.each(sRespCivilStatus[0].data, function(i, val){
+				$("#txtcivilstatus").append('<option value'+val.id+'>'+val.name+'</option>');
+			});
+
+			$.each(sRespTipoDoc[0].data, function(i, val){
+				$("#txttypedoc").append('<option value'+val.id+'>'+val.name+'</option>');
+			});
+
+			$.each(sRespTipoCity[0].data, function(i, val){
+				$("#txtsex").append('<option value'+val.id+'>'+val.name+'</option>');
+			});
 
 		});
 }
