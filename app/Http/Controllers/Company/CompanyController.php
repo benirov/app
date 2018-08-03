@@ -43,7 +43,7 @@ class CompanyController extends ApiController
         // Compañia
         'namecompany' => ['required','min:6', 'unique:tblCompanies,name'],
         'phonecompany' => 'required|min:6',
-        'contactcompany' => 'required||min:6|',
+        'contact' => 'required||min:6|',
         'emailcompany' => ['required','min:6', 'email','unique:tblCompanies,email'],
         'url' => ['required','min:6', 'unique:tblCompanies,url'],
         
@@ -53,10 +53,10 @@ class CompanyController extends ApiController
         'nameclient' => 'required|min:6|',
         'lastnameclient' => 'required|min:6|',
         'password' => 'required|min:6|confirmed',
-        'sexclient' => 'required',
+        'sex' => 'required',
         'civilstatus' => 'required',
-        'emailclient' => ['required','min:6', 'email','unique:tblClients,email'],
-        'phoneclient' => 'required',
+        'email' => ['required','min:6', 'email','unique:tblClients,email'],
+        'phone' => 'required',
         'direction' => 'required',
 
         // claves foraneas
@@ -75,7 +75,7 @@ class CompanyController extends ApiController
         // claves foraneas para cliente
 
         $fields['fkIdMdCivilStatus'] =  $fields['civilstatus'];
-        $fields['fkIdMdsex'] =  $fields['sexclient'];
+        $fields['fkIdMdsex'] =  $fields['sex'];
         $fields['fkIdCity'] =  $fields['city'];
         $fields['fkIdTipoDoc'] =  $fields['typedoc'];
         $fields['fkIdTypeClient'] =  $fields['typeUser'];
