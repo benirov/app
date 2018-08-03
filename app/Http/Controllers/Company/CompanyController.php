@@ -51,7 +51,8 @@ class CompanyController extends ApiController
         // Clientes
         'typedoc' => ['required'],
         'document' => ['required','min:6', 'unique:tblClients,document'],
-        'nameclient' => 'required|min:6|',
+        'name' => 'required|min:6|',
+        'username' => ['required','min:6', 'unique:tblUsers,username'],
         'lastnameclient' => 'required|min:6|',
         'password' => 'required|min:6|confirmed',
         'sex' => 'required',
@@ -79,10 +80,15 @@ class CompanyController extends ApiController
         $fields['fkIdMdsex'] =  $fields['sex'];
         $fields['fkIdCity'] =  $fields['city'];
         $fields['fkIdTipoDoc'] =  $fields['typedoc'];
-        $fields['fkIdTypeClient'] =  $fields['typeUser'];
+        $fields['fkIdProfile'] =  $fields['typeUser'];
+
 
         // $Client = Client::class;
         // $Users = User::class;
+
+        // datos de user
+
+        $fields['fkIdTypeClient'] =  $fields['typeUser'];
 
         return DB::transaction(function() use ($fields)
         {

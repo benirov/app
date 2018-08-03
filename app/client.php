@@ -26,10 +26,10 @@ class client extends Model
         'direction',
         'children',
         'fkIdMdsex',
-        'deleted_at',
         'status',
         'fkIdCity',
         'fkIdTipoDoc',
-        'fkIdTypeClient'
+        'fkIdTypeClient',
+        'status',
     ];
 }

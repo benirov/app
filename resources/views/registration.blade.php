@@ -42,7 +42,7 @@
                                         <label for="txtname"><b>{{ trans('message.fullname') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="nameclient" value="{{ old('nameclient') }}" required/>
+                                            <input id="txtname" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.fullname') }}" name="name" value="{{ old('nameclient') }}" required/>
                                          </div>
                                         <span for="txtname" class="help-block"></span>
                                     </div>
@@ -209,7 +209,7 @@
                                         <label for="txtusername"><b>{{ trans('message.username') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fas fa-male"></i></span>
-                                            <input id="txtusername" type="text" class="form-control  Requerido  RegUsuario" placeholder="{{ trans('message.username') }}" name="nameclient" required/>
+                                            <input id="txtusername" type="text" class="form-control  Requerido  RegUsuario" placeholder="{{ trans('message.username') }}" name="username" required/>
                                          </div>
                                         <span for="txtusername" class="help-block"></span>
                                     </div>

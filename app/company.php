@@ -15,12 +15,13 @@ class company extends Model
   public $timestamps = false;
 
   protected $fillable = [
-      'name',
+      'namecompany',
       'url',
-      'phone',
-      'contac',
+      'phonecompany',
+      'contact',
       'logo',
-      'email',
+      'emailcompany',
+      'status'
   ];
 
   // public function User(){
