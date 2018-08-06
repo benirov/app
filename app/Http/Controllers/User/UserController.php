@@ -115,7 +115,7 @@ class UserController extends ApiController
 
     public function getTypeUsers()
     {
-            $usersType = DB::table('tblMastersDetail')->where('fkIdMaster', 1)->where('status', 1)->get();
+            $usersType = DB::table('tblMastersDetail')->where('fkIdMaster', 1)->where('status', 1)->toSql();
         return $usersType;
     }
 }
