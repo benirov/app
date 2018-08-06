@@ -71,7 +71,7 @@ class LoginController extends Controller
         $request->session()->put('emailClient', $login[0]->emailClient);
         $request->session()->put('phone', $login[0]->phoneClient);
         $request->session()->put('sex', $login[0]->sexClient);
-        $request->session()->put('City', $login[0]->cityClient;
+        $request->session()->put('City', $login[0]->cityClient);
         $request->session()->put('TipoDoc', $login[0]->TipoDocClient);
         $request->session()->put('TypeClient', $login[0]->TypeClientClient);
         $request->session()->put('user', $login[0]->user);
