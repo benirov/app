@@ -45,6 +45,13 @@ class User extends Authenticatable
       return str_random(100);
     }
 
+    public static function generatePassword($key)
+    {
+      return base64_encode($key);
+    }
+
+
+
     //  public static function getUserMenu()
     // {
     //      $userMenu = DB::table('tblUserMenu')->whereIn('id', function($query)

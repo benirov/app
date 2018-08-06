@@ -82,6 +82,9 @@ class CompanyController extends ApiController
         $fields['fkIdTipoDoc'] =  $fields['typedoc'];
         $fields['fkIdProfile'] =  $fields['typeUser'];
 
+        $fields['password'] =  User::generatePassword();
+
+
 
         // $Client = Client::class;
         // $Users = User::class;
