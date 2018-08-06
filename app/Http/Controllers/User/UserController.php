@@ -104,10 +104,7 @@ class UserController extends ApiController
 
      public function getMenu()
     {
-         $userMenu = DB::table('tblUsersMenu')->whereIn('id', function($query)
-            {
-                $query->select(DB::raw('fkIdMenu'))->from('tblProfileUsers')->whereRaw('tblProfileUsers.id = '.Session::get("profileUser").'');
-            })->get();
+         $userMenu = DB::select('call sp_getMenu(?)', array(Session::get("profileUser")));
          // dd($userMenu);
 
          return $userMenu; 
