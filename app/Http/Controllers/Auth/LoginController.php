@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
-use App\Login;
 use App\User;
+use App\Login;
 use Session;
 
 class LoginController extends Controller
