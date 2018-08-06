@@ -307,7 +307,7 @@
 
 
                             <div class="row">
-                              <div class="col-md-6 col-sm-6 col-xs-12">
+                              <div class="col-md-8 col-md-offset-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txturl"><b>{{ trans('message.url') }}</b></label>
                                          <div class="input-group">
@@ -317,7 +317,7 @@
                                         <span for="txturl" class="help-block"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <!-- <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txtlogo"><b>{{ trans('message.logo') }}</b></label>
                                          <div class="input-group">
@@ -326,7 +326,7 @@
                                          </div>
                                         <span for="txtlogo" class="help-block"></span>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                           </div>
                           <br>

@@ -19,7 +19,6 @@ class company extends Model
       'url',
       'phonecompany',
       'contact',
-      'logo',
       'emailcompany',
       'status'
   ];
