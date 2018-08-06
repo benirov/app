@@ -31,7 +31,7 @@
                     <label for="txtusername"><b>{{ trans('message.username') }}</b></label>
                      <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                        <input id="txtusername" type="email" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.username') }}" name="username" value="{{ old('username') }}" required/>
+                        <input id="txtusername" type="text" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.username') }}" name="username" value="{{ old('username') }}" required/>
                      </div>
                     <span for="txtusername" class="help-block"></span>
                 </div>
