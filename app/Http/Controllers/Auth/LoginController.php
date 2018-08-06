@@ -57,7 +57,6 @@ class LoginController extends Controller
       $fields = $request->all();
       // $fields['password'] =  User::generatePassword($fields['password']);
       $login = DB::select('call sp_getUser(?, ?)', array($fields['username'], 'YWJjMTIzNA=='));
-      // return $login;
       if($login[0]->Error == 0){
         $request->session()->put('Company', $login[0]->company);
         $request->session()->put('nameCompany', $login[0]->namecompany);
