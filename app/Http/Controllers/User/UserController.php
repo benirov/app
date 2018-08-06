@@ -48,50 +48,7 @@ class UserController extends ApiController
 
         // echo $request;
         // exit();
-      $rules =
-      [
-        'email' => 'required|email|unique:tblUsers',
-        'name' => 'required',
-        'namecompany' => ['required','min:6', 'unique:tblCompanies,name'],
-        'url' => ['required','min:6', 'unique:tblCompanies,url'],
-        'password' => 'required|min:6|confirmed',
-        'typeUser' => 'required',
-      ];
-
-      $this->validate($request, $rules);
-        $fields = $request->all();
-        // $fields['password'] =  bcrypt($request->password);
-        $fields['tokenUser'] =  User::generateToken();
-        $fields['fkIdMaster'] =  1;
-        $fields['fkIdDetailMaster'] =  $fields['typeUser'];
-
-        $loginSesion = Login::class;
-        $classCompany     = company::class;
-
-        return DB::transaction(function() use ($fields, $loginSesion, $classCompany)
-        {
-            $user = User::create($fields);
-            $lastIdUser = $user->id;
-            $dataLogin =
-            [
-              'name' => $fields['email'],
-              'password' => $fields['password'],
-              'fkIdUser' => $lastIdUser
-            ];
-
-            $dataCompany =
-            [
-              'name' => $fields['namecompany'],
-              'url' => $fields['url'],
-              'fkIdUser' => $lastIdUser
-            ];
-
-            $login = $loginSesion::create($dataLogin);
-            $company = $classCompany::create($dataCompany);
-
-            // return response()->json(['data' => $user], 201);
-            return $this->showOne($user, 201);
-        });
+     
     }
 
     /**

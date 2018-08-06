@@ -72,7 +72,7 @@ class CompanyController extends ApiController
         $fields = $request->all();
         // $fields['password'] =  bcrypt($request->password);
         $fields['tokenUser'] =  User::generateToken();
-        $fields['fkIdDetailMaster'] =  $fields['typeUser'];
+        // $fields['fkIdDetailMaster'] =  $fields['typeUser'];
 
         // claves foraneas para cliente
 

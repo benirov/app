@@ -23,11 +23,8 @@ class User extends Authenticatable
 
     protected $fillable = [
         'username',
-        'lastname',
-        'age',
         'tokenUser',
-        'fkIdMaster',
-        'fkIdDetailMaster',
+        'password',
         'fkIdClient',
         'fechapassw',
         'fechaultlogin',
