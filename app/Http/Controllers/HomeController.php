@@ -62,6 +62,6 @@ class HomeController extends Controller
         // $menu = new User\UserController;
         // $menus =  $menu->getMenu();
         config(['app.pagetitle' => 'Aqui podras visualizar']);
-      return view('/home')
+      return view('/home');
     }
 }
