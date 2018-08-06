@@ -11,7 +11,7 @@
                     <img src="/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>{{ Session::get('nameUser') }}</p>
+                    <p>{{ Session::get('username') }}</p>
                     <!-- Status -->
                 </div>
             </div>
