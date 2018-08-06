@@ -107,10 +107,10 @@ class UserController extends ApiController
          $userMenu = DB::table('tblUsersMenu')->whereIn('id', function($query)
             {
                 $query->select(DB::raw('fkIdMenu'))->from('tblProfileUsers')->whereRaw('tblProfileUsers.id = '.Session::get("profileUser").'');
-            })->toSql();
-         dd($userMenu);
+            })->get();
+         // dd($userMenu);
 
-         // return $userMenu; 
+         return $userMenu; 
     }
 
     public function getTypeUsers()
