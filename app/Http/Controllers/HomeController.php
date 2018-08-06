@@ -59,9 +59,9 @@ class HomeController extends Controller
     }
 
     public function getHome(){
-        $menu = new User\UserController;
-        $menus =  $menu->getMenu();
+        // $menu = new User\UserController;
+        // $menus =  $menu->getMenu();
         config(['app.pagetitle' => 'Aqui podras visualizar']);
-      return view('/home')->with('menu', $menus);
+      return view('/home')
     }
 }

@@ -219,11 +219,9 @@
                                         <label for="txttypeuser"><b>{{ trans('message.typeuser') }}</b></label>
                                          <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-users-cog"></i></span>
-                                             <select id="txttypeuser" class="form-control  Requerido  select2"  name="typeUser">
-                                                        @foreach ($typeUser as $users)
-                                                                <option value="{{ $users->id }}">{{ $users->name }}</option>
-                                                            <p>This is user {{ $user->id }}</p>
-                                                        @endforeach
+                                             <select id="txttypeuser" class="form-control  Requerido"  name="typeUser" disabled>
+                                                        <option value="2">Cliente</option>
+                                                        
 
                                                   <!-- <option value="1">Administrador</option>
                                                   <option value="2">Cliente</option> -->
@@ -307,7 +305,7 @@
 
 
                             <div class="row">
-                              <div class="col-md-8 col-md-offset-4 col-sm-6 col-xs-12">
+                              <div class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <label for="txturl"><b>{{ trans('message.url') }}</b></label>
                                          <div class="input-group">
