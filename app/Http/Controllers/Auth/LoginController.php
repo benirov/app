@@ -77,6 +77,8 @@ class LoginController extends Controller
         $request->session()->put('TypeClient', $login[0]->fkIdTypeClient);
         $request->session()->put('user', $login[0]->id);
         $request->session()->put('username', $login[0]->username);
+        $request->session()->put('profileUser', $login[0]->fkIdProfile);
+        
         $request->session()->put('sessionActive', true);
          return redirect()->action('HomeController@getHome');
       }
