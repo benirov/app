@@ -37,7 +37,6 @@ $(document).ready(function()
 });
 
 function SendData(oData){
-	console.log("ruta : "+$("#formUser").attr('action'));
 	$.when(postQuery($("#formUser").attr('action') , oData, 1)).done(function (sResp)
 	{
 		// console.log(sResp)
@@ -67,7 +66,6 @@ function getDataconfiguration()
 		{
 
 			// console.log(sRespSex[data]);
-			console.log(sRespSex[0].data);
 
 			$.each(sRespSex[0].data, function(i, val){
 				console.log(val);

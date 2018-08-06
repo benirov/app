@@ -36,7 +36,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
+        config(['app.pagetitle' => 'Inicia sesion para acceder a la plataforma']);
         return view('/login');
     }
 

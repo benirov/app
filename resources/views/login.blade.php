@@ -28,12 +28,12 @@
         <form action="{{ secure_url('/getUser') }}" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="txtname"><b>{{ trans('message.email') }}</b></label>
+                    <label for="txtusername"><b>{{ trans('message.username') }}</b></label>
                      <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                        <input id="txtemail" type="email" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.email') }}" name="email" value="{{ old('name') }}" required/>
+                        <input id="txtusername" type="email" class="form-control  Requerido  RegNombre" placeholder="{{ trans('message.username') }}" name="username" value="{{ old('username') }}" required/>
                      </div>
-                    <span for="txtemail" class="help-block"></span>
+                    <span for="txtusername" class="help-block"></span>
                 </div>
 
                 <div class="form-group">
