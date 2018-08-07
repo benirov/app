@@ -7,7 +7,7 @@
 @section('main-content')
 	<div class="container-fluid spark-screen">
 		<div class="row">
-			<div class="col-md-4 col-sm-4 col-xs-12">
+			<div id="divMaster" class="col-md-4 col-sm-4 col-xs-12 hidden">
 				<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">
 					<thead>
 		                <tr role="row">

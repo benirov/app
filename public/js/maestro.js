@@ -41,5 +41,7 @@ function getMasterDetail(val){
 					                '</tr>');
 		});
 
+		$("#divMaster").removeClass("hidden");
+
 	});
 }
