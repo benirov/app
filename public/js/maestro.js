@@ -6,11 +6,10 @@ $(document).ready(function()
 
 function getMasters()
 {
-	$.when(getQuery('masters', 'json', '', true, 1),
-		).done(function (sRespMAsters)
+	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMAsters)
 		{
-
-			// console.log(sRespSex[data]);
+			console.log(sRespMAsters[0]);
+			console.log(sRespMAsters[0]);
 
 			$.each(sRespMAsters[0].data, function(i, val){
 				$("#idmaster").append('<option value="'+val.id+'">'+val.name+'</option>');

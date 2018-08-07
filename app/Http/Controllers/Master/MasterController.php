@@ -18,7 +18,7 @@ class MasterController extends ApiController
     {
         $users = master::all();
         // return response()->json(['data' =>$users], 200);
-        return $this->showAll($users);
+        return $this->showAll($users, 200);
         exit();
     }
 
