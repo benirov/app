@@ -9,7 +9,6 @@
 		<div class="row">
 			<div clas="box">
 				<div id="divMaster" class="col-md-4 col-sm-4 col-xs-12 hidden">
-					<br>
 					<h3 class="box-title">Categorias</h3>
 					<br>
 					<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">

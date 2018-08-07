@@ -15,3 +15,7 @@
       background-color: #2196F3!important;
       color: #ffffff!important;
    }
+
+   .box-header {
+    border-bottom: 2px solid #0369ba;
+}
