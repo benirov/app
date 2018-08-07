@@ -16,9 +16,9 @@ class MasterController extends ApiController
      */
     public function index()
     {
-        $users = master::all();
+        $master = master::all();
         // return response()->json(['data' =>$users], 200);
-        return $this->showAll($users, 200);
+        return $this->showAll($master, 200);
         exit();
     }
 

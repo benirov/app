@@ -6,9 +6,9 @@ $(document).ready(function()
 
 function getMasters()
 {
-	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMAsters)
+	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMasters)
 		{
-			console.log(sRespMAsters[0]);
+			console.log(sRespMasters);
 			console.log(sRespMAsters[0]);
 
 			$.each(sRespMAsters[0].data, function(i, val){
