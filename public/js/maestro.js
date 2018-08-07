@@ -17,11 +17,17 @@ function getMasters(){
 	{
 		console.log(sRespMasters);
 		
-
 		$.each(sRespMasters.data, function(i, val){
-			$("#idmaster").append('<option value="'+val.id+'">'+val.name+'</option>');
-		});
 
+					$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+							                  '<td>'+val.id+'</td>'+
+							                  '<td>'+val.name+'</td>'+
+							                  '<td>'+val.name+'</td>'+
+							                  '<td>'+val.status+'</td>'+
+							                '</tr>');
+				});
+
+				$("#divMaster").removeClass("hidden");
 	});
 }
 
