@@ -58,6 +58,12 @@ class HomeController extends Controller
         return view('/login');
     }
 
+    public function getViewMater()
+    {
+        config(['app.pagetitle' => 'Seccion de Maestro | Plataforma']);
+        return view('/maestro');
+    }
+
     public function getHome(){
         $menu = new User\UserController;
         $menus =  $menu->getMenu();
