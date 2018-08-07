@@ -8,10 +8,25 @@
 	<div class="container-fluid spark-screen">
 		<div class="row">
 			<div class="col-md-4 col-sm-4 col-xs-12">
-			<label for="idmaster"><b>Seleccione Categoria</b></label>
-			<select id="idmaster" class="form-control select2" name="master">
-				
-			</select>
+				<table id="master" class="table table-bordered table-hover dataTable" role="gridMaster">
+					<thead>
+		                <tr role="row">
+		                	<th class="sorting_asc" tabindex="0">Id
+		                	</th>
+		                	<th class="sorting" tabindex="0">name
+		                	</th>
+		                	<th class="sorting" tabindex="0">desIngles</th>
+		                	<th class="sorting" tabindex="0" >desIngles
+		                	</th>
+		                	<th class="sorting" tabindex="0">Status
+		                	</th>
+		                </tr>
+                </thead>
+                <tbody>
+                	
+                </tbody>
+					
+				</table>
 		</div>		
 			<!-- <div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
