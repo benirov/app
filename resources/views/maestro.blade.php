@@ -13,8 +13,6 @@
 		                <tr role="row">
 		                	<th class="sorting_asc" tabindex="0">Id
 		                	</th>
-		                	<th class="sorting" tabindex="0">name
-		                	</th>
 		                	<th class="sorting" tabindex="0">descIngles</th>
 		                	<th class="sorting" tabindex="0" >descEspañol
 		                	</th>
