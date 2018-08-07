@@ -11,7 +11,7 @@ class master extends Model
      protected $fillable =
      [
        'typeUser',
-       'permittingUser'
+       'permittingUser',
        'name'
      ];
 }
