@@ -8,7 +8,7 @@
 	<div class="container-fluid spark-screen">
 		<div class="row">
 			<div class="col-md-4 col-sm-4 col-xs-12">
-			<label for="txtdocument"><b>Seleccione Categoria</b></label>
+			<label for="idmaster"><b>Seleccione Categoria</b></label>
 			<select id="idmaster" class="form-control select2" name="master">
 				
 			</select>

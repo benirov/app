@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Master;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 
-class MasterController extends Controller
+class MasterController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,10 @@ class MasterController extends Controller
      */
     public function index()
     {
-        //
+        $users = master::all();
+        // return response()->json(['data' =>$users], 200);
+        return $this->showAll($users);
+        exit();
     }
 
     /**
