@@ -11,7 +11,7 @@ function getMasters()
 			console.log(sRespMasters);
 			
 
-			$.each(sRespMAsters.data, function(i, val){
+			$.each(sRespMasters.data, function(i, val){
 				$("#idmaster").append('<option value="'+val.id+'">'+val.name+'</option>');
 			});
 
