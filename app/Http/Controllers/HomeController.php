@@ -58,7 +58,7 @@ class HomeController extends Controller
         return view('/login');
     }
 
-    public function getViewMater()
+    public function getViewMaster()
     {
         config(['app.pagetitle' => 'Seccion de Maestro | Plataforma']);
         return view('/maestro');

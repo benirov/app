@@ -30,6 +30,6 @@ Route::resource('users', 'User\UserController');
 Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
 
-Route::resource('masters', 'User\UserController');
+Route::resource('masters', 'Master\MasterController');
 // Route::resource('Util', 'UtilController');
 
