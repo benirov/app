@@ -25,4 +25,3 @@
 		</div>
 	</div>
 @endsection
-<script src="{{secure_asset('/js/maestro.js')}}"></script>
