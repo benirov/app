@@ -31,6 +31,9 @@ return [
 
     'section' => env('TITLE_SECTION'),
 
+    'namejs' => env('TITLE_JS'),
+    
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

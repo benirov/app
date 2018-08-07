@@ -60,6 +60,7 @@ desired effect
 @section('scripts')
     @include('adminlte::layouts.partials.scripts')
     @include('adminlte::layouts.partials.contentplugin')
+    @include('adminlte::layouts.partials.uploadjs')
 @show
 
 </body>
