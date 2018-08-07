@@ -15,8 +15,8 @@
 		                	</th>
 		                	<th class="sorting" tabindex="0">name
 		                	</th>
-		                	<th class="sorting" tabindex="0">desIngles</th>
-		                	<th class="sorting" tabindex="0" >desIngles
+		                	<th class="sorting" tabindex="0">descIngles</th>
+		                	<th class="sorting" tabindex="0" >descEspañol
 		                	</th>
 		                	<th class="sorting" tabindex="0">Status
 		                	</th>
