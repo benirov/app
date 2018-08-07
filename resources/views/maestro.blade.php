@@ -7,25 +7,30 @@
 @section('main-content')
 	<div class="container-fluid spark-screen">
 		<div class="row">
-			<div id="divMaster" class="col-md-4 col-sm-4 col-xs-12 hidden">
-				<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">
-					<thead>
-		                <tr role="row">
-		                	<th class="sorting_asc" tabindex="0">Id
-		                	</th>
-		                	<th class="sorting" tabindex="0">descIngles</th>
-		                	<th class="sorting" tabindex="0" >descEspañol
-		                	</th>
-		                	<th class="sorting" tabindex="0">Status
-		                	</th>
-		                </tr>
-                </thead>
-                <tbody>
-                	
-                </tbody>
-					
-				</table>
-		</div>		
+			<div clas="box">
+				<div id="divMaster" class="col-md-4 col-sm-4 col-xs-12 hidden">
+					<br>
+					<h3 class="box-title">Categorias</h3>
+					<br>
+					<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">
+						<thead>
+			                <tr role="row">
+			                	<th class="sorting_asc" tabindex="0">Id
+			                	</th>
+			                	<th class="sorting" tabindex="0">descIngles</th>
+			                	<th class="sorting" tabindex="0" >descEspañol
+			                	</th>
+			                	<th class="sorting" tabindex="0">Status
+			                	</th>
+			                </tr>
+	                </thead>
+	                <tbody>
+	                	
+	                </tbody>
+						
+					</table>
+				</div>
+			</div>	
 			<!-- <div class="col-md-8 col-md-offset-2">
 				<div class="panel panel-default">
 					<div class="panel-heading">Home</div>
