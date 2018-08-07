@@ -12,7 +12,7 @@
 					<h3 class="box-title">Categorias</h3>
 					<br>
 					<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">
-						<thead>
+						<thead class="colorblue">
 			                <tr role="row">
 			                	<th class="sorting_asc" tabindex="0">Id
 			                	</th>
