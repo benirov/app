@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ApiController;
 use App\master;
+use App\masterDetail;
 
 class MasterController extends ApiController
 {
@@ -86,5 +87,11 @@ class MasterController extends ApiController
     public function destroy($id)
     {
         //
+    }
+
+    public function getMasterDetail($id){
+        $MasterDetail =  master::find($id);
+         return $MasterDetail->getMasterDetail;
+
     }
 }

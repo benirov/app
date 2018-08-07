@@ -14,4 +14,8 @@ class master extends Model
        'permittingUser',
        'name'
      ];
+
+     public function getMasterDetail(){
+     	 return $this->hasMany('App\masterdetail', 'fkIdMaster', 'id');
+     }
 }
