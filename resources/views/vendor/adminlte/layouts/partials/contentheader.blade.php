@@ -1,6 +1,6 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
-    <h1>
+    <h1 class="box-header">
         @yield('contentheader_title', config('app.section'))
         <small>@yield('contentheader_description')</small>
     </h1>
