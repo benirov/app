@@ -32,7 +32,13 @@ function getMasterDetail(val){
 		
 
 		$.each(sRespMasters.data, function(i, val){
-			$("#idmaster").append('<option value="'+val.id+'">'+val.name+'</option>');
+
+			$("#master tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+					                  '<td class="sorting_1">'+val.id+'</td>'+
+					                  '<td>'+val.name+'</td>'+
+					                  '<td>'+val.name+'</td>'+
+					                  '<td>'+val.status+'</td>'+
+					                '</tr>');
 		});
 
 	});
