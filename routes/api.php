@@ -31,6 +31,6 @@ Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
 
 Route::resource('masters', 'Master\MasterController');
-Route::resource('masterdetail', 'MasterDetail\MasterDetailController');
+Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
 // Route::resource('Util', 'UtilController');
 
