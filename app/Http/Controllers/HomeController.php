@@ -72,6 +72,7 @@ class HomeController extends Controller
     public function getHome(){
         $menu = new User\UserController;
         $menus =  $menu->getMenu();
+        config(['app.namejs' => '/js/home.js']);
         config(['app.pagetitle' => 'Aqui podras visualizar']);
       return view('/home')->with('menu', $menus);
     }
