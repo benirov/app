@@ -63,6 +63,7 @@ class HomeController extends Controller
         $menu = new User\UserController;
         $menus =  $menu->getMenu();
         config(['app.pagetitle' => 'Seccion de Maestro | Plataforma']);
+        config(['app.section' => 'Maestro']);
         return view('/maestro')->with('menu', $menus);
     }
 

@@ -29,6 +29,8 @@ return [
 
     'pagetitle' => env('TITLE_PAGE'),
 
+    'section' => env('TITLE_SECTION'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
