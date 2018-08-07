@@ -9,7 +9,14 @@ $(document).ready(function()
 			getMasterDetail($(this).val());
 			console.log($(this).val());
 		}
+	});
+
+	$("#mastertable tbody tr").on("click", function()
+	{
+		$("#mastertable tbody tr").removeClass("active");
+		$(this).toggleClass("active");
 	})
+
 });
 
 function getMasters(){
