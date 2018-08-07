@@ -4,6 +4,7 @@ namespace App\Http\Controllers\MasterDetail;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 
 class MasterDetailController extends ApiController
 {
