@@ -11,7 +11,7 @@ $(document).ready(function()
 		}
 	});
 
-	$("#mastertable tbody tr").on("click", function()
+	$("#mastertable tbody tr").click(function()
 	{
 		console.log("click");
 		$("#mastertable tbody tr").removeClass("active");
