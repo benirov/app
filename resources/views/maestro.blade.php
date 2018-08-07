@@ -8,7 +8,7 @@
 	<div class="container-fluid spark-screen">
 		<div class="row">
 			<div class="col-md-4 col-sm-4 col-xs-12">
-				<table id="master" class="table table-bordered table-hover dataTable" role="gridMaster">
+				<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">
 					<thead>
 		                <tr role="row">
 		                	<th class="sorting_asc" tabindex="0">Id

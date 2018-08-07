@@ -33,7 +33,7 @@ function getMasterDetail(val){
 
 		$.each(sRespMasters.data, function(i, val){
 
-			$("#master tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+			$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
 					                  '<td class="sorting_1">'+val.id+'</td>'+
 					                  '<td>'+val.name+'</td>'+
 					                  '<td>'+val.name+'</td>'+
