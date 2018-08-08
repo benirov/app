@@ -32,4 +32,9 @@ class client extends Model
         'fkIdTypeClient',
         'status',
     ];
+
+
+     public function getUserClients(){
+       return $this->hasMany('App\User', 'fkIdClient', 'id');
+     }
 }

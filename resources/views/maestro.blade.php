@@ -9,7 +9,12 @@
 		<div class="row">
 			<div clas="box">
 				<div id="divMaster" class="col-md-4 col-sm-4 col-xs-12 hidden">
-					<h3 class="box-title">Categorias</h3>
+					<div class="col-md-8 col-sm-8 col-xs-8">
+						<h3 class="box-title">Categorias</h3>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<button type="submit" class="btn btn-info"><i class="fas fa-plus"></i></button>
+					</div>
 					<br>
 					<table id="mastertable" class="table table-bordered table-hover dataTable" role="gridMaster">
 						<thead class="colorblue">

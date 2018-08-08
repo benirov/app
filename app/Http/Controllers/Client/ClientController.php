@@ -82,4 +82,11 @@ class ClientController extends Controller
     {
         //
     }
+
+
+    public function getUserClients($id){
+        $client = client::find($id);
+        return $this->showAll($client->getUserClients, 200);
+        
+    }
 }

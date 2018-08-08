@@ -91,7 +91,7 @@ class MasterController extends ApiController
 
     public function getMasterDetail($id){
         $MasterDetail =  master::find($id);
-         return $MasterDetail->getMasterDetail;
+        return $this->showAll($MasterDetail->getMasterDetail, 200);
 
     }
 }

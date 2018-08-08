@@ -24,13 +24,15 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     #adminlte_api_routes
 });
 
-// Route::post('insertUser', 'UserController@store');
+Route::group(['middleware' => 'verifySession'], function () {
+	Route::resource('users', 'User\UserController');
+	Route::resource('company', 'Company\CompanyController');
+	Route::resource('getUser', 'Auth\LoginController');
 
-Route::resource('users', 'User\UserController');
-Route::resource('company', 'Company\CompanyController');
-Route::resource('getUser', 'Auth\LoginController');
-
-Route::resource('masters', 'Master\MasterController');
-Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
-// Route::resource('Util', 'UtilController');
+	Route::resource('masters', 'Master\MasterController');
+	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
+	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients');
+Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
+     
+});
 

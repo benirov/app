@@ -32,9 +32,6 @@ class User extends Authenticatable
         
     ];
 
-    public function User(){
-      return $this->belongsTo(master::class);
-    }
 
     public function typeUser(){
       return $this->typeUser == User::typeUser;

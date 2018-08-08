@@ -23,6 +23,11 @@ class company extends Model
       'status'
   ];
 
+
+  public function getClient(){
+       return $this->hasOne('App\client', 'fkIdCompanies ', 'id');
+     }
+
   // public function User(){
   //   return $this->belongsTo(User::class);
   // }

@@ -16,7 +16,7 @@ $(document).ready(function()
 		console.log("click");
 		$("#mastertable tbody tr").removeClass("active");
 		$(this).toggleClass("active");
-	})
+	});
 
 });
 

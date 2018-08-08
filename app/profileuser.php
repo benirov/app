@@ -3,6 +3,7 @@
 namespace App;
 use App\masterdetail
 use App\usermenu
+use App\User
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,6 +24,11 @@ class profileuser extends Model
 
     public function UserMenu(){
       return $this->belongsTo(usermenu::class);
+    }
+
+    public function getProfileUser($id)
+    {
+     return $this->hasMany(User::class); 
     }
 
 }

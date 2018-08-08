@@ -157,4 +157,9 @@ class CompanyController extends ApiController
     {
         //
     }
+
+    public function getClients($id){
+        $company = company::find($id);
+        return $this->showOne($company->getClient, 201);
+    }
 }
