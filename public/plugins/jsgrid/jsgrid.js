@@ -1946,8 +1946,10 @@
 
             if(this.autosearch) {
                 $result.on("keypress", function(e) {
+                    console.log("aqui");
                     if(e.which === 13) {
                         grid.search();
+                        console.log("aqui adentro");
                         e.preventDefault();
                     }
                 });
