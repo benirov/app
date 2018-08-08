@@ -25,6 +25,7 @@ class verifySession
      */
     public function handle($request, Closure $next, $session)
     {
+        echo $session;
         // session('key')
         // Session::put("sessionActive", 1);
         if($session != 1  || !$session ){
