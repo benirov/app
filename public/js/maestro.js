@@ -18,6 +18,27 @@ $(document).ready(function()
 		$(this).toggleClass("active");
 	});
 
+	 $("#jsGrid").jsGrid({
+        width: "100%",
+        height: "400px",
+ 
+        inserting: true,
+        editing: true,
+        sorting: true,
+        paging: true,
+ 
+        data: clients,
+ 
+        fields: [
+            { name: "Name", type: "text", width: 150, validate: "required" },
+            { name: "Age", type: "number", width: 50 },
+            { name: "Address", type: "text", width: 200 },
+            { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
+            { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
+            { type: "control" }
+        ]
+    });
+
 });
 
 function getMasters(){
