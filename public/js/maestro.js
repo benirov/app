@@ -45,7 +45,7 @@ $(document).ready(function()
         data: clients,
  
         fields: [
-            { name: "Name", type: "text", width: 150, sorting: true validate: "required" },
+            { name: "Name", type: "text", width: 150, sorting: true, validate: "required" },
             { name: "Age", type: "number", width: 50, sorting: true },
             { name: "Address", type: "text", width: 200, sorting: true },
             { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
