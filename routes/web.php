@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Session;
 
 $session = Session::get("sessionActive");
 
-Route::group(['middleware' => 'verifySession:$session'], function () {
+Route::group(['middleware' => 'verifySession:1'], function () {
        
      Route::get('/home', 'HomeController@getHome')->name('home');
      Route::get('/maestro', 'HomeController@getViewMaster')->name('master');
