@@ -24,7 +24,7 @@ use Illuminate\Http\Request;
 	Route::resource('company', 'Company\CompanyController');
 	Route::resource('getUser', 'Auth\LoginController');
 
-	Route::resource('masters', 'Master\MasterController')->middleware('verifySession');;
+	Route::resource('masters', 'Master\MasterController')->middleware('verifySession');
 	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
 	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients');
 	Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
