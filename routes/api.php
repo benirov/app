@@ -28,7 +28,10 @@ $Session = Session::get("sessionActive");
 	Route::resource('masters', 'Master\MasterController');
 	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
 	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients')->middleware('verifySession:$Session');
-	Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
+	Route::get(['verifySession' => 'Session:$Session'], function()
+		{
+			'clientusers/{id}', 'Client\ClientController@getUserClients');	
+		}       
      
 
 

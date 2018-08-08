@@ -20,6 +20,7 @@ class verifySession
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
+    *  @param string $session
      * @return mixed
      */
     public function handle($request, Closure $next, $session)
