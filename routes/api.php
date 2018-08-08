@@ -19,15 +19,15 @@ use Illuminate\Http\Request;
 
 
 
-Route::group(['middleware' => 'verifySession'], function () {
+
 	Route::resource('users', 'User\UserController');
 	Route::resource('company', 'Company\CompanyController');
 	Route::resource('getUser', 'Auth\LoginController');
 
-	Route::resource('masters', 'Master\MasterController');
+	Route::resource('masters', 'Master\MasterController')->middleware('verifySession');;
 	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
 	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients');
 	Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
      
-});
+
 
