@@ -38,19 +38,19 @@ $(document).ready(function()
         height: "400px",
  
         filtering: true,
+        inserting: true,
         editing: true,
         sorting: true,
         paging: true,
-        autoload: true,
  
         data: clients,
  
         fields: [
-            { name: "Name", type: "text", width: 150, sorting: true, validate: "required" },
-            { name: "Age", type: "number", width: 50, sorting: true },
-            { name: "Address", type: "text", width: 200, sorting: true },
+            { name: "Name", type: "text", width: 150, validate: "required" },
+            { name: "Age", type: "number", width: 50 },
+            { name: "Address", type: "text", width: 200 },
             { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
-            { name: "Married", type: "checkbox", title: "Is Married", sorting: true },
+            { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
             { type: "control" }
         ]
     });
