@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // })->middleware('auth:api');
 
-
+$Session = Session::get("sessionActive");
 
 
 	Route::resource('users', 'User\UserController');
@@ -26,7 +27,7 @@ use Illuminate\Http\Request;
 
 	Route::resource('masters', 'Master\MasterController');
 	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
-	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients')->middleware('verifySession');
+	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients')->middleware('verifySession:$Session');
 	Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
      
 

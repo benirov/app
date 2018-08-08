@@ -22,11 +22,11 @@ class verifySession
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $session)
     {
         // session('key')
         // Session::put("sessionActive", 1);
-        if(session('sessionActive') != 1  || !session('sessionActive') ){
+        if($session != 1  || !$session ){
             return redirect('/login'); 
         }
         return $next($request);

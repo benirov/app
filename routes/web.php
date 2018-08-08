@@ -12,18 +12,17 @@
 |
 */
 
-
 Route::group(['middleware' => 'verifySession'], function () {
        
      Route::get('/home', 'HomeController@getHome')->name('home');
      Route::get('/maestro', 'HomeController@getViewMaster')->name('master');
 });
 
-// Route::group(['middleware' => 'verifyLogin'], function () {
+Route::group(['middleware' => 'verifyLogin'], function () {
        
      Route::get('/', 'HomeController@getViewLogin')->name('login');
 	Route::get('/login', 'HomeController@getViewLogin')->name('login');
-   // });
+   });
 
 
 
