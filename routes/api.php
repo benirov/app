@@ -15,6 +15,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Session;
 
+$session = Session::get("sessionActive");
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
@@ -26,7 +28,7 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     #adminlte_api_routes
 });
 
-Route::group(['middleware' => 'verifySession:Session::get("sessionActive")'], function () {
+Route::group(['middleware' => 'verifySession:$session'], function () {
 	Route::resource('users', 'User\UserController');
 Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
