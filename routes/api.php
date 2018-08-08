@@ -13,13 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+// Route::get('/user', function (Request $request) {
+//     return $request->user();
+// })->middleware('auth:api');
 
 
 
-Route::group(['middleware' => 'verifySession:api'], function () {
+Route::group(['middleware' => 'verifySession'], function () {
 	Route::resource('users', 'User\UserController');
 	Route::resource('company', 'Company\CompanyController');
 	Route::resource('getUser', 'Auth\LoginController');
