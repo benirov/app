@@ -32,7 +32,7 @@ Route::group(['middleware' => 'verifySession'], function () {
 	Route::resource('masters', 'Master\MasterController');
 	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
 	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients');
-Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
+	Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
      
 });
 
