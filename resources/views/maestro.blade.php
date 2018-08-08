@@ -8,7 +8,7 @@
 	<div class="container-fluid spark-screen">
 		<div class="row">
 			<div clas="box">
-				<div id="divMaster" class="col-md-4 col-sm-4 col-xs-12 hidden">
+				<div id="divMaster" class="col-md-5 col-sm-4 col-xs-12">
 					<div class="col-md-8 col-sm-8 col-xs-8">
 						<h3 class="box-title">Categorias</h3>
 					</div>
