@@ -12,7 +12,7 @@
 |
 */
 
-Route::group(['middleware' => 'verifySession'], function () {
+Route::group(['middleware' => 'verifySession:Session::get("sessionActive")'], function () {
        
      Route::get('/home', 'HomeController@getHome')->name('home');
      Route::get('/maestro', 'HomeController@getViewMaster')->name('master');
