@@ -33,22 +33,30 @@ $(document).ready(function()
         { Name: "United Kingdom", Id: 3 }
     ];
 
-	 $("#jsGrid").jsGrid({
+	$("#jsGrid").jsGrid({
+        height: "90%",
         width: "100%",
-        height: "400px",
  
-        inserting: true,
+        filtering: true,
         editing: true,
         sorting: true,
         paging: true,
+        autoload: true,
  
+        pageSize: 15,
+        pageButtonCount: 5,
+ 
+        deleteConfirm: "Do you really want to delete the client?",
+ 
+        controller: db,
+
         data: clients,
  
         fields: [
-            { name: "Name", type: "text", width: 150, validate: "required" },
+            { name: "Name", type: "text", width: 150 },
             { name: "Age", type: "number", width: 50 },
             { name: "Address", type: "text", width: 200 },
-            { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
+            { name: "Country", type: "select", items: db.countries, valueField: "Id", textField: "Name" },
             { name: "Married", type: "checkbox", title: "Is Married", sorting: false },
             { type: "control" }
         ]
@@ -71,7 +79,7 @@ function getMasters(){
 							                '</tr>');
 				});
 
-				$("#divMaster").removeClass("hidden");
+				// $("#divMaster").removeClass("hidden");
 	});
 }
 
