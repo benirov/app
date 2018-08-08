@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Session;
 //     return $request->user();
 // })->middleware('auth:api');
 
-$Session = Session::get("sessionActive");
+
 
 
 	Route::resource('users', 'User\UserController');
@@ -26,12 +26,9 @@ $Session = Session::get("sessionActive");
 	Route::resource('getUser', 'Auth\LoginController');
 
 	Route::resource('masters', 'Master\MasterController');
-	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
-	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients')->middleware('verifySession:$Session');
-	Route::get(['verifySession' => 'Session:$Session'], function()
-		{
-			'clientusers/{id}', 'Client\ClientController@getUserClients');	
-		}       
+	Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail')->middleware('verifySession:0');;
+	Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients')->middleware('verifySession:1');
+	Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
      
 
 
