@@ -104,6 +104,8 @@ function drawGrid(Data) {
         { "Name": "Ramona Benton", "Age": 32, "Country": 3, "Address": "Ap #614-689 Vehicula Street", "Married": true }
     ];
 
+    console.log(clients);
+
 	 $("#jsGrid").jsGrid({
         width: "100%",
         height: "400px",
@@ -115,16 +117,14 @@ function drawGrid(Data) {
         paging: true,
         autoload: true,
 
-        pageSize: 10,
-        pageButtonCount: 5,
  
         data: Data,
  
         fields: [
-            { name: "Id", type: "text", width: 50, validate: "required" },
-            { name: "Name", type: "number", width: 100 },
-            { name: "descIngles ", type: "text", width: 100 },
-            { name: "descEspañol ", type: "text", width: 100},
+            { name: "id", type: "text", width: 50, validate: "required" },
+            { name: "name", type: "number", width: 100 },
+            { name: "status", type: "text", width: 100 },
+            // { name: "descEspañol ", type: "text", width: 100},
             { type: "control" }
         ]
     });
