@@ -80,7 +80,7 @@ function drawGrid(Data) {
         paging: true,
         autoload: true,
         callajax: true,
-        execajax: 'getMasterDetail()',
+        execajax: 'getMasterDetail',
 
 		 
         // data: Data,
