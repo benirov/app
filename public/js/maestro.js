@@ -91,6 +91,8 @@ function drawGrid(Data) {
 
     db.data = Data;
 
+    window.db = db;
+
 	 $("#jsGrid").jsGrid({
         width: "100%",
         height: "400px",
