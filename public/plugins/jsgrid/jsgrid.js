@@ -87,7 +87,8 @@
             console.log("aqui editar");
             if(this.callajax){
                 console.log(this);
-                this.execajax;
+                return self[this.execajax]();
+                // this.execajax;
 
             }
             if(this.editing) {
