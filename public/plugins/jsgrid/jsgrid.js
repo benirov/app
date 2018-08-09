@@ -85,6 +85,11 @@
 
         rowClick: function(args) {
             console.log("aqui editar");
+            if(this.callajax){
+                console.log(this);
+                execajax();
+
+            }
             if(this.editing) {
                 this.editItem($(args.event.target).closest("tr"));
             }
@@ -110,6 +115,9 @@
         editing: false,
         editRowRenderer: null,
         editRowClass: "jsgrid-edit-row",
+
+        callajax: false,
+        execajax: '',
 
         confirmDeleting: true,
         deleteConfirm: "Are you sure?",

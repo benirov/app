@@ -38,29 +38,30 @@ function getMasters(){
 	});
 }
 
-// function getMasterDetail(val){
-// 	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
-// 	{
-// 		console.log(sRespMasters.data[0]);
+function getMasterDetail(val){
+	console.log("aqui");
+	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
+	{
+		// console.log(sRespMasters.data[0]);
 
 
-// 		drawGrid(sRespMasters.data[0]);
+		// drawGrid(sRespMasters.data[0]);
 		
 
-// 		// $.each(sRespMasters.data, function(i, val){
+		// $.each(sRespMasters.data, function(i, val){
 
-// 		// 	$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
-// 		// 			                  '<td class="sorting_1">'+val.id+'</td>'+
-// 		// 			                  '<td>'+val.name+'</td>'+
-// 		// 			                  '<td>'+val.name+'</td>'+
-// 		// 			                  '<td>'+val.status+'</td>'+
-// 		// 			                '</tr>');
-// 		// });
+		// 	$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+		// 			                  '<td class="sorting_1">'+val.id+'</td>'+
+		// 			                  '<td>'+val.name+'</td>'+
+		// 			                  '<td>'+val.name+'</td>'+
+		// 			                  '<td>'+val.status+'</td>'+
+		// 			                '</tr>');
+		// });
 
-// 		// $("#divMaster").removeClass("hidden");
+		// $("#divMaster").removeClass("hidden");
 
-// 	});
-// }
+	});
+}
 
 function drawGrid(Data) {
 
@@ -74,10 +75,12 @@ function drawGrid(Data) {
  
         filtering: true,
         inserting: false,
-        editing: true,
+        editing: false,
         sorting: true,
         paging: true,
         autoload: true,
+        callajax: true,
+        execajax: 'getMasterDetail',
 
 		 
         // data: Data,
