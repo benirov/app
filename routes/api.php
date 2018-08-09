@@ -28,7 +28,7 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     #adminlte_api_routes
 });
 
-Route::group(['middleware' => 'verifySession:1'], function () {
+Route::group(['middleware' => 'verifySession:{$session}'], function () {
 	Route::resource('users', 'User\UserController');
 Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
