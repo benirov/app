@@ -26,48 +26,45 @@ function getMasters(){
 	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMasters)
 	{
 		console.log(sRespMasters);
-		
-		$.each(sRespMasters.data, function(i, val){
 
-					$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
-							                  '<td>'+val.id+'</td>'+
-							                  '<td>'+val.name+'</td>'+
-							                  '<td>'+val.name+'</td>'+
-							                  '<td>'+val.status+'</td>'+
-							                '</tr>');
-				});
+		console.log(sRespMasters.data[0]);
+
+
+		drawGrid(sRespMasters.data);
+		
+		
 
 				// $("#divMaster").removeClass("hidden");
 	});
 }
 
-function getMasterDetail(val){
-	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
-	{
-		console.log(sRespMasters.data[0]);
+// function getMasterDetail(val){
+// 	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
+// 	{
+// 		console.log(sRespMasters.data[0]);
 
 
-		drawGrid(sRespMasters.data[0]);
+// 		drawGrid(sRespMasters.data[0]);
 		
 
-		// $.each(sRespMasters.data, function(i, val){
+// 		// $.each(sRespMasters.data, function(i, val){
 
-		// 	$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
-		// 			                  '<td class="sorting_1">'+val.id+'</td>'+
-		// 			                  '<td>'+val.name+'</td>'+
-		// 			                  '<td>'+val.name+'</td>'+
-		// 			                  '<td>'+val.status+'</td>'+
-		// 			                '</tr>');
-		// });
+// 		// 	$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+// 		// 			                  '<td class="sorting_1">'+val.id+'</td>'+
+// 		// 			                  '<td>'+val.name+'</td>'+
+// 		// 			                  '<td>'+val.name+'</td>'+
+// 		// 			                  '<td>'+val.status+'</td>'+
+// 		// 			                '</tr>');
+// 		// });
 
-		// $("#divMaster").removeClass("hidden");
+// 		// $("#divMaster").removeClass("hidden");
 
-	});
-}
+// 	});
+// }
 
 function drawGrid(Data) {
 
-	console.log(Data);
+	// console.log(Data);
 
 	var clients = [
         { "Name": "Otto Clay", "Age": 25, "Country": 1, "Address": "Ap #897-1459 Quam Avenue", "Married": true },
