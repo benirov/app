@@ -23,7 +23,7 @@ $(document).ready(function()
 });
 
 function getMasters(){
-	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMasters)
+	$.when(getQuery('masters', '', '', true, 1)).done(function (sRespMasters)
 	{
 		console.log(sRespMasters);
 
