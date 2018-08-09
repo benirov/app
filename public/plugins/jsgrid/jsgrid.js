@@ -84,6 +84,7 @@
         rowRenderer: null,
 
         rowClick: function(args) {
+            console.log("aqui editar");
             if(this.editing) {
                 this.editItem($(args.event.target).closest("tr"));
             }

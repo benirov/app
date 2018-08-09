@@ -13,7 +13,7 @@
 
 <link href="{{ secure_asset('/plugins/jsgrid/jsgrid.min.css') }}" rel="stylesheet" />
 <link href="{{ secure_asset('/plugins/jsgrid/jsgrid-theme.min.css') }}" rel="stylesheet" />
-<script src="{{ secure_asset('/plugins/jsgrid/jsgrid.min.js') }}"></script>
+<script src="{{ secure_asset('/plugins/jsgrid/jsgrid.js') }}"></script>
 
 <!-- Utility Js -->
 <script src="{{ secure_asset('/js/Util.js') }}"></script>
