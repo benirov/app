@@ -86,10 +86,11 @@
         rowClick: function(args) {
             console.log(args);
             if(this.callajax){
-                console.log(this);
+                // console.log(this);
                 return self[this.execajax](args.item.id);
                 $("#"+this.tableid+" tbody tr").removeClass("active");
                 $("#"+args.itemIndex).addClass("active");
+                $("#"+args.itemIndex);
 
             }
             if(this.editing) {
