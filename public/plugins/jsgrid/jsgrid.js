@@ -478,7 +478,7 @@
         _createHeaderRow: function() {
             if($.isFunction(this.headerRowRenderer))
                 return $(this.renderTemplate(this.headerRowRenderer, this));
-
+            console.log(this);
             var $result = $("<tr>").addClass(this.headerRowClass);
 
             this._eachField(function(field, index) {
@@ -509,7 +509,7 @@
                 return $(this.renderTemplate(this.filterRowRenderer, this));
 
             var $result = $("<tr>").addClass(this.filterRowClass);
-
+            console.log(this);
             this._eachField(function(field) {
                 this._prepareCell("<td>", field, "filtercss")
                     .append(this.renderTemplate(field.filterTemplate, field))
@@ -617,7 +617,7 @@
 
         _createRow: function(item, itemIndex) {
             var $result;
-
+            console.log(itemIndex);
             if($.isFunction(this.rowRenderer)) {
                 $result = this.renderTemplate(this.rowRenderer, this, { item: item, itemIndex: itemIndex });
             } else {
