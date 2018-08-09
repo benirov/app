@@ -13,10 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-use Illuminate\Support\Facades\Session;
 
 // $session = Session::get("sessionActive");
-$session = \Session::get('sessionActive');
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -29,7 +27,7 @@ Route::group(['prefix' => 'v1','middleware' => 'auth:api'], function () {
     #adminlte_api_routes
 });
 
-Route::group(['middleware' => 'verifySession:'.$session], function () {
+
 	Route::resource('users', 'User\UserController');
 Route::resource('company', 'Company\CompanyController');
 Route::resource('getUser', 'Auth\LoginController');
@@ -39,5 +37,4 @@ Route::get('masterdetail/{id}', 'Master\MasterController@getMasterDetail');
 Route::get('clientcompanies/{id}', 'Company\CompanyController@getClients');
 Route::get('clientusers/{id}', 'Client\ClientController@getUserClients');       
      
-});
 

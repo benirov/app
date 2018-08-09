@@ -23,15 +23,12 @@ class verifySession
     *  @param string $session
      * @return mixed
      */
-    public function handle($request, Closure $next, $session)
+    public function handle($request, Closure $next)
     {
-        echo $session;
-        dd($session);
-        // session('key')
-        // Session::put("sessionActive", 1);
-        // if($session != 1  || !$session ){
-        //     return redirect('/login'); 
-        // }
+        
+         if(Session::get("sessionActive") != 1  || !Session::get("sessionActive")){
+            return redirect('/login'); 
+        }
         return $next($request);
     }
 }
