@@ -123,6 +123,7 @@ function drawGrid(Data) {
             data:Data,
             loadData: function (filter) {
                 return $.grep(this.data, function (item) {
+                	console.log(item);
                     return (!filter.id || item.id.indexOf(filter.id) >= 0) &&
                     		(!filter.name || item.name.indexOf(filter.name) >= 0) && 
                     		(!filter.status || item.status.indexOf(filter.status) >= 0)
