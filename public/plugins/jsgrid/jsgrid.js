@@ -84,11 +84,11 @@
         rowRenderer: null,
 
         rowClick: function(args) {
-            console.log("aqui editar");
+            console.log(args);
             if(this.callajax){
                 console.log(this);
                 return self[this.execajax]();
-                // this.execajax;
+                $("#"+this.execajax+" tbody tr").removeClass("active");
 
             }
             if(this.editing) {
@@ -195,6 +195,7 @@
         invalidClass: "jsgrid-invalid",
 
         containerClass: "jsgrid",
+        tableid: "tablejsgrid",
         tableClass: "jsgrid-table",
         gridHeaderClass: "jsgrid-grid-header",
         gridBodyClass: "jsgrid-grid-body",
@@ -432,7 +433,7 @@
                 $filterRow = this._filterRow = this._createFilterRow(),
                 $insertRow = this._insertRow = this._createInsertRow();
 
-            var $headerGrid = this._headerGrid = $("<table>").addClass(this.tableClass)
+            var $headerGrid = this._headerGrid = $("<table id='"+tableid+"'>").addClass(this.tableClass)
                 .append($headerRow)
                 .append($filterRow)
                 .append($insertRow);

@@ -72,7 +72,7 @@ function drawGrid(Data) {
 	 $("#jsGrid").jsGrid({
         width: "100%",
         height: "400px",
- 
+ 		tableid: "tblMaster",
         filtering: true,
         inserting: false,
         editing: false,
