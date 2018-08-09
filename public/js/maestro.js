@@ -30,7 +30,7 @@ function getMasters(){
 		console.log(sRespMasters.data[0]);
 
 
-		drawGrid(sRespMasters.data);
+		drawGrid(sRespMasters.data[0]);
 		
 		
 
