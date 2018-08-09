@@ -88,8 +88,8 @@
             if(this.callajax){
                 console.log(this);
                 return self[this.execajax](args.item.id);
-                $("#"+this.execajax+" tbody tr").removeClass("active");
-                $("#"+args.itemIndex).toggleClass("active");
+                $("#"+this.tableid+" tbody tr").removeClass("active");
+                $("#"+args.itemIndex).addClass("active");
 
             }
             if(this.editing) {
