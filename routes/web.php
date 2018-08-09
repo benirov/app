@@ -15,7 +15,7 @@
 use Illuminate\Support\Facades\Session;
 
 // $session = Session::get("sessionActive");
-$session \Session::get('sessionActive');
+$session = \Session::get('sessionActive');
 // quede aqui la variable de sesion hay que pasarla fuera de comillas
 Route::group(['middleware' => 'verifySession:'.$session], function () {
        

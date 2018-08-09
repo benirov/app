@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 // $session = Session::get("sessionActive");
-$session \Session::get('sessionActive');
+$session = \Session::get('sessionActive');
 
 Route::get('/user', function (Request $request) {
     return $request->user();
