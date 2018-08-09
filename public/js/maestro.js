@@ -40,7 +40,7 @@ function getMasters(){
 
 function getMasterDetail(val){
 	console.log("aqui");
-	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
+	$.when(getQuery('masterdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
 	{
 		// console.log(sRespMasters.data[0]);
 
