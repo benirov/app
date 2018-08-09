@@ -18,7 +18,55 @@ $(document).ready(function()
 		$(this).toggleClass("active");
 	});
 
-	 var clients = [
+	 
+
+});
+
+function getMasters(){
+	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMasters)
+	{
+		console.log(sRespMasters);
+		
+		$.each(sRespMasters.data, function(i, val){
+
+					$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+							                  '<td>'+val.id+'</td>'+
+							                  '<td>'+val.name+'</td>'+
+							                  '<td>'+val.name+'</td>'+
+							                  '<td>'+val.status+'</td>'+
+							                '</tr>');
+				});
+
+				// $("#divMaster").removeClass("hidden");
+	});
+}
+
+function getMasterDetail(val){
+	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
+	{
+		console.log(sRespMasters);
+
+		drawGrid(data);
+		
+
+		// $.each(sRespMasters.data, function(i, val){
+
+		// 	$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
+		// 			                  '<td class="sorting_1">'+val.id+'</td>'+
+		// 			                  '<td>'+val.name+'</td>'+
+		// 			                  '<td>'+val.name+'</td>'+
+		// 			                  '<td>'+val.status+'</td>'+
+		// 			                '</tr>');
+		// });
+
+		// $("#divMaster").removeClass("hidden");
+
+	});
+}
+
+function drawGrid(Data) {
+
+	var clients = [
         { "Name": "Otto Clay", "Age": 25, "Country": 1, "Address": "Ap #897-1459 Quam Avenue", "Married": true },
         { "Name": "Connor Johnston", "Age": 45, "Country": 2, "Address": "Ap #370-4647 Dis Av.", "Married": true },
         { "Name": "Lacey Hess", "Age": 29, "Country": 3, "Address": "Ap #365-8835 Integer St.", "Married": true },
@@ -55,13 +103,6 @@ $(document).ready(function()
 
         { "Name": "Ramona Benton", "Age": 32, "Country": 3, "Address": "Ap #614-689 Vehicula Street", "Married": true }
     ];
- 
-    var countries = [
-        { Name: "", Id: 0 },
-        { Name: "United States", Id: 1 },
-        { Name: "Canada", Id: 2 },
-        { Name: "United Kingdom", Id: 3 }
-    ];
 
 	 $("#jsGrid").jsGrid({
         width: "100%",
@@ -77,54 +118,15 @@ $(document).ready(function()
         pageSize: 10,
         pageButtonCount: 5,
  
-        data: clients,
+        data: Data,
  
         fields: [
-            { name: "Name", type: "text", width: 150, validate: "required" },
-            { name: "Age", type: "number", width: 50 },
-            { name: "Country", type: "select", items: countries, valueField: "Id", textField: "Name" },
+            { name: "Id", type: "text", width: 50, validate: "required" },
+            { name: "Name", type: "number", width: 100 },
+            { name: "descIngles ", type: "text", width: 100 },
+            { name: "descEspañol ", type: "text", width: 100},
             { type: "control" }
         ]
     });
 
-});
-
-function getMasters(){
-	$.when(getQuery('masters', 'json', '', true, 1)).done(function (sRespMasters)
-	{
-		console.log(sRespMasters);
-		
-		$.each(sRespMasters.data, function(i, val){
-
-					$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
-							                  '<td>'+val.id+'</td>'+
-							                  '<td>'+val.name+'</td>'+
-							                  '<td>'+val.name+'</td>'+
-							                  '<td>'+val.status+'</td>'+
-							                '</tr>');
-				});
-
-				// $("#divMaster").removeClass("hidden");
-	});
-}
-
-function getMasterDetail(val){
-	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
-	{
-		console.log(sRespMasters);
-		
-
-		$.each(sRespMasters.data, function(i, val){
-
-			$("#mastertable tbody").append('<tr id="'+val.id+'" role="row" class="odd">'+
-					                  '<td class="sorting_1">'+val.id+'</td>'+
-					                  '<td>'+val.name+'</td>'+
-					                  '<td>'+val.name+'</td>'+
-					                  '<td>'+val.status+'</td>'+
-					                '</tr>');
-		});
-
-		$("#divMaster").removeClass("hidden");
-
-	});
 }
