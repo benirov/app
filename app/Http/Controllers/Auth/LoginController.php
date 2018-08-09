@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\User;
 use App\Login;
-use Session;
+// use Session;
 
 class LoginController extends Controller
 {
