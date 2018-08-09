@@ -617,11 +617,11 @@
 
         _createRow: function(item, itemIndex) {
             var $result;
-            console.log(itemIndex);
+            // console.log(itemIndex);
             if($.isFunction(this.rowRenderer)) {
                 $result = this.renderTemplate(this.rowRenderer, this, { item: item, itemIndex: itemIndex });
             } else {
-                $result = $("<tr>");
+                $result = $("<tr id='"+itemIndex+"'>");
                 this._renderCells($result, item);
             }
 
