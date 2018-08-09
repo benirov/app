@@ -27,10 +27,10 @@ function getMasters(){
 	{
 		// console.log(sRespMasters);
 
-		console.log(JSON.stringify(sRespMasters.data));
+		console.log(sRespMasters.data);
 
 
-		drawGrid(JSON.stringify(sRespMasters.data));
+		drawGrid(sRespMasters.data);
 		
 		
 
