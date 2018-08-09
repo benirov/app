@@ -79,8 +79,9 @@ class LoginController extends Controller
         $request->session()->put('username', $login[0]->username);
         $request->session()->put('profileUser', $login[0]->profileUser);
         // session(['sessionActive' => true]);
-        
+
         // // Session::set('sessionActive', true);
+        echo "aqui";
         
         $request->session()->put('sessionActive', true);
          return redirect()->action('HomeController@getHome');
