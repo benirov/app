@@ -122,8 +122,9 @@ function drawGrid(Data) {
         controller: {
             data:Data,
             loadData: function (filter) {
+            	console.log(filter);
                 return $.grep(this.data, function (item) {
-                    return (!filter.Name || item.Name.indexOf(filter.Name) >= 0);
+                    return (!filter.name || item.name.indexOf(filter.name) >= 0);
                 });
             },          
         },
