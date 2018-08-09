@@ -433,7 +433,7 @@
                 $filterRow = this._filterRow = this._createFilterRow(),
                 $insertRow = this._insertRow = this._createInsertRow();
 
-            var $headerGrid = this._headerGrid = $("<table id='"+tableid+"'>").addClass(this.tableClass)
+            var $headerGrid = this._headerGrid = $("<table id='"+this.tableid+"'>").addClass(this.tableClass)
                 .append($headerRow)
                 .append($filterRow)
                 .append($insertRow);
@@ -448,7 +448,7 @@
         _createBody: function() {
             var $content = this._content = $("<tbody>");
 
-            var $bodyGrid = this._bodyGrid = $("<table>").addClass(this.tableClass)
+            var $bodyGrid = this._bodyGrid = $("<table id='"+this.tableid+"'>").addClass(this.tableClass)
                 .append($content);
 
             var $body = this._body = $("<div>").addClass(this.gridBodyClass)
