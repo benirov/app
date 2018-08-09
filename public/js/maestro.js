@@ -25,12 +25,12 @@ $(document).ready(function()
 function getMasters(){
 	$.when(getQuery('masters', '', '', true, 1)).done(function (sRespMasters)
 	{
-		console.log(sRespMasters);
+		// console.log(sRespMasters);
 
-		console.log(sRespMasters.data[0]);
+		console.log(JSON.stringify(sRespMasters.data));
 
 
-		drawGrid(sRespMasters.data[0]);
+		drawGrid(JSON.stringify(sRespMasters.data));
 		
 		
 
