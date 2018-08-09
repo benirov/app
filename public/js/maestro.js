@@ -95,8 +95,8 @@ function drawGrid(Data) {
  
         fields: [
             { name: "id", type: "text", width: 50, validate: "required", sorting: true, editing: false, },
-            { name: "name", type: "text", width: 100, sorting: true },
-            { name: "status", type: "text", width: 50, sorting: true },
+            { name: "name", type: "number", width: 100, sorting: true },
+            { name: "status", type: "number", width: 50, sorting: true },
             // { name: "descEspañol ", type: "text", width: 100},
             { type: "control" }
         ]
