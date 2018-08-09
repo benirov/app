@@ -123,17 +123,17 @@ function drawGrid(Data) {
             data:Data,
             loadData: function (filter) {
                 return $.grep(this.data, function (item) {
-                    return (!filter.id || item.id.indexOf(filter.id) >= 0) ||
-                    		(!filter.name || item.name.indexOf(filter.name) >= 0) || 
+                    return (!filter.id || item.id.indexOf(filter.id) >= 0) &&
+                    		(!filter.name || item.name.indexOf(filter.name) >= 0) && 
                     		(!filter.status || item.status.indexOf(filter.status) >= 0)
                 });
             },          
         },
  
         fields: [
-            { name: "id", type: "number", width: 50, validate: "required", sorting: true, editing: false, },
+            { name: "id", type: "text", width: 50, validate: "required", sorting: true, editing: false, },
             { name: "name", type: "text", width: 100, sorting: true },
-            { name: "status", type: "number", width: 50, sorting: true },
+            { name: "status", type: "text", width: 50, sorting: true },
             // { name: "descEspañol ", type: "text", width: 100},
             { type: "control" }
         ]
