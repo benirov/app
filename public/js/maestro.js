@@ -118,7 +118,15 @@ function drawGrid(Data) {
         autoload: true,
 
 		 
-        data: Data,
+        // data: Data,
+        controller: {
+            data:Data,
+            loadData: function (filter) {
+                return $.grep(this.data, function (item) {
+                    return (!filter.Name || item.Name.indexOf(filter.Name) >= 0);
+                });
+            },          
+        },
  
         fields: [
             { name: "id", type: "number", width: 50, validate: "required", sorting: true, editing: false, },
