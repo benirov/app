@@ -66,32 +66,7 @@ function drawGrid(Data) {
 
 	// console.log(Data);
 
-	var db = {
-
-        loadData: function(filter) {
-            return $.grep(this.data, function(client) {
-                return (!filter.id || client.id.indexOf(filter.status) > -1)
-                    && (!filter.name || client.name === filter.name)
-                    && (!filter.status || client.status.indexOf(filter.status) > -1)
-            });
-        },
-
-        insertItem: function(insertingClient) {
-            this.clients.push(insertingClient);
-        },
-
-        updateItem: function(updatingClient) { },
-
-        deleteItem: function(deletingClient) {
-            var clientIndex = $.inArray(deletingClient, this.clients);
-            this.clients.splice(clientIndex, 1);
-        }
-
-    };
-
-    db.data = Data;
-
-    window.db = db;
+	
 
 	 $("#jsGrid").jsGrid({
         width: "100%",
@@ -102,21 +77,20 @@ function drawGrid(Data) {
         editing: true,
         sorting: true,
         paging: true,
-        autoload: false,
+        autoload: true,
 
 		 
-         // data: Data,
-        controller: db,
-            // loadData: function (filter) {
-            //     return $.grep(this.data, function (item) {
-            //     	console.log(item);
-            //     	console.log(filter);
-            //         return (!filter.id || item.id.indexOf(filter.id) >= 0) &&
-            //         		(!filter.name || item.name.indexOf(filter.name) >= 0) && 
-            //         		(!filter.status || item.status.indexOf(filter.status) >= 0)
-            //     });
-            // },          
-        
+        // data: Data,
+        controller: {
+            data:Data,
+            loadData: function (filter) {
+                	return $.grep(this.data, function(item) {
+                		return (!filter.id || item.id === filter.id)
+                    	&& (!filter.name || item.name.indexOf(filter.name) > -1)
+                    	&& (!filter.status || item.status === filter.status);
+                });
+                     
+        },
  
         fields: [
             { name: "id", type: "text", width: 50, validate: "required", sorting: true, editing: false, },
