@@ -117,12 +117,7 @@ function drawGrid(Data) {
         paging: true,
         autoload: true,
 
-		 controller: {
-		            loadData: null,
-		            insertItem: null,
-		            updateItem: null,
-		            deleteItem: null
-		        },
+		 
         data: Data,
  
         fields: [
