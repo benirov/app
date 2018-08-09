@@ -44,9 +44,10 @@ function getMasters(){
 function getMasterDetail(val){
 	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
 	{
-		// console.log(sRespMasters);
+		console.log(sRespMasters.data[0]);
 
-		drawGrid(sRespMasters.data);
+
+		drawGrid(sRespMasters.data[0]);
 		
 
 		// $.each(sRespMasters.data, function(i, val){
