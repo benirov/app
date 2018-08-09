@@ -80,7 +80,7 @@ function drawGrid(Data) {
         autoload: false,
 
 		 
-        // data: Data,
+         data: Data,
         controller: {
             data:Data
             // loadData: function (filter) {
