@@ -44,9 +44,9 @@ function getMasters(){
 function getMasterDetail(val){
 	$.when(getQuery('mastersdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
 	{
-		console.log(sRespMasters);
+		// console.log(sRespMasters);
 
-		drawGrid(data);
+		drawGrid(sRespMasters.data);
 		
 
 		// $.each(sRespMasters.data, function(i, val){
@@ -65,6 +65,8 @@ function getMasterDetail(val){
 }
 
 function drawGrid(Data) {
+
+	console.log(Data);
 
 	var clients = [
         { "Name": "Otto Clay", "Age": 25, "Country": 1, "Address": "Ap #897-1459 Quam Avenue", "Married": true },
