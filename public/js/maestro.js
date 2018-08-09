@@ -90,7 +90,8 @@ function drawGrid(Data) {
                     	&& (!filter.status || item.status === filter.status);
                 });
                      
-        },
+        }
+    },
  
         fields: [
             { name: "id", type: "text", width: 50, validate: "required", sorting: true, editing: false, },
