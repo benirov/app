@@ -120,7 +120,7 @@ class LoginController extends Controller
     public function logout(){
       Cookie::forget('XSRF-TOKEN');
       Cookie::forget('laravel_session');
-      $request->session()->put('sessionActive', false);
+      session()->put('sessionActive', false);
       session()->forget("sessionActive");
       session()->flush();
       // Session::forget('sessionActive');
