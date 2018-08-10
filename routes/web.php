@@ -17,11 +17,24 @@
 // $session = Session::get("sessionActive");
 
 // quede aqui la variable de sesion hay que pasarla fuera de comillas
-Route::group(['middleware' => 'verifySession'], function () {
+// Route::group(['middleware' => 'verifySession'], function () {
        
-     Route::get('/home', 'HomeController@getHome')->name('home');
-     Route::get('/maestro', 'HomeController@getViewMaster')->name('master');
-});
+//      Route::get('/home', 'HomeController@getHome')->name('home');
+//      Route::get('/maestro', 'HomeController@getViewMaster')->name('master')->middleware('verifySession');
+// });
+
+Route::get('/home', function () {
+    //
+})->middleware('verifySession');
+
+Route::get('/maestro', function () {
+    //
+})->middleware('verifySession');
+
+// Route::get('/home', 'HomeController@getHome')->name('home');
+// Route::get('/maestro', 'HomeController@getViewMaster')->name('master')->middleware('verifySession');
+
+
 
 Route::group(['middleware' => 'verifyLogin'], function () {
        

@@ -117,7 +117,8 @@ class LoginController extends Controller
     // }
 
     public function logout(){
-      Session::flush();
+      Session::forget('sessionActive');
+      Session::forget();
       return redirect('/login');
     }
 }
