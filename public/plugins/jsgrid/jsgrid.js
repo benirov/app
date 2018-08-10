@@ -1289,8 +1289,9 @@
                                 '<label id="txt'+i+'"><b>'+i+'</b></label>'+
                                     '<div class="input-group">'+
                                         '<select id="txt'+i+'" type="'+$type+'" class="form-control  Requerido"  name="'+i+'" value="'+value+'"/>'+
-                                        '<option value="0">inactivo</option>'+
-                                        '<option value="1">activo</option>'+
+                                            '<option value="0">inactivo</option>'+
+                                            '<option value="1">activo</option>'+
+                                        '</select>'
                                     '</div>'+
                                 '</div>'+
                             '</div>';
