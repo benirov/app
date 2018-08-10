@@ -1265,6 +1265,7 @@
         },
 
         _createEditRow: function(item) {
+            console.log("esta es la funcion");
             if($.isFunction(this.editRowRenderer)) {
                 return $(this.renderTemplate(this.editRowRenderer, this, { item: item, itemIndex: this._itemIndex(item) }));
             }
