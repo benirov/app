@@ -76,7 +76,7 @@ function drawGrid(Data) {
  		tableid: "tblMaster",
         filtering: true,
         inserting: false,
-        editing: false,
+        // editing: false,
         sorting: true,
         paging: true,
         autoload: true,
