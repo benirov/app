@@ -1270,7 +1270,7 @@
             console.log(item);
             var htmlEdit = '';
             $.each(item, function(i, value){
-                htmlEdit += '<div class=col-md-2 col-sm-4 col-xs-12>'+
+                htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12>'+
                                 '<div class="input-group">'+
                                     '<span class="input-group-addon"><i class="fa fa-user"></i></span>'+
                                     '<input id="txtname" type="text" class="form-control  Requerido"  name="name" value="" required/>'+
