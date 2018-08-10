@@ -1278,8 +1278,7 @@
                                         '<input id="txtname" type="text" class="form-control  Requerido"  name="name" value="" required/>'+
                                     '</div>'+
                                 '</div>'+
-                            '</div>'+
-                            '<br>';
+                            '</div>';
             });
             $("#bodyeditting").html(htmlEdit);
             // let divElement = document.createElement('<div class="modal fade" id="modalformEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>');
