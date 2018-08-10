@@ -25,11 +25,11 @@
 
 Route::get('/home', 'HomeController@getHome',  function () {
     //
-})->middleware('verifySession');
+})->middleware('verifySession', 'revalidate');
 
 Route::get('/maestro', 'HomeController@maestro', function () {
     //
-})->middleware('verifySession');
+})->middleware('verifySession', 'revalidate');
 
 // Route::get('/home', 'HomeController@getHome')->name('home');
 // Route::get('/maestro', 'HomeController@getViewMaster')->name('master')->middleware('verifySession');
