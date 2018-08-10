@@ -1270,6 +1270,7 @@
             console.log(item);
             var htmlEdit = '';
             $.each(item, function(i, value){
+                console.log(i);
                 console.log(value);
                 htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12>'+
                                 '<div class="form-group">'+
