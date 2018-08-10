@@ -1271,17 +1271,32 @@
             var htmlEdit = '';
             $.each(item, function(i, value){
                 console.log(i);
-                console.log(value);
-                htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12>'+
+                if(i == 'created_at' || i == 'updated_at'){
+
+                }else{
+                    $hidden = '';
+                    $type = 'text';
+                    if(i == 'id'){
+                        $hidden = 'hidden';
+                    }
+                    if(i == 'status'){
+                        $type = 'number';
+                    }
+
+                    htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12>'+
                                 '<div class="form-group">'+
-                                '<label for="txtname"><b>name</b></label>'+
+                                '<label for="txtname"><b>'+i+'</b></label>'+
                                     '<div class="input-group">'+
                                         '<span class="input-group-addon"><i class="fa fa-user"></i></span>'+
-                                        '<input id="txtname" type="text" class="form-control  Requerido"  name="name" value="" required/>'+
+                                        '<input id="txtname" type="'+$type+'" class="form-control  Requerido"  name="name" value="" required/>'+
                                     '</div>'+
                                 '</div>'+
                             '</div>';
+                }
+                
             });
+                
+               
             $("#bodyeditting").html(htmlEdit);
             
             $("#modalEditingForm").modal('show');
