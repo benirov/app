@@ -44,8 +44,9 @@ class Kernel extends HttpKernel
         ],
 
         'revalidate' => [
+            \App\Http\Middleware\revalidateBackHistory::class,
             \App\Http\Middleware\verifyLogin::class,
-             \App\Http\Middleware\revalidateBackHistory::class,
+             
             
             
         ],
