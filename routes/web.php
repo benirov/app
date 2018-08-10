@@ -27,7 +27,7 @@
 
 
 
-Route::group(['prefix' => 'web', 'middleware' => 'verifySession','revalidate'], function () {
+Route::group(['middleware' => ['revalidate']], function () {
        
      Route::get('/home', 'HomeController@getHome');
 	Route::get('/maestro', 'HomeController@maestro');

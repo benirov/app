@@ -35,13 +35,19 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            'revalidate' => \App\Http\Middleware\revalidateBackHistory::class,
         ],
 
         'api' => [
             'throttle:60,1',
             'bindings',
             \Barryvdh\Cors\HandleCors::class,
+        ],
+
+        'revalidate' => [
+            \App\Http\Middleware\verifyLogin::class,
+             \App\Http\Middleware\revalidateBackHistory::class,
+            
+            
         ],
     ];
 
