@@ -60,6 +60,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verifySession' => \App\Http\Middleware\verifySession::class,
         'verifyLogin' => \App\Http\Middleware\verifyLogin::class,
-        'revalidate' => \App\Http\Middleware\RevalidateBackHistory::class,
+        'revalidate' => \App\Http\Middleware\revalidateBackHistory::class,
     ];
 }
