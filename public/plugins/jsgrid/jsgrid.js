@@ -114,7 +114,7 @@
         insertRowRenderer: null,
         insertRowClass: "jsgrid-insert-row",
 
-        editing: false,
+        editing: true,
         editRowRenderer: null,
         editRowClass: "jsgrid-edit-row",
 
@@ -1240,7 +1240,7 @@
         _editRow: function($row) {
             if(!this.editing)
                 return;
-
+            console.log("editar");
             var item = $row.data(JSGRID_ROW_DATA_KEY);
 
             var args = this._callEventHandler(this.onItemEditing, {
