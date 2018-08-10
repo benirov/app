@@ -1283,12 +1283,12 @@
                         $type = 'number';
                     }
 
-                    htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12>'+
+                    htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12 '+$hidden+'>'+
                                 '<div class="form-group">'+
                                 '<label for="txtname"><b>'+i+'</b></label>'+
                                     '<div class="input-group">'+
                                         '<span class="input-group-addon"><i class="fa fa-user"></i></span>'+
-                                        '<input id="txtname" type="'+$type+'" class="form-control  Requerido"  name="name" value="" required/>'+
+                                        '<input id="txtname" type="'+$type+'" class="form-control  Requerido"  name="name" value="'+value+'"/>'+
                                     '</div>'+
                                 '</div>'+
                             '</div>';
