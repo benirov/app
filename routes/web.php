@@ -23,11 +23,11 @@
 //      Route::get('/maestro', 'HomeController@getViewMaster')->name('master')->middleware('verifySession');
 // });
 
-Route::get('/home', function () {
+Route::get('/home', 'HomeController@getHome',  function () {
     //
 })->middleware('verifySession');
 
-Route::get('/maestro', function () {
+Route::get('/maestro', 'HomeController@maestro', function () {
     //
 })->middleware('verifySession');
 
