@@ -23,15 +23,13 @@
 //      Route::get('/maestro', 'HomeController@getViewMaster')->name('master')->middleware('verifySession');
 // });
 
+Route::get('/home', 'HomeController@getHome',  function () {
+    //
+})->middleware('verifySession', 'revalidate');
 
-
-
-
-Route::group(['middleware' => ['revalidate']], function () {
-       
-     Route::get('/home', 'HomeController@getHome');
-	Route::get('/maestro', 'HomeController@maestro');
-   });
+Route::get('/maestro', 'HomeController@maestro', function () {
+    //
+})->middleware('verifySession', 'revalidate');
 
 
 
