@@ -1266,7 +1266,7 @@
         },
 
         _createEditRow: function(item, $row) {
-            console.log("esta es la funcion "+$row);
+            
             console.log(item);
             var htmlEdit = '';
             $.each(item, function(i, value){
@@ -1287,7 +1287,6 @@
                                 '<div class="form-group">'+
                                 '<label for="txtname"><b>'+i+'</b></label>'+
                                     '<div class="input-group">'+
-                                        '<span class="input-group-addon"><i class="fa fa-user"></i></span>'+
                                         '<input id="txtname" type="'+$type+'" class="form-control  Requerido"  name="name" value="'+value+'"/>'+
                                     '</div>'+
                                 '</div>'+
