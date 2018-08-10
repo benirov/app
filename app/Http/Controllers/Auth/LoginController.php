@@ -83,7 +83,8 @@ class LoginController extends Controller
         // // Session::set('sessionActive', true);
         
         $request->session()->put('sessionActive', true);
-         return redirect()->action('HomeController@getHome');
+        return redirect('/home');
+         // return redirect()->action('HomeController@getHome');
       }
       else
       {
