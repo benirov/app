@@ -1282,15 +1282,33 @@
                     if(i == 'status'){
                         $type = 'number';
                     }
-
-                    htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12 '+$hidden+'>'+
+                    if(i == 'status')
+                    {
+                        htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12 '+$hidden+'>'+
                                 '<div class="form-group">'+
-                                '<label for="txtname"><b>'+i+'</b></label>'+
+                                '<label id="txt'+i+'"><b>'+i+'</b></label>'+
                                     '<div class="input-group">'+
-                                        '<input id="txtname" type="'+$type+'" class="form-control  Requerido"  name="name" value="'+value+'"/>'+
+                                        '<select id="txt'+i+'" type="'+$type+'" class="form-control  Requerido"  name="'+i+'" value="'+value+'"/>'+
+                                        '<option value="0">inactivo</option>'+
+                                        '<option value="1">activo</option>'+
                                     '</div>'+
                                 '</div>'+
                             '</div>';
+                            $('body #txt'+i+'').val(value);
+
+                    }else{
+                        htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12 '+$hidden+'>'+
+                                '<div class="form-group">'+
+                                '<label id="txt'+i+'"><b>'+i+'</b></label>'+
+                                    '<div class="input-group">'+
+                                        '<input id="txt'+i+'" type="'+$type+'" class="form-control  Requerido"  name="'+i+'" value="'+value+'"/>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>';
+
+                    }
+
+                    
                 }
                 
             });
