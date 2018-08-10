@@ -1256,12 +1256,12 @@
                 this.cancelEdit();
             }
 
-            var $editRow = this._createEditRow(item);
+            this._createEditRow(item);
 
-            this._editingRow = $row;
-            $row.hide();
-            $editRow.insertBefore($row);
-            $row.data(JSGRID_EDIT_ROW_DATA_KEY, $editRow);
+            // this._editingRow = $row;
+            // $row.hide();
+            // $editRow.insertBefore($row);
+            // $row.data(JSGRID_EDIT_ROW_DATA_KEY, $editRow);
         },
 
         _createEditRow: function(item) {
