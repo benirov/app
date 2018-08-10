@@ -25,9 +25,9 @@ class verifySession
      */
     public function handle($request, Closure $next)
     {
-        
-         if(Session::get("sessionActive") != 1  || !Session::get("sessionActive")){
-            return redirect('/login'); 
+        // session()->get("sessionActive");
+         if(!session()->get("sessionActive")){
+            return redirect('/login');
         }
         return $next($request);
     }
