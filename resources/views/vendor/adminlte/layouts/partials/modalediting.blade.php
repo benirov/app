@@ -10,13 +10,13 @@
       <div class="modal-body">
         <div class="container-fluid">
           <div id="bodyeditting">
-            
+
           </div>
         </div>
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary editingForm" data-dismiss="modal">Guardar Cambios</button
+        <button type="button" class="btn btn-primary editingForm" data-dismiss="modal">Guardar Cambios</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>

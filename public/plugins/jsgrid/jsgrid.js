@@ -1257,7 +1257,7 @@
             //     this.cancelEdit();
             // }
 
-            this._createEditRow(item);
+            this._createEditRow(item, $row);
 
             // this._editingRow = $row;
             // $row.hide();
@@ -1265,9 +1265,19 @@
             // $row.data(JSGRID_EDIT_ROW_DATA_KEY, $editRow);
         },
 
-        _createEditRow: function(item) {
+        _createEditRow: function(item, $row) {
             console.log("esta es la funcion");
             console.log(item);
+            var htmlEdit = '';
+            $.each(item, function(i, value){
+                htmlEdit += '<div class=col-md-2 col-sm-4 col-xs-12>'+
+                                '<div class="input-group">'+
+                                    '<span class="input-group-addon"><i class="fa fa-user"></i></span>'+
+                                    '<input id="txtname" type="text" class="form-control  Requerido"  name="name" value="" required/>'+
+                                '</div>'+
+                            '</div>'+
+            });
+            $("#bodyeditting").html(htmlEdit);
             // let divElement = document.createElement('<div class="modal fade" id="modalformEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>');
             // let headElement = document.createElement('<div class="modal-dialog" role="document">'+
             //                         '<div class="modal-content">'+
