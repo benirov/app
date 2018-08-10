@@ -55,7 +55,6 @@ class HomeController extends Controller
     public function getViewLogin()
     {
         config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
-        echo session()->get("sessionActive");
         return view('/login');
     }
 
