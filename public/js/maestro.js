@@ -83,10 +83,6 @@ function drawGrid(Data) {
         callajax: true,
         execajax: 'getMasterDetail',
 
-        rowClick: function(args) {
-            showDetailsDialog("Edit", args.item);
-        },
-
 		 
         // data: Data,
         controller: {
