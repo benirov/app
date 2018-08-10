@@ -40,8 +40,9 @@ function getMasters(){
 
 function getMasterDetail(val){
 	console.log("aqui");
-	$.when(getQuery('masterdetail/'+val, 'json', '', true, 1)).done(function (sRespMasters)
+	$.when(getQuery('masterdetail/'+val, 'json', '', true, 1)).done(function (sRespMastersDetail)
 	{
+		drawGrid(sRespMastersDetail.data);
 		// console.log(sRespMasters.data[0]);
 
 
