@@ -1,4 +1,10 @@
 @extends('adminlte::layouts.app')
+<style>
+.input-group .input-group-addon {
+     background-color: #FFFFFF!important; 
+     color: #555555!important; 
+}
+</style>
 
 @section('htmlheader_title')
 	{{ trans('adminlte_lang::message.home') }}
