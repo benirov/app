@@ -1266,21 +1266,43 @@
 
         _createEditRow: function(item) {
             console.log("esta es la funcion");
-            if($.isFunction(this.editRowRenderer)) {
-                return $(this.renderTemplate(this.editRowRenderer, this, { item: item, itemIndex: this._itemIndex(item) }));
-            }
+            let divElement = '<div class="modal fade" id="modalformEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>';
+            let headElement = '<div class="modal-dialog" role="document">'+
+                                    '<div class="modal-content">'+
+                                        '<div class="modal-header">'+
+                                            '<h5 class="modal-title" id="exampleModalLabel">Editing</h5>'+
+                                            '<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+                                                '<span aria-hidden="true">&times;</span>'+
+                                            '</button>'+
+                                        '</div>'+
+                                        '<div class="modal-body">'+
+                                            '<div class="container-fluid">'+
+                                              
+                                            '</div>'+
+                                        '</div>'+
+                                        '<div class="modal-footer">'+
+                                            '<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>'+
+                                        ' </div>'+
+                                    '</div>'+
+                                '</div>';
 
-            var $result = $("<tr>").addClass(this.editRowClass);
+                                $("#modalformEdit").show();
+                            
+            // if($.isFunction(this.editRowRenderer)) {
+            //     return $(this.renderTemplate(this.editRowRenderer, this, { item: item, itemIndex: this._itemIndex(item) }));
+            // }
 
-            this._eachField(function(field) {
-                var fieldValue = this._getItemFieldValue(item, field);
+            // var $result = $("<tr>").addClass(this.editRowClass);
 
-                this._prepareCell("<td>", field, "editcss")
-                    .append(this.renderTemplate(field.editTemplate || "", field, { value: fieldValue, item: item }))
-                    .appendTo($result);
-            });
+            // this._eachField(function(field) {
+            //     var fieldValue = this._getItemFieldValue(item, field);
 
-            return $result;
+            //     this._prepareCell("<td>", field, "editcss")
+            //         .append(this.renderTemplate(field.editTemplate || "", field, { value: fieldValue, item: item }))
+            //         .appendTo($result);
+            // });
+
+            // return $result;
         },
 
         updateItem: function(item, editedItem) {
