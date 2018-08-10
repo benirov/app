@@ -1267,6 +1267,7 @@
 
         _createEditRow: function(item) {
             console.log("esta es la funcion");
+            console.log(item);
             // let divElement = document.createElement('<div class="modal fade" id="modalformEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>');
             // let headElement = document.createElement('<div class="modal-dialog" role="document">'+
             //                         '<div class="modal-content">'+
@@ -1288,7 +1289,7 @@
             //                     '</div>');
             //  divElement.appendChild(headElement);                                // Append the text to <button>
             // document.body.appendChild(divElement); 
-            
+
 
             $("#modalEditingForm").modal('show');
                             
