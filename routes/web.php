@@ -25,7 +25,7 @@
 
 Route::get('/home', 'HomeController@getHome',  function () {
     //
-})->middleware('verifySession', 'revalidate');
+})->middleware('verifySession', 'revalidate'); 
 
 Route::get('/maestro', 'HomeController@maestro', function () {
     //
