@@ -55,6 +55,7 @@ class HomeController extends Controller
     public function getViewLogin()
     {
         config(['app.pagetitle' => 'Inicia sesion para tener el control de tus datos']);
+        echo session()->get("sessionActive");
         return view('/login');
     }
 
@@ -74,6 +75,8 @@ class HomeController extends Controller
         $menus =  $menu->getMenu();
         config(['app.namejs' => '/js/home.js']);
         config(['app.pagetitle' => 'Aqui podras visualizar']);
+
+        echo session()->get("sessionActive");
       return view('/home')->with('menu', $menus);
     }
 }
