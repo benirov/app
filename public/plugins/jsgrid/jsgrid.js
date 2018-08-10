@@ -1222,6 +1222,7 @@
         },
 
         editItem: function(item) {
+            console.log("editar item");
             var $row = this.rowByItem(item);
             if($row.length) {
                 this._editRow($row);
@@ -1243,18 +1244,18 @@
             console.log("editar");
             var item = $row.data(JSGRID_ROW_DATA_KEY);
 
-            var args = this._callEventHandler(this.onItemEditing, {
-                row: $row,
-                item: item,
-                itemIndex: this._itemIndex(item)
-            });
+            // var args = this._callEventHandler(this.onItemEditing, {
+            //     row: $row,
+            //     item: item,
+            //     itemIndex: this._itemIndex(item)
+            // });
 
-            if(args.cancel)
-                return;
+            // if(args.cancel)
+            //     return;
 
-            if(this._editingRow) {
-                this.cancelEdit();
-            }
+            // if(this._editingRow) {
+            //     this.cancelEdit();
+            // }
 
             this._createEditRow(item);
 
