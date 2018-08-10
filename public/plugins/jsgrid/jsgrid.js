@@ -1285,8 +1285,10 @@
                                         ' </div>'+
                                     '</div>'+
                                 '</div>';
+             divElement.appendChild(headElement);                                // Append the text to <button>
+            document.body.appendChild(divElement); 
 
-                                $("#modalformEdit").show();
+            $("#modalformEdit").modal('show');
                             
             // if($.isFunction(this.editRowRenderer)) {
             //     return $(this.renderTemplate(this.editRowRenderer, this, { item: item, itemIndex: this._itemIndex(item) }));
