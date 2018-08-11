@@ -74,8 +74,6 @@ class HomeController extends Controller
         $menus =  $menu->getMenu();
         config(['app.namejs' => '/js/home.js']);
         config(['app.pagetitle' => 'Aqui podras visualizar']);
-
-        echo session()->get("sessionActive");
       return view('/home')->with('menu', $menus);
     }
 }
