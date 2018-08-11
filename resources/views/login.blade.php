@@ -2,7 +2,7 @@
 
 @if(Session::has('sessionActive'))
 <div class="alert alert-danger">
-  {{activa}} 
+    activa
 </div>
 @endif
 
