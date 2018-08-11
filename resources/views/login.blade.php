@@ -1,9 +1,9 @@
 @extends('adminlte::layouts.auth')
 
 @if(Session::has('sessionActive'))
-<div class="alert alert-danger">
-    activa
-</div>
+    @php
+        header('Location: https://young-coast-20991.herokuapp.com/home');
+    @endphp
 @endif
 
 @section('htmlheader_title')
