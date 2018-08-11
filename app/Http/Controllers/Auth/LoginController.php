@@ -123,8 +123,6 @@ class LoginController extends Controller
       session()->put('sessionActive', false);
       session()->forget("sessionActive");
       session()->flush();
-      // Session::forget('sessionActive');
-      // Session::flush();
       return redirect('/login');
     }
 }
