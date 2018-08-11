@@ -19,7 +19,10 @@ class verifyLogin
     {
         if(session()->has('sessionActive'))
         {
-            return redirect('/home'); 
+            if(session()->get("sessionActive")){
+            return redirect('/home');
+        }
+            // return redirect('/home'); 
         }
         return $next($request);
     }
