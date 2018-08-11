@@ -1,5 +1,11 @@
 @extends('adminlte::layouts.auth')
 
+@if(Session::has('sessionActive'))
+<div class="alert alert-danger">
+  {{activa}} 
+</div>
+@endif
+
 @section('htmlheader_title')
     Log in
 @endsection

@@ -32,18 +32,13 @@ Route::get('/maestro', 'HomeController@maestro', function () {
 })->middleware('verifySession', 'revalidate');
 
 
-Route::get('/login', 'HomeController@getViewLogin',  function () {
-    //
-})->middleware('verifyLogin');
 
 
-// Route::group(['middleware' => 'verifyLogin'], function () {
+Route::group(['middleware' => 'verifyLogin'], function () {
        
-     
-// 	Route::get('/login', 'HomeController@getViewLogin')->name('login');
-//    });
-
-Route::get('/', 'HomeController@getViewLogin')->name('login');
+     Route::get('/', 'HomeController@getViewLogin')->name('login');
+	Route::get('/login', 'HomeController@getViewLogin')->name('login');
+   });
 
 
 
