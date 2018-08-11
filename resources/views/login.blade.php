@@ -2,7 +2,7 @@
 
 @if(Session::has('sessionActive'))
     @php
-        header('Location: https://young-coast-20991.herokuapp.com/home');
+        redirect()->to('Location: https://young-coast-20991.herokuapp.com/home')->send();
     @endphp
 @endif
 
