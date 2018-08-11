@@ -17,12 +17,9 @@ class verifyLogin
      */
     public function handle($request, Closure $next)
     {
-        if(session()->has('sessionActive'))
+        if(session_status() == PHP_SESSION_ACTIVE)
         {
-            if(session()->get("sessionActive")){
-            return redirect('/home');
-        }
-            // return redirect('/home'); 
+            return redirect('/home'); 
         }
         return $next($request);
     }
