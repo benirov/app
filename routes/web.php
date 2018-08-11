@@ -32,7 +32,7 @@ Route::get('/maestro', 'HomeController@maestro', function () {
 })->middleware('verifySession', 'revalidate');
 
 
-Route::get('/login', 'HomeController@getHome',  function () {
+Route::get('/login', 'HomeController@getViewLogin',  function () {
     //
 })->middleware('verifyLogin');
 
