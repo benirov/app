@@ -1,11 +1,12 @@
 //Funcion para mostrar un mensaje de alerta del tipo bootbox
 
-$(document).ready()
+$(document).ready(function()
 {
     window.onbeforeunload = function(){
             alert("Esta por cerrar!");
         }
-}
+    });
+
 function alert(Title) {
     bootbox.alert(Titulo + " ");
 }
