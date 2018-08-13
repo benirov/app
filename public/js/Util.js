@@ -2,10 +2,10 @@
 
 $(document).ready(function()
 {
-    window.onbeforeunload = function(){
-            alert("Esta por cerrar!");
-        }
-    });
+    $( window ).unload(function(this) {
+        console.log(this);
+        alert("pruebas");
+});
 
 function alert(Title) {
     bootbox.alert(Title + " ");
