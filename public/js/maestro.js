@@ -64,12 +64,10 @@ function getMasterDetail(val){
 	});
 }
 function deletedMaster(row){
-	console.log("deletedMaster");
 	console.log(row.id);
 	$.when(deletedQuery('masters/'+row.id, 'json', '', true, 1)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
-		console.log(sRespMastersDeleted.code);
 		if(sRespMastersDeleted.code == 201){
 			notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
 			getMasters();

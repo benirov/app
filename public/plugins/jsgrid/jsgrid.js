@@ -1242,7 +1242,7 @@
         _editRow: function($row) {
             if(!this.editing)
                 return;
-            console.log("editar");
+            // console.log("editar");
             var item = $row.data(JSGRID_ROW_DATA_KEY);
 
             // var args = this._callEventHandler(this.onItemEditing, {
@@ -1268,11 +1268,11 @@
 
         _createEditRow: function(item, $row) {
             
-            console.log(item);
+            // console.log(item);
             var htmlEdit = '';
             $.each(item, function(i, value){
                 console.log(i);
-                if(i == 'created_at' || i == 'updated_at'){
+                if(i == 'created_at' || i == 'updated_at' || i == 'deleted_at'){
 
                 }else{
                     $hidden = '';
@@ -1283,20 +1283,22 @@
                     if(i == 'status'){
                         $type = 'number';
                     }
+                    if(value == 1){
+                        $seleted = 'selected';
+                    }
                     if(i == 'status')
                     {
                         htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12 '+$hidden+'>'+
                                 '<div class="form-group">'+
                                 '<label id="txt'+i+'"><b>'+i+'</b></label>'+
                                     '<div class="input-group">'+
-                                        '<select id="txt'+i+'" type="'+$type+'" class="form-control  Requerido"  name="'+i+'" value="'+value+'">'+
+                                        '<select id="txt'+i+'" type="'+$type+'" class="form-control  Requerido"  name="'+i+'">'+
                                             '<option value="0">inactivo</option>'+
-                                            '<option value="1">activo</option>'+
+                                            '<option value="1" '+$seleted+'>activo</option>'+
                                         '</select>'
                                     '</div>'+
                                 '</div>'+
                             '</div>';
-                            $('body #txt'+i+'').val(value);
 
                     }else{
                         htmlEdit += '<div class=col-md-6 col-sm-6 col-xs-12 '+$hidden+'>'+
@@ -1317,6 +1319,8 @@
                 
                
             $("#bodyeditting").html(htmlEdit);
+
+
             
             $("#modalEditingForm").modal('show');
                             
@@ -1447,7 +1451,7 @@
         },
 
         _deleteRow: function($row) {
-            console.log($row);
+            // console.log($row);
             // var deletingItem = $row.data(JSGRID_ROW_DATA_KEY),
             //     deletingItemIndex = this._itemIndex(deletingItem);
 
