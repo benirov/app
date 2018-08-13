@@ -1321,7 +1321,7 @@
                
             $("#bodyeditting").html(htmlEdit);
 
-            $("body .editingForm").data( 'url', urlEditing);
+            $("body .editingForm").data( 'url', this.urlEditing);
 
             
             $("#modalEditingForm").modal('show');
