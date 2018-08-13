@@ -88,7 +88,7 @@ class MasterController extends ApiController
     {
         $master = master::findOrFail($id);
         $master->delete();
-        return $this->showOne($master);
+        return $this->deletedData();
     }
 
     public function getMasterDetail($id){

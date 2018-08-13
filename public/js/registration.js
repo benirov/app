@@ -44,12 +44,12 @@ function SendData(oData){
 		// console.log(sResp.code);
 		if (sResp.code == 201)
 		{
-			notify("Registro realizado con exito", "success", "user");
+			notify("Registro realizado con exito", "success", "fa fa-user");
 			// FormReset($("#formUser"));
 		}
 		else
 		{
-			notify(sResp.error, "warning", "times-circle");
+			notify(sResp.error, "warning", "fa fa-times-circle");
 		}
 	});
 }

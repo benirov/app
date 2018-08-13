@@ -69,7 +69,14 @@ function deletedMaster(row){
 	$.when(deletedQuery('masters/'+row.id, 'json', '', true, 1)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
-		getMasters();
+		console.log(sRespMastersDeleted.code);
+		if(sRespMastersDeleted.code == 201){
+			notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
+			getMasters();
+		}else{
+			notify(sResp.error, "warning", "fa fa-times-circle");
+		}
+		
 		
 
 	});

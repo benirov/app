@@ -26,4 +26,8 @@ trait ApiResponser
 	protected function deletedModel($code = 201){
 		return $this->successResponse(['data'=> 'Usuario Eliminado', 'code' => $code], $code);
 	}
+
+	protected function deletedData($code = 201){
+		return $this->successResponse(['data'=> 'Registro Eliminado', 'code' => $code], $code);
+	}
 }
