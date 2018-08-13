@@ -828,10 +828,11 @@ function putQuery(sUrl, oFd, LoadModal)
 {
     LoadModal = LoadModal || 0;
     return $.ajax({
-        type: "post",
+        method: "POST"
+        // type: "post",
         url: sUrl,
         dataType: "json",
-        data: {oFd, '_method':'PUT'},
+        data: oFd,
         timeout: 60000,
         contentType: false,
         processData: false,
