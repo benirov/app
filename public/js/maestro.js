@@ -26,8 +26,9 @@ $(document).ready(function()
 		$(this).toggleClass("active");
 	});
 
-	$(document).on("click", ".addMaster", function(event)
+	$(".addMaster").on("click", function(event)
 	{
+		console.log("aqui");
     	$("#modalCreateForm").modal('show');
 	});
 
