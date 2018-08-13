@@ -102,6 +102,6 @@ class MasterController extends ApiController
         // echo "aqui";
         echo $request->input('name');
         $data = $request->all();
-        echo $data['id'];
+        echo $data['id']; 
     }
 }
