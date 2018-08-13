@@ -97,4 +97,8 @@ class MasterController extends ApiController
         return $this->showAll($MasterDetail->getMasterDetail, 200);
 
     }
+
+    public function updateMaster(Request $request){
+        echo $request;
+    }
 }

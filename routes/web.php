@@ -52,6 +52,7 @@ Route::get('Util/getdatasex', 'UtilController@getDataSex');
 Route::get('Util/getdatacivilstatus', 'UtilController@getDataCivilStatus');
 Route::get('Util/getdatatipodoc', 'UtilController@getDataTipoDoc');
 Route::get('Util/getdatacity', 'UtilController@getDataCity');
+Route::post('masters/update', 'Master\MasterController@updateMaster');
 
 // vista de logs
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

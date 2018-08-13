@@ -126,7 +126,7 @@ function drawGrid(Data) {
         callajax: true,
         execajax: 'getMasterDetail',
         functionAjaxDeleted: 'deletedMaster',
-        urlEditing: 'masters',
+        urlEditing: 'masters/update',
 
 		 
         // data: Data,
