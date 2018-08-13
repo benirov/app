@@ -122,13 +122,13 @@ function drawGrid(Data) {
         filtering: true,
         inserting: false,
         // editing: false,
-        urlEditing = '',
         sorting: true,
         paging: true,
         autoload: true,
         callajax: true,
         execajax: 'getMasterDetail',
         functionAjaxDeleted: 'deletedMaster',
+        urlEditing = 'masters',
 
 		 
         // data: Data,
