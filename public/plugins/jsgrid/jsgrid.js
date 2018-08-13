@@ -118,10 +118,9 @@
         editRowRenderer: null,
         editRowClass: "jsgrid-edit-row",
 
-        urlEditing: '',
-
         callajax: false,
         execajax: '',
+        urlEditing: '',
 
         confirmDeleting: true,
         deleteConfirm: "Do you want to delete this record?",
