@@ -1,11 +1,5 @@
 $(document).ready(function()
 {
-	$.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-      });
-	
 	$(".select2").select2();
 	getMasters();
 
@@ -29,7 +23,7 @@ $(document).ready(function()
 	{
 		console.log(SerializeForm($("body #editing")));
 		var oData = BuildForm(SerializeForm($("body #editing")));
-		// oData.append('_method', 'PUT');
+		oData.append('_method', 'PUT');
 		console.log(oData);
 	 	editingMaster(oData, $(this).data("url"));
 	});
@@ -132,7 +126,7 @@ function drawGrid(Data) {
         callajax: true,
         execajax: 'getMasterDetail',
         functionAjaxDeleted: 'deletedMaster',
-        urlEditing: 'masters/update',
+        urlEditing: 'masters',
 
 		 
         // data: Data,
