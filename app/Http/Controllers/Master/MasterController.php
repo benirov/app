@@ -41,6 +41,14 @@ class MasterController extends ApiController
      */
     public function store(Request $request)
     {
+
+          $rules =
+            [
+            // Compañia
+            'name' => ['required','min:6'],  
+            ];
+
+      $this->validate($request, $rules);
      $data = $request->all();
      return $data['name'];
      echo $data['name'];   
