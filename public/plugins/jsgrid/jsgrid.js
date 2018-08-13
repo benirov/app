@@ -1432,7 +1432,8 @@
                 sure(this.deleteConfirm, function(sResp){
                     if(sResp){
                         console.log($row.data(JSGRID_ROW_DATA_KEY));
-                         this._deleteRow($row.data(JSGRID_ROW_DATA_KEY));
+                        self[this.functionAjaxDeleted]($row.data(JSGRID_ROW_DATA_KEY));
+                         // this._deleteRow($row.data(JSGRID_ROW_DATA_KEY));
                     }
                 });
                 

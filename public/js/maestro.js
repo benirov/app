@@ -63,6 +63,10 @@ function getMasterDetail(val){
 
 	});
 }
+function deletedMaster(row){
+	console.log("deletedMaster");
+	console.log(row);
+}
 
 function drawGrid(Data) {
 
@@ -82,6 +86,7 @@ function drawGrid(Data) {
         autoload: true,
         callajax: true,
         execajax: 'getMasterDetail',
+        functionAjaxDeleted: 'deletedMaster'
 
 		 
         // data: Data,
