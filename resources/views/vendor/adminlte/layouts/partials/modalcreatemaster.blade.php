@@ -25,9 +25,9 @@
                     <div class="form-group">
                     <label id="txtstatus"><b>status</b></label>
                         <div class="input-group">
-                            '<select id="txtstatus" class="form-control  Requerido"  name="status" maxlenght="15">
-                                '<option value="0">inactivo</option>
-                                '<option value="1">activo</option>
+                            <select id="txtstatus" class="form-control  Requerido"  name="status" maxlenght="15">
+                                <option value="0">inactivo</option>
+                                <option value="1">activo</option>
                             </select>
                         </div>
                     </div>

@@ -34,11 +34,19 @@ $(document).ready(function()
 
 	$(document).on("click", " .createMaster", function(event)
 	{
-		console.log(SerializeForm($("body #createMaster")));
-		var oData = BuildForm(SerializeForm($("body #createMaster")));
-		// oData.append('_method', 'PUT');
-		console.log(oData);
-	 	createMaster(oData);
+		EvalReg($("#formUser"), function(bResp)
+	 	{
+	 		if(bResp)
+	 		{
+	 			console.log(SerializeForm($("body #createMaster")));
+				var oData = BuildForm(SerializeForm($("body #createMaster")));
+				// oData.append('_method', 'PUT');
+				console.log(oData);
+			 	createMaster(oData);
+	 		}
+	 		
+	 	}
+		
 	});
 
 
