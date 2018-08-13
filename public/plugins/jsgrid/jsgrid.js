@@ -1430,11 +1430,12 @@
                 return;
 
             if(this.confirmDeleting){
+                let $thisjs = this;
                 sure(this.deleteConfirm, function(sResp){
                     if(sResp){
-                        console.log(this);
-                        console.log(this.functionAjaxDeleted);
-                        return self[this.functionAjaxDeleted]($row.data(JSGRID_ROW_DATA_KEY));
+                        console.log($thisjs);
+                        console.log($thisjs.functionAjaxDeleted);
+                        return self[$thisjs.functionAjaxDeleted]($row.data(JSGRID_ROW_DATA_KEY));
                          // this._deleteRow($row.data(JSGRID_ROW_DATA_KEY));
                     }
                 });
