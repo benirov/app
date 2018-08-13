@@ -11,6 +11,7 @@
       <div class="modal-body">
         <div class="container-fluid">
           <form id="editing">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div id="bodyeditting">
 
             </div>
