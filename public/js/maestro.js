@@ -122,7 +122,7 @@ function drawGrid(Data) {
         filtering: true,
         inserting: false,
         // editing: false,
-        urlEditing = '';
+        urlEditing = '',
         sorting: true,
         paging: true,
         autoload: true,
