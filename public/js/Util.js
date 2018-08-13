@@ -2,7 +2,7 @@
 
 $(document).ready(function()
 {
-    var inFormOrLink;
+    var inFormOrLink = false;
     $('a').on('click', function() { inFormOrLink = true; });
     $('form').on('submit', function() { inFormOrLink = true; });
 
