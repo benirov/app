@@ -3,11 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class master extends Model
 {
+  use  SoftDeletes;
 
     protected $table = 'tblMasters';
+    protected $dates = ['deleted_at'];
      protected $fillable =
      [
        'typeUser',
