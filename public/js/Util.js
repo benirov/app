@@ -5,6 +5,7 @@ $(document).ready(function()
     $( window ).unload(function() {
         
         alert("pruebas");
+    }
 });
 
 function alert(Title) {
