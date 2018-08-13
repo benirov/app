@@ -22,8 +22,8 @@ $(document).ready(function()
 	$(document).on("click", " body .editingForm", function(event)
 	{
 		console.log($(this).data("url"));
-		console.log("click");
-		var oData = BuildForm(SerializeForm($("#editing")));
+		console.log(SerializeForm($("body #editing")));
+		var oData = BuildForm(SerializeForm($("body #editing")));
 		console.log(oData);
 	 	editingMaster(oData);
 	});
