@@ -13,7 +13,7 @@
 						<h3 class="box-title">Categorias</h3>
 					</div>
 					<div class="col-md-4 col-sm-4 col-xs-4">
-						<button type="submit" class="btn btn-info"><i class="fas fa-plus"></i></button>
+						<button type="submit" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Agregar Categoria">><i class="fas fa-plus"></i></button>
 					</div>
 					<div id="jsGrid">
 						

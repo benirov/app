@@ -1,5 +1,7 @@
 $(document).ready(function()
 {
+
+	 $('[data-toggle="tooltip"]').tooltip()
 	$.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -100,6 +102,7 @@ function editingMaster(Data, url){
 	{
 		console.log(sRespMastersDeleted);
 		if(sRespMastersDeleted.code == 201){
+			$("#modalEditingForm").modal('hide');
 			notify("Registro Modificado", "success", 'far fa-thumbs-up')
 			getMasters();
 		}else{
