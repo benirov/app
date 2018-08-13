@@ -75,8 +75,9 @@ class MasterController extends ApiController
      */
     public function update(Request $request, $id)
     {
-        return $request;
-        // return "aqui";
+        // return $request;
+         return "aqui original";
+         echo $request->id();
     }
 
     /**

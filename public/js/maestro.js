@@ -23,7 +23,7 @@ $(document).ready(function()
 	{
 		console.log(SerializeForm($("body #editing")));
 		var oData = BuildForm(SerializeForm($("body #editing")));
-		oData.append('_method', 'PUT');
+		// oData.append('_method', 'PUT');
 		console.log(oData);
 	 	editingMaster(oData, $(this).data("url"));
 	});
