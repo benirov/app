@@ -1272,7 +1272,8 @@
             // console.log(item);
             var htmlEdit = '';
             $.each(item, function(i, value){
-                console.log(i);
+                // console.log(i);
+                $seleted = '';
                 if(i == 'created_at' || i == 'updated_at' || i == 'deleted_at'){
 
                 }else{

@@ -15,7 +15,7 @@
             <div>
               <div class=col-md-6 col-sm-6 col-xs-12>
                     <div class="form-group">
-                    <label id="txtname"><b>name</b></label>
+                    <label for="txtname"><b>name</b></label>
                         <div class="input-group">
                             <input id="txtname" type="text" class="form-control  Requerido"  name="name" maxlenght="15"/>
                         </div>
@@ -23,7 +23,7 @@
                 </div>
                 <div class=col-md-6 col-sm-6 col-xs-12>
                     <div class="form-group">
-                    <label id="txtstatus"><b>status</b></label>
+                    <label for="txtstatus"><b>status</b></label>
                         <div class="input-group">
                             <select id="txtstatus" class="form-control  Requerido"  name="status" maxlenght="15">
                                 <option value="0">inactivo</option>
