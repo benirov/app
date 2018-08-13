@@ -26,12 +26,12 @@ $(document).ready(function()
 		$(this).toggleClass("active");
 	});
 
-	$(document).on(".addMaster", function(event)
+	$(document).on("click", ".addMaster", function(event)
 	{
     	$("#modalCreateForm").modal('show');
 	});
 
-	$(document).on("click", " body .createMaster", function(event)
+	$(document).on("click", " .createMaster", function(event)
 	{
 		console.log(SerializeForm($("body #createMaster")));
 		var oData = BuildForm(SerializeForm($("body #createMaster")));
