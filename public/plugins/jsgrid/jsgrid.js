@@ -122,7 +122,8 @@
         execajax: '',
 
         confirmDeleting: true,
-        deleteConfirm: "Do you want to delete this record??",
+        deleteConfirm: "Do you want to delete this record?",
+        functionAjaxDeleted: '',
 
         selecting: true,
         selectedRowClass: "jsgrid-selected-row",
