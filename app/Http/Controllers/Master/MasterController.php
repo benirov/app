@@ -99,7 +99,7 @@ class MasterController extends ApiController
     }
 
     public function updateMaster(Request $request){
-        echo "aqui";
-        echo $request->id();
+        // echo "aqui";
+        return $request->all();
     }
 }
