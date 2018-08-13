@@ -26,6 +26,20 @@ $(document).ready(function()
 		$(this).toggleClass("active");
 	});
 
+	$(document).on(".addMaster", function(event)
+	{
+    	$("#modalCreateForm").modal('show');
+	});
+
+	$(document).on("click", " body .createMaster", function(event)
+	{
+		console.log(SerializeForm($("body #createMaster")));
+		var oData = BuildForm(SerializeForm($("body #createMaster")));
+		// oData.append('_method', 'PUT');
+		console.log(oData);
+	 	createMaster(oData);
+	});
+
 
 	$(document).on("click", " body .editingForm", function(event)
 	{
@@ -88,7 +102,7 @@ function deletedMaster(row){
 			notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
 			getMasters();
 		}else{
-			notify(sResp.error, "warning", "fa fa-times-circle");
+			notify(sRespMastersDeleted.error, "warning", "fa fa-times-circle");
 		}
 		
 		
@@ -98,15 +112,15 @@ function deletedMaster(row){
 }
 
 function editingMaster(Data, url){
-	$.when(putQuery(url, Data, 0)).done(function (sRespMastersDeleted)
+	$.when(putQuery(url, Data, 0)).done(function (sRespMastersEditing)
 	{
-		console.log(sRespMastersDeleted);
-		if(sRespMastersDeleted.code == 201){
+		console.log(sRespMastersEditing);
+		if(sRespMastersEditing.code == 201){
 			$("#modalEditingForm").modal('hide');
 			notify("Registro Modificado", "success", 'far fa-thumbs-up')
 			getMasters();
 		}else{
-			notify(sResp.error, "warning", "fa fa-times-circle");
+			notify(sRespMastersEditing.error, "warning", "fa fa-times-circle");
 		}
 		
 		
@@ -114,6 +128,25 @@ function editingMaster(Data, url){
 	});
 
 }
+
+function createMaster(Data){
+	$.when(postQuery('masters', Data, 0)).done(function (sRespMastersCreate)
+	{
+		console.log(sRespMastersCreate);
+		if(sRespMastersCreate.code == 201){
+			$("#modalEditingForm").modal('hide');
+			notify("Registro Creado", "success", 'far fa-thumbs-up')
+			getMasters();
+		}else{
+			notify(sRespMastersCreate.error, "warning", "fa fa-times-circle");
+		}
+		
+		
+
+	});
+
+}
+
 
 function drawGrid(Data) {
 

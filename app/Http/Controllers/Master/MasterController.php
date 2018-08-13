@@ -41,7 +41,8 @@ class MasterController extends ApiController
      */
     public function store(Request $request)
     {
-        //
+     $data = $request->all();
+     echo $data['name'];   
     }
 
     /**
