@@ -86,7 +86,7 @@ function drawGrid(Data) {
         autoload: true,
         callajax: true,
         execajax: 'getMasterDetail',
-        functionAjaxDeleted: 'deletedMaster'
+        functionAjaxDeleted: 'deletedMaster',
 
 		 
         // data: Data,
