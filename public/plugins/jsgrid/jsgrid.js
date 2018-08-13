@@ -1431,11 +1431,11 @@
             if(this.confirmDeleting){
                 sure(this.deleteConfirm, function(sResp){
                     if(sResp){
-                        console.log($row);
-                         return this._deleteRow($row);
+                        console.log($row.data(JSGRID_ROW_DATA_KEY));
+                         this._deleteRow($row.data(JSGRID_ROW_DATA_KEY));
                     }
                 });
-                return;
+                
 
            // && !window.confirm(getOrApply(this.deleteConfirm, this, $row.data(JSGRID_ROW_DATA_KEY))))
             } 
