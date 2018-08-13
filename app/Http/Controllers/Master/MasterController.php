@@ -100,7 +100,8 @@ class MasterController extends ApiController
 
     public function updateMaster(Request $request){
         // echo "aqui";
-        echo $request->imput('name');
-        return $request->all();
+        echo $request->input('name');
+        $data = $request->all();
+        echo $data['id'];
     }
 }
