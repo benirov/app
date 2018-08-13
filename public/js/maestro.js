@@ -23,7 +23,7 @@ $(document).ready(function()
 	{
 		console.log(SerializeForm($("body #editing")));
 		var oData = BuildForm(SerializeForm($("body #editing")));
-		oData.append('_method', 'PATCH');
+		oData.append('_method', 'PUT');
 		console.log(oData);
 	 	editingMaster(oData, $(this).data("url"));
 	});
@@ -91,7 +91,6 @@ function deletedMaster(row){
 
 function editingMaster(Data, url){
 	console.log("funcion editar");
-	console.log(Data);
 	$.when(putQuery(url, Data, 0)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
