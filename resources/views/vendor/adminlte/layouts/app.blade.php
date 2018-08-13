@@ -54,6 +54,7 @@ desired effect
 
     @include('adminlte::layouts.partials.modalbinnacle')
     @include('adminlte::layouts.partials.modalediting')
+    @include('adminlte::layouts.partials.modalcreatemaster')
     @include('adminlte::layouts.partials.modalbootbox')
     @include('adminlte::layouts.partials.footer')
 
