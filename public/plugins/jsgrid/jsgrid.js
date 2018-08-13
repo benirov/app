@@ -1428,31 +1428,40 @@
             if(!$row.length)
                 return;
 
-            if(this.confirmDeleting && !window.confirm(getOrApply(this.deleteConfirm, this, $row.data(JSGRID_ROW_DATA_KEY))))
+            if(this.confirmDeleting){
+                sure(deleteConfirm, function(sResp){
+                    if(sResp){
+                        console.log($row);
+                         return this._deleteRow($row);
+                    }
+                });
                 return;
 
-            return this._deleteRow($row);
+           // && !window.confirm(getOrApply(this.deleteConfirm, this, $row.data(JSGRID_ROW_DATA_KEY))))
+            } 
+                
         },
 
         _deleteRow: function($row) {
-            var deletingItem = $row.data(JSGRID_ROW_DATA_KEY),
-                deletingItemIndex = this._itemIndex(deletingItem);
+            console.log($row);
+            // var deletingItem = $row.data(JSGRID_ROW_DATA_KEY),
+            //     deletingItemIndex = this._itemIndex(deletingItem);
 
-            var args = this._callEventHandler(this.onItemDeleting, {
-                row: $row,
-                item: deletingItem,
-                itemIndex: deletingItemIndex
-            });
+            // var args = this._callEventHandler(this.onItemDeleting, {
+            //     row: $row,
+            //     item: deletingItem,
+            //     itemIndex: deletingItemIndex
+            // });
 
-            return this._controllerCall("deleteItem", deletingItem, args.cancel, function() {
-                this._loadStrategy.finishDelete(deletingItem, deletingItemIndex);
+            // return this._controllerCall("deleteItem", deletingItem, args.cancel, function() {
+            //     this._loadStrategy.finishDelete(deletingItem, deletingItemIndex);
 
-                this._callEventHandler(this.onItemDeleted, {
-                    row: $row,
-                    item: deletingItem,
-                    itemIndex: deletingItemIndex
-                });
-            });
+            //     this._callEventHandler(this.onItemDeleted, {
+            //         row: $row,
+            //         item: deletingItem,
+            //         itemIndex: deletingItemIndex
+            //     });
+            // });
         }
     };
 
