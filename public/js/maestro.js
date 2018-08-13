@@ -40,12 +40,11 @@ $(document).ready(function()
 	 		{
 	 			console.log(SerializeForm($("body #createMaster")));
 				var oData = BuildForm(SerializeForm($("body #createMaster")));
-				// oData.append('_method', 'PUT');
 				console.log(oData);
 			 	createMaster(oData);
 	 		}
 	 		
-	 	}
+	 	});
 		
 	});
 
@@ -128,7 +127,8 @@ function editingMaster(Data, url){
 			$("#modalEditingForm").modal('hide');
 			notify("Registro Modificado", "success", 'far fa-thumbs-up')
 			getMasters();
-		}else{
+		}else
+		{
 			notify(sRespMastersEditing.error, "warning", "fa fa-times-circle");
 		}
 		
