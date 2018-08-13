@@ -828,7 +828,7 @@ function putQuery(sUrl, oFd, LoadModal)
 {
     LoadModal = LoadModal || 0;
     return $.ajax({
-        method: "POST"
+        method: "POST",
         // type: "post",
         url: sUrl,
         dataType: "json",
