@@ -831,7 +831,7 @@ function putQuery(sUrl, oFd, LoadModal)
         type: "post",
         url: sUrl,
         dataType: "json",
-        data: {oFd, '_method':'PUT'},
+        data: oFd,
         timeout: 60000,
         contentType: false,
         processData: false,
