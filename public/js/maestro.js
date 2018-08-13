@@ -65,8 +65,8 @@ function getMasterDetail(val){
 }
 function deletedMaster(row){
 	console.log("deletedMaster");
-	console.log(row);
-	$.when(deletedQuery('masters/'+val, 'json', '', true, 1)).done(function (sRespMastersDeleted)
+	console.log(row.id);
+	$.when(deletedQuery('masters/'+row.id, 'json', '', true, 1)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
 		getMasters();
