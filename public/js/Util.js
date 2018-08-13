@@ -828,7 +828,7 @@ function putQuery(sUrl, oFd, LoadModal)
 {
     LoadModal = LoadModal || 0;
     return $.ajax({
-        type: "delete",
+        type: "put",
         url: sUrl,
         dataType: "json",
         data: oFd,
