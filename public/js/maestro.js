@@ -91,7 +91,7 @@ function deletedMaster(row){
 function editingMaster(Data, url){
 	console.log("funcion editar");
 	console.log(Data);
-	$.when(putQuery(url+row.id, 'json', , true, 0)).done(function (sRespMastersDeleted)
+	$.when(putQuery(url, Data, 0)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
 		if(sRespMastersDeleted.code == 201){
