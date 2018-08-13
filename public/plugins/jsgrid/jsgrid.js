@@ -118,6 +118,8 @@
         editRowRenderer: null,
         editRowClass: "jsgrid-edit-row",
 
+        urlEditing: '',
+
         callajax: false,
         execajax: '',
 
@@ -1320,6 +1322,7 @@
                
             $("#bodyeditting").html(htmlEdit);
 
+            $("body .editingForm")..data( 'url', urlEditing);
 
             
             $("#modalEditingForm").modal('show');

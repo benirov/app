@@ -18,6 +18,15 @@ $(document).ready(function()
 		$(this).toggleClass("active");
 	});
 
+
+	$(document).on("click", " body .editingForm", function(event)
+	{
+		console.log($(this).data("url"));
+		console.log("click");
+		var oData = BuildForm(SerializeForm($("#editing")));
+		console.log(oData);
+	 	editingMaster(oData);
+	});
 	 
 
 });
@@ -81,6 +90,25 @@ function deletedMaster(row){
 
 }
 
+function editingMaster(Data){
+	console.log("funcion editar");
+	console.log(Data);
+	// $.when(deletedQuery('masters/'+row.id, 'json', '', true, 1)).done(function (sRespMastersDeleted)
+	// {
+	// 	console.log(sRespMastersDeleted);
+	// 	if(sRespMastersDeleted.code == 201){
+	// 		notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
+	// 		getMasters();
+	// 	}else{
+	// 		notify(sResp.error, "warning", "fa fa-times-circle");
+	// 	}
+		
+		
+
+	// });
+
+}
+
 function drawGrid(Data) {
 
 	// console.log(Data);
@@ -94,6 +122,7 @@ function drawGrid(Data) {
         filtering: true,
         inserting: false,
         // editing: false,
+        urlEditing = '';
         sorting: true,
         paging: true,
         autoload: true,
