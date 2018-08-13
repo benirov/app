@@ -66,6 +66,14 @@ function getMasterDetail(val){
 function deletedMaster(row){
 	console.log("deletedMaster");
 	console.log(row);
+	$.when(getQuery('masters/'+val, 'json', '', true, 1)).done(function (sRespMastersDeleted)
+	{
+		console.log(sRespMastersDeleted);
+		getMasters();
+		
+
+	});
+
 }
 
 function drawGrid(Data) {
