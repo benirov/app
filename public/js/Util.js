@@ -2,8 +2,8 @@
 
 $(document).ready(function()
 {
-    $( window ).unload(function(this) {
-        console.log(this);
+    $( window ).unload(function() {
+        
         alert("pruebas");
 });
 
