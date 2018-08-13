@@ -1429,7 +1429,7 @@
                 return;
 
             if(this.confirmDeleting){
-                sure(deleteConfirm, function(sResp){
+                sure(this.deleteConfirm, function(sResp){
                     if(sResp){
                         console.log($row);
                          return this._deleteRow($row);
