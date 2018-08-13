@@ -21,11 +21,10 @@ $(document).ready(function()
 
 	$(document).on("click", " body .editingForm", function(event)
 	{
-		console.log($(this).data("url"));
 		console.log(SerializeForm($("body #editing")));
 		var oData = BuildForm(SerializeForm($("body #editing")));
 		console.log(oData);
-	 	editingMaster(oData);
+	 	editingMaster(oData, $(this).data("url"));
 	});
 	 
 
@@ -73,8 +72,7 @@ function getMasterDetail(val){
 	});
 }
 function deletedMaster(row){
-	console.log(row.id);
-	$.when(deletedQuery('masters/'+row.id, 'json', '', true, 1)).done(function (sRespMastersDeleted)
+	$.when(deletedQuery('masters/'+row.id, 'json', '', true, 0)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
 		if(sRespMastersDeleted.code == 201){
@@ -90,22 +88,22 @@ function deletedMaster(row){
 
 }
 
-function editingMaster(Data){
+function editingMaster(Data, url){
 	console.log("funcion editar");
 	console.log(Data);
-	// $.when(deletedQuery('masters/'+row.id, 'json', '', true, 1)).done(function (sRespMastersDeleted)
-	// {
-	// 	console.log(sRespMastersDeleted);
-	// 	if(sRespMastersDeleted.code == 201){
-	// 		notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
-	// 		getMasters();
-	// 	}else{
-	// 		notify(sResp.error, "warning", "fa fa-times-circle");
-	// 	}
+	$.when(putQuery(url+row.id, 'json', , true, 0)).done(function (sRespMastersDeleted)
+	{
+		console.log(sRespMastersDeleted);
+		if(sRespMastersDeleted.code == 201){
+			notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
+			getMasters();
+		}else{
+			notify(sResp.error, "warning", "fa fa-times-circle");
+		}
 		
 		
 
-	// });
+	});
 
 }
 
