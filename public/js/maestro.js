@@ -34,7 +34,7 @@ $(document).ready(function()
 
 	$(document).on("click", " .createMaster", function(event)
 	{
-		EvalReg($("#formUser"), function(bResp)
+		EvalReg($("#createMaster"), function(bResp)
 	 	{
 	 		if(bResp)
 	 		{
