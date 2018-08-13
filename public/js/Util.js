@@ -1,3 +1,18 @@
+//Funcion para mostrar un mensaje de alerta del tipo bootbox
+function alert(Title) {
+    bootbox.alert(Titulo + " ");
+}
+
+//Funcion para mostrar un mensaje de pregunta del tipo bootbox
+function sure(question, callback)
+{
+    bootbox.confirm(question, function (result)
+    {
+        callback(result);
+    });
+}
+
+
 //Funcion para mostrar un mensaje de notificacion, los tipos son: success, info, danger, warning
 function notify(mensaje, tipo, icon, modo, url)
 {

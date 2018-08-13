@@ -23,7 +23,7 @@ $(document).ready(function()
 });
 
 function getMasters(){
-	$.when(getQuery('masters', '', '', true, 1)).done(function (sRespMasters)
+	$.when(getQuery('masters', '', '', true, 0)).done(function (sRespMasters)
 	{
 		// console.log(sRespMasters);
 
@@ -40,7 +40,7 @@ function getMasters(){
 
 function getMasterDetail(val){
 	console.log("aqui");
-	$.when(getQuery('masterdetail/'+val, 'json', '', true, 1)).done(function (sRespMastersDetail)
+	$.when(getQuery('masterdetail/'+val, 'json', '', true, 0)).done(function (sRespMastersDetail)
 	{
 		drawGrid(sRespMastersDetail.data);
 		// console.log(sRespMasters.data[0]);
