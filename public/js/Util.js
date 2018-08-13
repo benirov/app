@@ -8,7 +8,7 @@ $(document).ready(function()
     });
 
 function alert(Title) {
-    bootbox.alert(Titulo + " ");
+    bootbox.alert(Title + " ");
 }
 
 //Funcion para mostrar un mensaje de pregunta del tipo bootbox
