@@ -2,11 +2,14 @@
 
 $(document).ready(function()
 {
-    $( window ).unload(function() {
-        
-        alert("pruebas");
+    var inFormOrLink;
+    $('a').on('click', function() { inFormOrLink = true; });
+    $('form').on('submit', function() { inFormOrLink = true; });
+
+    $(window).on("beforeunload", function() { 
+        return inFormOrLink ? "Do you really want to close?" : null; 
+    })
     });
-});
 
 function alert(Title) {
     bootbox.alert(Title + " ");
