@@ -92,16 +92,20 @@ class MasterController extends ApiController
         return $this->deletedData();
     }
 
-    public function getMasterDetail($id){
+    public function getMasterDetail($id)
+    {
         $MasterDetail =  master::find($id);
         return $this->showAll($MasterDetail->getMasterDetail, 200);
 
     }
 
-    public function updateMaster(Request $request){
-        // echo "aqui";
-        echo $request->input('name');
-        $data = $request->all();
-        echo $data['id']; 
+    public function updateMaster(Request $request)
+    {
+        $data = $request->all();  
+        $master = $master = master::findOrFail($data['id']);
+        $master->name = $data['name'];
+        $master->status = $data['status'];
+        $master->save();
+        return $this->showOne($master, 201);
     }
 }

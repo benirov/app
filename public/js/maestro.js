@@ -5,7 +5,7 @@ $(document).ready(function()
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
       });
-	
+
 	$(".select2").select2();
 	getMasters();
 
@@ -96,12 +96,11 @@ function deletedMaster(row){
 }
 
 function editingMaster(Data, url){
-	console.log("funcion editar");
 	$.when(putQuery(url, Data, 0)).done(function (sRespMastersDeleted)
 	{
 		console.log(sRespMastersDeleted);
 		if(sRespMastersDeleted.code == 201){
-			notify(sRespMastersDeleted.data, "success", 'far fa-thumbs-up')
+			notify("Registro Modificado", "success", 'far fa-thumbs-up')
 			getMasters();
 		}else{
 			notify(sResp.error, "warning", "fa fa-times-circle");
