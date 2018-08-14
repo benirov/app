@@ -14,6 +14,10 @@ trait ApiResponser
 		return response()->json(['error'=> $message, 'code' => $code], $code);
 	}
 
+	private function responseJson($data){
+		return response()->json($data);
+	}
+
 	protected function showAll(Collection $collection, $code = 200){
 		return $this->successResponse(['data'=> $collection], $code);
 	}
