@@ -124,7 +124,7 @@ class MasterController extends ApiController
     public function getMaster()
     {
         $Master =  master::getDataMaster();
-        return response()->json($Master);
+        return $this->responseJson($Master);
 
     }
 }
