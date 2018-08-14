@@ -17,7 +17,7 @@
 					</div>
 					<br>
 					<div class="panel-body">
-						{{!! $grid !!}}
+						{!! $grid !!}
 					</div>
 				</div>
 			</div>

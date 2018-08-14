@@ -25,8 +25,8 @@ class GridClass extends MasterController
     public function headerGrid()
     {
         $header = '<thead>';
-        $header .=       '<tr>';
-            foreach ($this->headerArray as $key => $value)
+        $header .=       '<tr class="sorting_asc">';
+            foreach ($this->headerArray as $key)
             {
                 $header .=   '<th>'.$value.'</th>';
             }
@@ -50,6 +50,8 @@ class GridClass extends MasterController
             {
                 $body   .=   '<tr>';
                 $body   .=        '<td>'.$value["id"].'</td>';
+                $body   .=        '<td>'.$value["name"].'</td>';
+                $body   .=        '<td>'.$value["status"].'</td>';
                 $body   .=   '<tr>';
             }
 
@@ -82,7 +84,7 @@ class GridClass extends MasterController
 
     public function renderGrid()
     {
-        $table = '<table border>';
+        $table = '<table class="table table-bordered table-hover dataTable">';
         $table .= $this->headerGrid();
         $table .= $this->rowDataGrid();
         $table .= '</table>';
