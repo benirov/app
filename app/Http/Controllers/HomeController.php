@@ -11,7 +11,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
-use Custom\Grid;
+// use Custom\Grid;
 require_once('../resources/views/gridClass.php');
 use Session;
 /**
