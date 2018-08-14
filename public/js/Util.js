@@ -2,12 +2,17 @@
 
 $(document).ready(function()
 {
-    var inFormOrLink = false;
-    $('a').on('click', function() { inFormOrLink = true; });
-    $('form').on('submit', function() { inFormOrLink = true; });
+    jQuery('form').submit(function() {
+        jQuery(window).unbind("beforeunload");
+    });
+
+    jQuery('a').click(function() {
+        jQuery(window).unbind("beforeunload");
+    });
+    
 
     $(window).on("beforeunload", function() { 
-        return inFormOrLink ? "Do you really want to close?" : null; 
+        alert("aqui");
     })
     });
 
