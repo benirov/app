@@ -74,7 +74,7 @@ class GridClass extends MasterController
         // if($this->filter)
         // {
             $filterRender  = '<div class="col-md-5">';
-            $filterRender .=     '<label for"find">searc</label>';
+            $filterRender .=     '<label for="find">searc</label>';
             $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
             $filterRender .= '</div">';
         // }
@@ -101,9 +101,9 @@ class GridClass extends MasterController
     public function renderGrid()
     {
         $table = '<div class="box box-primary"';
-        $table .= '<div class="box-header">
-                        <h3 class="box-title">Categorias</h3>
-                    </div>';
+        $table .=   '<div class="box-header">';
+        $table .=     '<h3 class="box-title">Categorias</h3>';
+        $table .=   '</div>';
         $table .= $this->renderFilter();
         $table .= '<table class="table table-bordered table-hover dataTable">';
         $table .= $this->headerGrid();
