@@ -3,7 +3,7 @@
 namespace resources\views\Grid;
 use App\Http\Controllers\Master\MasterController;
 
-class Grid extends MasterController
+class GridClass extends MasterController
 {
 
         public $fieldEditing = false;
