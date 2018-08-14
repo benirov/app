@@ -9,7 +9,7 @@ $(document).ready(function()
 
     window.addEventListener("beforeunload", function (event) {
   console.log(event);
-    event.preventDefault();
+    // event.preventDefault();
     if(!inFormOrLink)
     {
         event.returnValue = "null"; 
