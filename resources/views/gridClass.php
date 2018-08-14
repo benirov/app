@@ -21,11 +21,11 @@ class GridClass extends MasterController
 
     }
 
-    public function headerGrid($header)
+    public function headerGrid($headerArray)
     {
         $header = '<thead>';
         $header =       '<tr>';
-            foreach ($header as $key => $value) {
+            foreach ($headerArray as $key => $value) {
                 $header =   '<th>'.$value.'</th>';
             }
 
