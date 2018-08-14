@@ -12,6 +12,14 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
+        sure("pruebas", function(sResp)
+        {
+            if(sResp)
+            {
+                console.log("aqui");
+            }
+        });
+        
         event.returnValue = "null"; 
     }
     
