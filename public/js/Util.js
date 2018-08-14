@@ -14,10 +14,7 @@ $(document).ready(function()
     {
         event.returnValue = "pruebas";
     }
-    else
-    {
-        event.returnValue = false;
-    }
+    
 
   // Chrome/Chromium based browsers still need this one.
       // event.returnValue = "\o/";
