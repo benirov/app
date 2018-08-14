@@ -123,8 +123,8 @@ class MasterController extends ApiController
 
     public function getMaster()
     {
-        $MasterDetail =  master::class;
-        return $this->showAll(master::getDataMaster(), 200);
+        $Master =  master::getDataMaster();
+        return $this->showAll($Master, 200);
 
     }
 }
