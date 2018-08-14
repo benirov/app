@@ -25,7 +25,7 @@ class master extends Model
      }
 
 
-     public function getDataMaster()
+     public static function getDataMaster()
      {
         $master = DB::table('tblMasters')->select('id', 'name', 'status')->get();
      }
