@@ -14,6 +14,7 @@ $(document).ready(function()
     {
         var href = $('.logout').attr('href');
         window.location.href = href;
+        return false;
          // return 'Esta accion cerrara la ventana';
 
 
