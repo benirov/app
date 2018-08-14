@@ -15,7 +15,7 @@ trait ApiResponser
 	}
 
 	protected function responseJson($data){
-		return response()->json($data);
+		return json_encode($data);
 	}
 
 	protected function showAll(Collection $collection, $code = 200){
