@@ -26,11 +26,11 @@ class GridClass extends MasterController
     {
         $header = '<thead>';
         $header .=       '<tr class="sorting_asc">';
-            foreach ($this->headerArray as $key => $value)
+            foreach ($this->headerArray as $key)
             {
-                $header .=   '<th>'.$value[$key].'</th>';
-                $header .=   '<th>'.$value[$key].'</th>';
-                $header .=   '<th>'.$value[$key].'</th>';
+                $header .=   '<th>'.$key.'</th>';
+                $header .=   '<th>'.$key.'</th>';
+                $header .=   '<th>'.$key.'</th>';
             }
 
         $header .=       '<tr>';

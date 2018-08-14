@@ -79,9 +79,9 @@ class HomeController extends Controller
 
         // grid
         $header = array(
-            'title' => 'id',
-            'title' => 'name',
-            'title' => 'status');
+            'id',
+            'name',
+            'status');
         $grid = new GridClass; 
         $grid->dataGrid();
         $grid->headerArray = $header;
