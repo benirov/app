@@ -80,7 +80,7 @@ class GridClass extends MasterController
     public function renderGrid()
     {
         $table = '<table border>';
-        $table .= $this->headerGrid();
+        $table .= $this->headerGrid($headerArray);
         $table .= $this->rowDataGrid();
         $table .= '</table>';
 
