@@ -20,7 +20,7 @@ $(document).ready(function()
             }
         });
         
-        event.returnValue = "null"; 
+        // event.returnValue = "null"; 
     }
     
 
