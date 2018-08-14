@@ -41,9 +41,9 @@ class GridClass extends MasterController
         $body = '<tbody>';
         $data = $this->dataGrid();
 
-        $dataArray = json_decode($data['data'], true);
+        $dataArray = json_decode($data, true);
         dd($dataArray);
-            foreach ($data['data'] as $key => $value) 
+            foreach ($dataArray['data'] as $key => $value) 
             {
                 $body   .=   '<tr>';
                 $body   .=        '<td>'.$value["id"].'</td>';
@@ -63,6 +63,12 @@ class GridClass extends MasterController
     }
 
     public function filterGrid($filter)
+    {
+            $this->filter = $filter;
+
+    }
+
+    public function filterHeaderGrid($filter)
     {
             $this->filter = $filter;
 
