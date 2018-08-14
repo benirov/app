@@ -2,25 +2,19 @@
 
 $(document).ready(function()
 {
-    jQuery('form').submit(function() {
-        jQuery(window).unbind("beforeunload");
-    });
+    var inFormOrLink;
+    $('a').live('click', function() { inFormOrLink = true; });
+    $('form').bind('submit', function() { inFormOrLink = true; });
 
-    jQuery('a').click(function() {
-        jQuery(window).unbind("beforeunload");
-    });
-    
-
-    $(window).on("beforeunload", function() { 
-        sure("esta accion eliminara su sesion", function(sResp)
-        {
-            if(sResp)
-            {
-                return true;
-            }
-        });
-    })
-    });
+    $(window).bind('beforeunload', function(eventObject) {
+    var returnValue = undefined;
+    if (! inFormOrLink) {
+        returnValue = "Do you really want to close?";
+    }
+    eventObject.returnValue = returnValue;
+    return returnValue;
+}); 
+});
 
 function alert(Title) {
     bootbox.alert(Title + " ");
