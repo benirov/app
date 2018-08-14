@@ -6,7 +6,8 @@ use App\Http\Controllers\Master\MasterController;
 class Grid extends MasterController
 {
 
-        private $fieldEditing = false;
+        public $fieldEditing = false;
+        public $filter = false;
     // $master = getMaster();
 
 
@@ -52,6 +53,12 @@ class Grid extends MasterController
     public function editingGrid($editing)
     {
             $this->fieldEditing = $editing;
+
+    }
+
+    public function filterGrid($filter)
+    {
+            $this->filter = $filter;
 
     }
 
