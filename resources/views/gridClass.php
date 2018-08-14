@@ -24,13 +24,14 @@ class GridClass extends MasterController
     public function headerGrid($headerArray)
     {
         $header = '<thead>';
-        $header =       '<tr>';
+        $header .=       '<tr>';
             foreach ($headerArray as $key => $value) {
-                $header =   '<th>'.$value.'</th>';
+                $header .=   '<th>'.$value.'</th>';
             }
 
-        $header =       '<tr>';
-        $header = '<thead>';
+        $header .=       '<tr>';
+        $header .= '<thead>';
+        return $header; 
         
 
     }
@@ -38,14 +39,15 @@ class GridClass extends MasterController
     public function rowDataGrid()
     {
         $body = '<tbody>';
-            foreach ($this->dataGrid() as $key => $value) {
-                $body   =   '<tr>';
-                $title  =        '<td>'.$value.'</td>';
-                $header =   '<tr>';
+        $data = $this->dataGrid();
+            foreach ($data as $key => $value) {
+                $body   .=   '<tr>';
+                $body   .=        '<td>'.$value.'</td>';
+                $body   .=   '<tr>';
             }
 
         
-        $header = '<thead>';
+        $body .= '<tbody>';
         
 
     }
@@ -67,9 +69,9 @@ class GridClass extends MasterController
     public function renderGrid()
     {
         $table = '<table border>';
-        $table = $this->headerGrid();
-        $table = $this->rowDataGrid();
-        $table = '</table>';
+        $table .= $this->headerGrid();
+        $table .= $this->rowDataGrid();
+        $table .= '</table>';
 
         return $table;
 
