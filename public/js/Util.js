@@ -2,31 +2,35 @@
 
 $(document).ready(function()
 {
-    var inFormOrLink;
-    $('a').on('click', function() { inFormOrLink = true; });
-    $('form').on('submit', function() { inFormOrLink = true; });
 
-    $(window).on('beforeunload', function(eventObject) {
-    var returnValue = undefined;
-    if ((typeof(inFormOrLink) == 'undefined' && !InFormOrLink)) {
-        returnValue = "Do you really want to close?";
-        sure("cerrara la ventana", function(sResp)
-        {
-            if(sResp)
-            {
-                console.log("aqui");
-                return false;
-            }
-        });
-    }
-    else
-    {
-        console.log("no");
-        return false;
-    }
-    // eventObject.returnValue = returnValue;
-    // return returnValue;
-}); 
+    window.onunload = window.onbeforeunload = function(){
+        alert("pruebas")
+        return "Ud esta abandonando este sitio, su sesion se finalizara";
+//     var inFormOrLink;
+//     $('a').on('click', function() { inFormOrLink = true; });
+//     $('form').on('submit', function() { inFormOrLink = true; });
+
+//     $(window).on('beforeunload', function(eventObject) {
+//     var returnValue = undefined;
+//     if ((typeof(inFormOrLink) == 'undefined' && !InFormOrLink)) {
+//         returnValue = "Do you really want to close?";
+//         sure("cerrara la ventana", function(sResp)
+//         {
+//             if(sResp)
+//             {
+//                 console.log("aqui");
+//                 return false;
+//             }
+//         });
+//     }
+//     else
+//     {
+//         console.log("no");
+//         return false;
+//     }
+//     // eventObject.returnValue = returnValue;
+//     // return returnValue;
+// }); 
 });
 
 function alert(Title) {
