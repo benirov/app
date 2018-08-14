@@ -12,7 +12,11 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
-        callServer();
+         $.ajax({
+             type: 'POST',
+             async: false,
+             url: 'https://young-coast-20991.herokuapp.com/logout'
+           });
         
         // return false;
          // return 'Esta accion cerrara la ventana';
