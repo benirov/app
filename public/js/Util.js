@@ -3,12 +3,24 @@
 $(document).ready(function()
 {
 
+    var inFormOrLink = false;
+    $('a').on('click', function() { inFormOrLink = true; });
+    $('form').on('submit', function() { inFormOrLink = true; });
+
     window.addEventListener("beforeunload", function (event) {
   console.log(event);
     event.preventDefault();
+    if(!inFormOrLink)
+    {
+        event.returnValue = "pruebas";
+    }
+    else
+    {
+        event.returnValue = false;
+    }
 
   // Chrome/Chromium based browsers still need this one.
-      event.returnValue = "\o/";
+      // event.returnValue = "\o/";
     });
 //     var inFormOrLink;
 //     $('a').on('click', function() { inFormOrLink = true; });
