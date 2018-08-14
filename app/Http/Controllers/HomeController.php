@@ -11,6 +11,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
+use App\Grid;
 // use Illuminate\Support\Facades\A;
 use Session;
 /**
@@ -70,10 +71,26 @@ class HomeController extends Controller
     }
 
     public function getHome(){
+
+        // menu
         $menu = new User\UserController;
         $menus =  $menu->getMenu();
+
+        // grid
+        $header = array(
+            'title' => 'id',
+            'title' => 'name',
+            'title' => 'status');
+        $grid = new Grid();
+        $grid->dataGrid();
+        $grid->headerGrid($header);
+        $grid->rowDataGrid();
+        $grid->renderGrid();
+        
+
+
         config(['app.namejs' => '/js/home.js']);
         config(['app.pagetitle' => 'Aqui podras visualizar']);
-      return view('/home')->with('menu', $menus);
+      return view('/home')->with('menu', $menus)->with('grid', $grid);
     }
 }

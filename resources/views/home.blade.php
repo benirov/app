@@ -15,6 +15,10 @@
 					<div class="panel-body">
 						{{ trans('adminlte_lang::message.logged') }}
 					</div>
+					<br>
+					<div class="panel-body">
+						{{ $grid }}
+					</div>
 				</div>
 			</div>
 		</div>
