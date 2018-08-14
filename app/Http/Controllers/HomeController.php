@@ -84,7 +84,8 @@ class HomeController extends Controller
             'title' => 'status');
         $grid = new GridClass; 
         $grid->dataGrid();
-        $grid->headerGrid($header);
+        $grid->headerArray = $header
+        $grid->headerGrid();
         $grid->rowDataGrid();
         $grid->renderGrid();
         

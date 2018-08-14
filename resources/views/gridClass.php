@@ -8,6 +8,7 @@ class GridClass extends MasterController
 
         public $fieldEditing = false;
         public $filter = false;
+        public $headerArray = array();
     // $master = getMaster();
 
 
@@ -21,7 +22,7 @@ class GridClass extends MasterController
 
     }
 
-    public function headerGrid($headerArray)
+    public function headerGrid()
     {
         $header = '<thead>';
         $header .=       '<tr>';
@@ -80,7 +81,7 @@ class GridClass extends MasterController
     public function renderGrid()
     {
         $table = '<table border>';
-        $table .= $this->headerGrid($headerArray);
+        $table .= $this->headerGrid();
         $table .= $this->rowDataGrid();
         $table .= '</table>';
 
