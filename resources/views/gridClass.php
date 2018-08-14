@@ -68,19 +68,19 @@ class GridClass extends MasterController
 
     }
 
-    public function renderFilter()
-    {
-        // $filterRender;
-        // if($this->filter)
-        // {
-            $filterRender  = '<div class="col-md-5">';
-            $filterRender .=     '<label for"find">searc</label>';
-            $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
-            $filterRender .= '</div">';
-        // }
+    // public function renderFilter()
+    // {
+    //     // $filterRender;
+    //     // if($this->filter)
+    //     // {
+    //         $filterRender  = '<div class="col-md-5">';
+    //         $filterRender .=     '<label for"find">searc</label>';
+    //         $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
+    //         $filterRender .= '</div">';
+    //     // }
 
-        return $filterRender;
-    }
+    //     return $filterRender;
+    // }
 
     
 
