@@ -88,7 +88,8 @@ class HomeController extends Controller
         $grid->headerGrid();
         $grid->rowDataGrid();
         $grid->renderGrid();
-        dd($grid);
+        echo $grid->renderGrid();
+        exit();
         
 
 
