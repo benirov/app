@@ -68,17 +68,33 @@ class GridClass extends MasterController
 
     }
 
-    public function filterGrid($filter)
+    public function renderFilter()
     {
-            $this->filter = $filter;
+        // $filterRender;
+        // if($this->filter)
+        // {
+            $filterRender  = '<div class="col-md-5">';
+            $filterRender .=     '<label for"find">searc</label>';
+            $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
+            $filterRender .= '</div">';
+        // }
 
+        return $filterRender;
     }
 
-    public function filterHeaderGrid($filter)
-    {
-            $this->filter = $filter;
+    
 
-    }
+    // public function filterGrid($filter)
+    // {
+    //         $this->filter = $filter;
+
+    // }
+
+    // public function filterHeaderGrid($filter)
+    // {
+    //         $this->filter = $filter;
+
+    // }
 
 
 
@@ -88,11 +104,12 @@ class GridClass extends MasterController
         $table .= '<div class="box-header">
                         <h3 class="box-title">Categorias</h3>
                     </div>';
+        $table .= $this->renderFilter();
         $table .= '<table class="table table-bordered table-hover dataTable">';
         $table .= $this->headerGrid();
         $table .= $this->rowDataGrid();
         $table .= '</table>';
-        $table .= '</div>'
+        $table .= '</div>';
 
         return $table;
 
