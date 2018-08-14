@@ -8,11 +8,19 @@ $(document).ready(function()
 
     $(window).on('beforeunload', function(eventObject) {
     var returnValue = undefined;
-    if ((inFormOrLink == undefined && !InFormOrLink)) {
+    if ((typeof(inFormOrLink) == 'undefined' && !InFormOrLink)) {
         returnValue = "Do you really want to close?";
+        sure("cerrara la ventana", function(sResp)
+        {
+            if(sResp)
+            {
+                console.log("aqui");
+                return false;
+            }
+        });
     }
-    eventObject.returnValue = returnValue;
-    return returnValue;
+    // eventObject.returnValue = returnValue;
+    // return returnValue;
 }); 
 });
 
