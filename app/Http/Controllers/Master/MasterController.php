@@ -119,4 +119,12 @@ class MasterController extends ApiController
         $master->save();
         return $this->showOne($master, 201);
     }
+
+
+    public function getMaster()
+    {
+        $MasterDetail =  master::class;
+        return $this->showAll($MasterDetail->getDataMaster, 200);
+
+    }
 }

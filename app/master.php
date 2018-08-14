@@ -21,4 +21,10 @@ class master extends Model
      public function getMasterDetail(){
      	 return $this->hasMany('App\masterdetail', 'fkIdMaster', 'id');
      }
+
+
+     public function getDataMaster()
+     {
+        $master = DB::table('tblMasters')->select('id', 'name', 'status')->get();
+     }
 }
