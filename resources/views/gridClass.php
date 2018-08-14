@@ -1,6 +1,6 @@
 <?php
 
-namespace resources\views\GridClass;
+namespace resources\views;
 use App\Http\Controllers\Master\MasterController;
 
 class GridClass extends MasterController
