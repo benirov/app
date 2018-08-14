@@ -12,14 +12,15 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
-        sure("pruebas", function(sResp)
-        {
-            if(sResp)
-            {
-                console.log("aqui");
-            }
-        });
-        
+        (e || window.event).returnValue = 'Esta accion cerrara la ventana';
+        // sure("pruebas", function(sResp)
+        // {
+        //     if(sResp)
+        //     {
+        //         console.log("aqui");
+        //     }
+        // });
+
         // event.returnValue = "null"; 
     }
     
