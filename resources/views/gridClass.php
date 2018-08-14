@@ -29,8 +29,6 @@ class GridClass extends MasterController
             foreach ($this->headerArray as $key)
             {
                 $header .=   '<th>'.$key.'</th>';
-                $header .=   '<th>'.$key.'</th>';
-                $header .=   '<th>'.$key.'</th>';
             }
 
         $header .=       '<tr>';
