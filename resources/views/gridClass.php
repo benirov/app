@@ -44,9 +44,9 @@ class GridClass extends MasterController
          // print_r($someArray);  
         // echo $data;
          // exit();
-            foreach ($someArray as $key => $value) {
+            foreach ($someArray as $key) {
                 $body   .=   '<tr>';
-                $body   .=        '<td>'.$value.'</td>';
+                $body   .=        '<td>'.$key.'</td>';
                 $body   .=   '<tr>';
             }
 
