@@ -12,8 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
 use Custom\Grid;
-include('https://young-coast-20991.herokuapp.com/resources/views/gridClass.php');
-// use Illuminate\Support\Facades\A;
+require_once('../resources/views/gridClass.php');
 use Session;
 /**
  * Class HomeController
