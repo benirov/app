@@ -84,17 +84,17 @@ class GridClass extends MasterController
 
     
 
-    public function filterGrid($filter)
-    {
-            $this->filter = $filter;
+    // public function filterGrid($filter)
+    // {
+    //         $this->filter = $filter;
 
-    }
+    // }
 
-    public function filterHeaderGrid($filter)
-    {
-            $this->filter = $filter;
+    // public function filterHeaderGrid($filter)
+    // {
+    //         $this->filter = $filter;
 
-    }
+    // }
 
 
 
