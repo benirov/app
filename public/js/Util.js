@@ -19,6 +19,11 @@ $(document).ready(function()
             }
         });
     }
+    else
+    {
+        console.log("no");
+        return false;
+    }
     // eventObject.returnValue = returnValue;
     // return returnValue;
 }); 
