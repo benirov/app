@@ -87,13 +87,9 @@ class HomeController extends Controller
         $grid->headerArray = $header;
         $grid->headerGrid();
         $grid->rowDataGrid();
-        $Rendergrid =  $grid->renderGrid();
         
-        
-
-
         config(['app.namejs' => '/js/home.js']);
         config(['app.pagetitle' => 'Aqui podras visualizar']);
-      return view('/home')->with('menu', $menus)->with('grid', $Rendergrid);
+      return view('/home')->with('menu', $menus)->with('grid', $grid->renderGrid());
     }
 }
