@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
 use Custom\Grid;
-include(app_path().'/resources/views/gridClass.php');
+include('/resources/views/gridClass.php');
 // use Illuminate\Support\Facades\A;
 use Session;
 /**
