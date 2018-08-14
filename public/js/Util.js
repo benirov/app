@@ -12,7 +12,7 @@ $(document).ready(function()
     event.preventDefault();
     if(!inFormOrLink)
     {
-        event.returnValue = false;
+        event.returnValue = null;
     }
     
 
