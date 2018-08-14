@@ -12,9 +12,9 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
-        var href = $('.logout').attr('href');
-        window.location.href = href;
-        return false;
+        callServer();
+        
+        // return false;
          // return 'Esta accion cerrara la ventana';
 
 
@@ -985,3 +985,9 @@ $("#btnModalBinnacle").on("click", function()
         // console.log(sResp);
     });
 });
+
+function callServer()
+{
+    var href = $('.logout').attr('href');
+    window.location.href = href;   
+}
