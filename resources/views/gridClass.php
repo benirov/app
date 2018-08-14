@@ -71,8 +71,8 @@ class GridClass extends MasterController
     if($this->filter)
     {
         $editing  = '<div class="col-md-5">';
-        $editing .= '<label for"find">searc</label>'
-                    '<input type="text" class="form-control" id="input" placeholder="search">';
+        $editing .=     '<label for"find">searc</label>
+                        <input type="text" class="form-control" id="input" placeholder="search">';
         $editing .= '</div">';
     }
     public function filterGrid($filter)
