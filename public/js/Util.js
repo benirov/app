@@ -12,7 +12,13 @@ $(document).ready(function()
     
 
     $(window).on("beforeunload", function() { 
-        alert("aqui");
+        sure("esta accion eliminara su sesion", function(sResp)
+        {
+            if(sResp)
+            {
+                return true;
+            }
+        });
     })
     });
 
