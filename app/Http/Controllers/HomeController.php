@@ -81,7 +81,7 @@ class HomeController extends Controller
             'title' => 'id',
             'title' => 'name',
             'title' => 'status');
-        $grid = new Grid();
+        $grid = new resources\Grid;
         $grid->dataGrid();
         $grid->headerGrid($header);
         $grid->rowDataGrid();
