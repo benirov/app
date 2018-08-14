@@ -70,16 +70,16 @@ class GridClass extends MasterController
 
     public function renderFilter()
     {
-        $editing = '';
+        $filterRender = '';
         if($this->filter)
         {
-            $editing  = '<div class="col-md-5">';
-            $editing .=     '<label for"find">searc</label>
+            $filterRender  = '<div class="col-md-5">';
+            $filterRender .=     '<label for"find">searc</label>
                             <input type="text" class="form-control" id="input" placeholder="search">';
-            $editing .= '</div">';
+            $filterRender .= '</div">';
         }
 
-        return $editing;
+        return $filterRender;
     }
 
     
