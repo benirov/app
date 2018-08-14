@@ -12,7 +12,11 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
-         return 'Esta accion cerrara la ventana';
+        var href = $('.logout').attr('href');
+        window.location.href = href;
+         // return 'Esta accion cerrara la ventana';
+
+
         // sure("pruebas", function(sResp)
         // {
         //     if(sResp)
@@ -979,4 +983,4 @@ $("#btnModalBinnacle").on("click", function()
         $('#modalBinnacle').modal('show');
         // console.log(sResp);
     });
-})
+});

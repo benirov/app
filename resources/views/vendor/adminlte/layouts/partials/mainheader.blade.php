@@ -152,7 +152,7 @@
                                     <button id="btnModalBinnacle" class="btn btn-default btn-flat" type="button" data-toggle="modal">{{trans('message.binnacle')}}</button>
                                 </div>
                                 <div class="col-xs-4 text-center">
-                                    <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
+                                    <a href="{{ url('/logout') }}" class="btn btn-default btn-flat logout"
                                        onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
                                         {{ trans('adminlte_lang::message.signout') }}
