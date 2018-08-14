@@ -3,12 +3,12 @@
 $(document).ready(function()
 {
     var inFormOrLink;
-    $('a').live('click', function() { inFormOrLink = true; });
-    $('form').bind('submit', function() { inFormOrLink = true; });
+    $('a').on('click', function() { inFormOrLink = true; });
+    $('form').on('submit', function() { inFormOrLink = true; });
 
-    $(window).bind('beforeunload', function(eventObject) {
+    $(window).on('beforeunload', function(eventObject) {
     var returnValue = undefined;
-    if (! inFormOrLink) {
+    if ((inFormOrLink == undefined && !InFormOrLink)) {
         returnValue = "Do you really want to close?";
     }
     eventObject.returnValue = returnValue;
