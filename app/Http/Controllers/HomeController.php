@@ -11,7 +11,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
-use App\Grid;
+use Custom\Grid;
 // use Illuminate\Support\Facades\A;
 use Session;
 /**
@@ -81,7 +81,7 @@ class HomeController extends Controller
             'title' => 'id',
             'title' => 'name',
             'title' => 'status');
-        $grid = new resources\Grid;
+        $grid = new Custom\Grid;
         $grid->dataGrid();
         $grid->headerGrid($header);
         $grid->rowDataGrid();
