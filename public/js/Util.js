@@ -3,9 +3,13 @@
 $(document).ready(function()
 {
 
-    window.onunload = window.onbeforeunload = function(){
-        alert("pruebas")
-        return "Ud esta abandonando este sitio, su sesion se finalizara";
+    window.addEventListener("beforeunload", function (event) {
+  console.log(event);
+    event.preventDefault();
+
+  // Chrome/Chromium based browsers still need this one.
+      event.returnValue = "\o/";
+    });
 //     var inFormOrLink;
 //     $('a').on('click', function() { inFormOrLink = true; });
 //     $('form').on('submit', function() { inFormOrLink = true; });
