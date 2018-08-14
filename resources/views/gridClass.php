@@ -74,8 +74,8 @@ class GridClass extends MasterController
         // if($this->filter)
         // {
             $filterRender  = '<div class="col-md-5">';
-            $filterRender .=     '<label for"find">searc</label>
-                            <input type="text" class="form-control" id="input" placeholder="search">';
+            $filterRender .=     '<label for"find">searc</label>';
+            $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
             $filterRender .= '</div">';
         // }
 
