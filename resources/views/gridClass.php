@@ -39,7 +39,7 @@ class GridClass extends MasterController
     public function rowDataGrid()
     {
         $body = '<tbody>';
-        $data = $this->dataGrid();
+        $data = json_encode($this->dataGrid());
         dd($data);
 
         $dataArray = json_decode($data, true);
