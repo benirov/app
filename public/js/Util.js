@@ -12,7 +12,7 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
-        (e || window.event).returnValue = 'Esta accion cerrara la ventana';
+        (event || window.event).returnValue = 'Esta accion cerrara la ventana';
         // sure("pruebas", function(sResp)
         // {
         //     if(sResp)
