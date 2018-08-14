@@ -42,8 +42,8 @@ class GridClass extends MasterController
         $data = $this->dataGrid();
 
         $dataArray = json_decode($data, true);
-        dd($dataArray);
-            foreach ($dataArray['data'] as $key => $value) 
+        
+            foreach ($dataArray as $key => $value) 
             {
                 $body   .=   '<tr>';
                 $body   .=        '<td>'.$value["id"].'</td>';
