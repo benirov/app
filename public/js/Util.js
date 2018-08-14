@@ -12,6 +12,12 @@ $(document).ready(function()
     // event.preventDefault();
     if(!inFormOrLink)
     {
+
+        $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
          $.ajax({
              type: 'POST',
              async: false,
