@@ -104,7 +104,7 @@ class GridClass extends MasterController
         $table .=   '<div class="box-header">';
         $table .=     '<h3 class="box-title">Categorias</h3>';
         $table .=   '</div>';
-        $table .= $this->renderFilter();
+        // $table .= $this->renderFilter();
         $table .= '<table class="table table-bordered table-hover dataTable">';
         $table .= $this->headerGrid();
         $table .= $this->rowDataGrid();
