@@ -60,6 +60,11 @@ class GridClass extends MasterController
                 $header .=   '<th >'.$key.$sortin.'</th>';
             }
 
+            if($this->editing)
+            {
+                $header .=   '<th>actions</th>';
+            }
+
         $header .=       '<tr>';
         $header .= '<thead>';
         return $header; 
