@@ -96,7 +96,7 @@ class GridClass extends MasterController
                                 $icon = '';
                                 break;
                         }
-                        $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="'.$icon.'"></i></button>'
+                        $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="'.$icon.'"></i></button>';
                     }
                     $body .= '</tr>'
                 }
