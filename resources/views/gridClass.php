@@ -78,7 +78,7 @@ class GridClass extends MasterController
             $filterRender .=     '<label>flitro</label>';
             $filterRender   .=    '<input type="text" class="form-control  inputSearchTable" id="filter" placeholder="search">';
                  $filterRender .= '</div>';
-            $filterRender .= '</div"><br>';
+            $filterRender .= '</div><br>';
         }
 
         return $filterRender;
