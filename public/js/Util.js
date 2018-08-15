@@ -2,7 +2,7 @@
 
 $(document).ready(function()
 {
-    localStorage.setItem("activePage");
+    // localStorage.setItem("activePage");
     var inFormOrLink = false;
     $(document).keydown(function(e)
     {
