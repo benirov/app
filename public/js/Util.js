@@ -2,7 +2,10 @@
 
 $(document).ready(function()
 {
-
+    window.onhashchange = function()
+    {
+        console.log("aqui");
+    }
 
         $('body .inputSearchTable').keyup(function() {
             console.log("aqui");
