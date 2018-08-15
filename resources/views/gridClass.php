@@ -33,6 +33,11 @@ class GridClass extends MasterController
         $this->editing = $editing;
     }
 
+     public function optionsEditing($headerOptions)
+    {
+        $this->optionsEditing = $headerOptions;
+    }
+
 
     public function dataGrid()
     {
