@@ -77,28 +77,29 @@ class GridClass extends MasterController
                 $body   .=        '<td>'.$value["name"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
                 $body   .=   '<tr>';
-            }
-            if($this->editing)
-            {
-                $header. = '<th>'
-                foreach ($this->optionsEditing as $options)
-                {
-                    switch ($options) {
-                        case 'editing':
-                            $icon = 'fas fa-edit';
-                            break;
 
-                            case 'deleted':
-                            $icon = 'fas fa-trash-alt';
-                            break;
-                        
-                        default:
-                            $icon = '';
-                            break;
+                if($this->editing)
+                {
+                    $body .= '<tr>';
+                    foreach ($this->optionsEditing as $options)
+                    {
+                        switch ($options) {
+                            case 'editing':
+                                $icon = 'fas fa-edit';
+                                break;
+
+                                case 'deleted':
+                                $icon = 'fas fa-trash-alt';
+                                break;
+                            
+                            default:
+                                $icon = '';
+                                break;
+                        }
+                        $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="'.$icon.'"></i></button>'
                     }
-                    $header .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="'.$icon.'"></i></button>'
+                    $body .= '</tr>'
                 }
-                $header. = '</th>'
             }
 
         
