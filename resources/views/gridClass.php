@@ -73,9 +73,14 @@ class GridClass extends MasterController
         $filterRender = '';
         if($this->filter)
         {
-            $filterRender  = '<div class="col-md-5">';
-            $filterRender .=     '<label>search</label>';
-            $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
+            $filterRender  = '<div class="row">';
+            foreach ($this->headerArray as $key)
+            {
+                $filterRender  = '<div class="col-md-5">';
+                $filterRender .=     '<label>'.$key.'</label>';
+                $filterRender   .=    '<input type="text" class="form-control" id="filter'.$key.'" placeholder="search '.$key.'" />';
+                 $filterRender .= '</div">';
+            }
             $filterRender .= '</div">';
         }
 
