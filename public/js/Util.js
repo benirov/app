@@ -2,14 +2,16 @@
 
 $(document).ready(function()
 {
+    document.onkeyup = fkey;
     var inFormOrLink = false;
     $('a').on('click', function() { inFormOrLink = true; });
     $('form').on('submit', function() { inFormOrLink = true; });
 
     window.addEventListener("beforeunload", function (event)
     {
-        console.log(window.event.keyCode);
-        if(window.event.keyCode == 116)
+        event = event || window.event;
+        console.log(event.keyCode);
+        if(event.keyCode == 116)
         {
             inFormOrLink = true;   
         }
