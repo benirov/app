@@ -70,14 +70,14 @@ class GridClass extends MasterController
 
     public function renderFilter()
     {
-        // $filterRender;
-        // if($this->filter)
-        // {
+        $filterRender = '';
+        if($this->filter)
+        {
             $filterRender  = '<div class="col-md-5">';
             $filterRender .=     '<label>search</label>';
             $filterRender   .=    '<input type="text" class="form-control" id="input" placeholder="search">';
             $filterRender .= '</div">';
-        // }
+        }
 
         return $filterRender;
     }
