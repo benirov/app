@@ -85,8 +85,8 @@ class HomeController extends Controller
         $grid = new GridClass; 
         $grid->dataGrid();
         $grid->sortingGrid(false);
-        $drid->filter(true);
-        $drid->headerArray($header);
+        $grid->filter(true);
+        $grid->headerArray($header);
         $grid->headerGrid();
         $grid->rowDataGrid();
         
