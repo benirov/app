@@ -3,6 +3,8 @@
 $(document).ready(function()
 {
 
+    $('body .dataTable').tablesorter();
+
    window.onpopstate = function()
    {
         inFormOrLink = true;
