@@ -89,7 +89,7 @@ class HomeController extends Controller
         $grid->editing(true);
         $grid->optionsEditing($optionsEditing);
         $grid->dataGrid();
-        $grid->sortingGrid(false);
+        $grid->sortingGrid(true);
         $grid->filter(true);
         $grid->headerArray($header);
         $grid->headerGrid();
