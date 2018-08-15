@@ -37,11 +37,16 @@ class GridClass extends MasterController
 
     public function headerGrid()
     {
+        $sortin = '';
+        if($this->sortingGrid)
+        {
+            $sortin = '<i class="fa fa-fw fa-sort"></i>';
+        }
         $header = '<thead>';
         $header .=       '<tr class="sorting_asc">';
             foreach ($this->headerArray as $key)
             {
-                $header .=   '<th >'.$key.'<i class="fa fa-fw fa-sort"></i></th>';
+                $header .=   '<th >'.$key.$sortin.'</th>';
             }
 
         $header .=       '<tr>';
