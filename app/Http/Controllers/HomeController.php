@@ -84,7 +84,7 @@ class HomeController extends Controller
             'status');
         $optionsEditing = array(
             'editing',
-            'deleted',);
+            'deleted');
         $grid = new GridClass;
         $grid->editing(true);
         $grid->optionsEditing($optionsEditing);
