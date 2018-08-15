@@ -86,11 +86,10 @@ class GridClass extends MasterController
                 $body   .=        '<td>'.$value["id"].'</td>';
                 $body   .=        '<td>'.$value["name"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
-                $body   .=   '</tr>';
 
                 if($this->editing)
                 {
-                    $body .= '<tr>';
+                    $body .= '<td>';
                     foreach ($this->optionsEditing as $options)
                     {
                         switch ($options) {
@@ -108,8 +107,9 @@ class GridClass extends MasterController
                         }
                         $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="'.$options.'"><i class="'.$icon.'"></i></button>';
                     }
-                    $body .= '</tr>';
+                    $body .= '</td>';
                 }
+                $body   .=   '</tr>';
             }
 
         
