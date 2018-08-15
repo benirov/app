@@ -7,13 +7,26 @@ class GridClass extends MasterController
 {
 
         public $fieldEditing = false;
-        public $filter = false;
-        public $headerArray = array();
-    // $master = getMaster();
+        private $filter = false;
+        private $headerArray = array();
+        private $sortingGrid = false;
 
 
+    public function sortingGrid($sorting)
+    {
+        $this->sortingGrid = $sorting;
+    }
 
-    
+    public function filter($filter)
+    {
+        $this->filter = $filter;
+    }
+
+     public function headerArray($headerArray)
+    {
+        $this->headerArray = $headerArray;
+    }
+
 
     public function dataGrid()
     {
@@ -86,28 +99,27 @@ class GridClass extends MasterController
 
     
 
-    // public function filterGrid($filter)
-    // {
-    //         $this->filter = $filter;
+    public function actionsGrid($filter)
+    {
+            $this->filter = $filter;
 
-    // }
-
-    // public function filterHeaderGrid($filter)
-    // {
-    //         $this->filter = $filter;
-
-    // }
+    }
 
 
 
     public function renderGrid()
     {
+        $sortin = '';
+        if($this->sortingGrid)
+        {
+            $sortin = 'dataTable';
+        }
         $table = '<div class="box box-primary">';
         $table .=   '<div class="">';
         $table .=     '<h3 class="box-title">Categorias</h3>';
         $table .=   '</div>';
         $table .= $this->renderFilter();
-        $table .= '<table class="table table-bordered table-hover dataTable">';
+        $table .= '<table class="table table-bordered table-hover '.$sortin.'">';
         $table .= $this->headerGrid();
         $table .= $this->rowDataGrid();
         $table .= '</table>';

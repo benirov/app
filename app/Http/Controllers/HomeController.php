@@ -84,9 +84,9 @@ class HomeController extends Controller
             'status');
         $grid = new GridClass; 
         $grid->dataGrid();
-        $grid->headerArray = $header;
-        $grid->filter = true;
-        
+        $drid->sortingGrid(true);
+        $drid->filter(true);
+        $drid->headerArray($header);
         $grid->headerGrid();
         $grid->rowDataGrid();
         
