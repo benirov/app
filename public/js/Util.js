@@ -6,7 +6,6 @@ $(document).ready(function()
     $(document).keydown(function(e)
     {
         var code = (e.keyCode ? e.keyCode : e.which);
-        console.log(code);
         if(code == 116)
         {
             inFormOrLink = true;
@@ -19,11 +18,9 @@ $(document).ready(function()
 
     window.addEventListener("beforeunload", function (event)
     {
-        console.log(event);
         
         if(!inFormOrLink)
         {
-
             $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
