@@ -82,7 +82,12 @@ class HomeController extends Controller
             'id',
             'name',
             'status');
-        $grid = new GridClass; 
+        $optionsEditing = array(
+            'editing',
+            'deleted',);
+        $grid = new GridClass;
+        $grid->editing(true);
+        $grid->optionsEditing($optionsEditing);
         $grid->dataGrid();
         $grid->sortingGrid(false);
         $grid->filter(true);

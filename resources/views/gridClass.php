@@ -6,7 +6,8 @@ use App\Http\Controllers\Master\MasterController;
 class GridClass extends MasterController
 {
 
-        public $fieldEditing = false;
+        private $editing = false;
+        private $optionsEditing = array();
         private $filter = false;
         private $headerArray = array();
         private $sortingGrid = false;
@@ -25,6 +26,11 @@ class GridClass extends MasterController
      public function headerArray($headerArray)
     {
         $this->headerArray = $headerArray;
+    }
+
+    public function editing($editing)
+    {
+        $this->editing = $editing;
     }
 
 
@@ -71,6 +77,28 @@ class GridClass extends MasterController
                 $body   .=        '<td>'.$value["name"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
                 $body   .=   '<tr>';
+            }
+            if($this->editing)
+            {
+                $header. = '<th>'
+                foreach ($this->optionsEditing as $options)
+                {
+                    switch ($options) {
+                        case 'editing':
+                            $icon = 'fas fa-edit';
+                            break;
+
+                            case 'deleted':
+                            $icon = 'fas fa-trash-alt';
+                            break;
+                        
+                        default:
+                            $icon = '';
+                            break;
+                    }
+                    $header .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="'.$icon.'"></i></button>'
+                }
+                $header. = '</th>'
             }
 
         
