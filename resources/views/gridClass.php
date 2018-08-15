@@ -40,7 +40,7 @@ class GridClass extends MasterController
 
     public function rowDataGrid()
     {
-        $body = '<tbody>';
+        $body = '<tbody class="searchable">';
         $data = $this->dataGrid();
 
         $dataArray = json_decode($data, true);
@@ -78,7 +78,7 @@ class GridClass extends MasterController
             {
                 $filterRender  .= '<div class="col-md-5">';
                 $filterRender .=     '<label>'.$key.'</label>';
-                $filterRender   .=    '<input type="text" class="form-control" id="filter'.$key.'" placeholder="search '.$key.'" />';
+                $filterRender   .=    '<input type="text" class="form-control  inputSearchTable" id="filter'.$key.'" placeholder="search '.$key.'" />';
                  $filterRender .= '</div">';
             }
             $filterRender .= '</div">';

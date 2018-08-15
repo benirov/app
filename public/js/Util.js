@@ -2,6 +2,18 @@
 
 $(document).ready(function()
 {
+
+
+        $('body .inputSearchTable').keyup(function() {
+            console.log("aqui");
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function() {
+                return rex.test($(this).text());
+            }).show();
+        })
+
+    validate():
     // localStorage.setItem("activePage");
     var inFormOrLink = false;
     $(document).keydown(function(e)
@@ -966,4 +978,9 @@ function callServer()
 {
     var href = $('.logout').attr('href');
     window.location.href = href;   
+}
+
+function validate()
+{
+
 }
