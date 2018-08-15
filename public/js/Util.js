@@ -2,9 +2,20 @@
 
 $(document).ready(function()
 {
-   $(window).on('popstate', function(event) {
-        alert("pop");
-    });
+   
+    window.onhashchange = function(e) {
+        console.log(getLocationHash());
+      switch(getLocationHash()) {
+        case 'state1': 
+          alert("salir");
+          break;
+        case 'state2':
+          alert("salir");
+          break;
+        default: 
+          alert("default");
+      }
+    }
 
         $('body .inputSearchTable').keyup(function() {
             console.log("aqui");
@@ -986,3 +997,7 @@ function validate()
 {
 
 }
+
+function getLocationHash() {
+  return window.location.hash.substring(1);
+    }
