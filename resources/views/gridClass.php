@@ -11,6 +11,8 @@ class GridClass extends MasterController
         private $filter = false;
         private $headerArray = array();
         private $sortingGrid = false;
+        private $add = false;
+        
 
 
     public function sortingGrid($sorting)
@@ -36,6 +38,11 @@ class GridClass extends MasterController
      public function optionsEditing($headerOptions)
     {
         $this->optionsEditing = $headerOptions;
+    }
+
+    public function add($add)
+    {
+        $this->add = $add;
     }
 
 
@@ -162,6 +169,12 @@ class GridClass extends MasterController
         $table .=   '<div class="">';
         $table .=     '<h3 class="box-title">Categorias</h3>';
         $table .=   '</div>';
+        if($this->add)
+        {
+          $table .=  '<div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Agregar"><i class="fas fa-plus"></i></button>
+                    </div>';
+        }
         $table .= $this->renderFilter();
         $table .= '<table class="table table-bordered table-hover '.$sortin.'">';
         $table .= $this->headerGrid();

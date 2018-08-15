@@ -87,6 +87,7 @@ class HomeController extends Controller
             'deleted');
         $grid = new GridClass;
         $grid->editing(true);
+        $grid->add(true);
         $grid->optionsEditing($optionsEditing);
         $grid->dataGrid();
         $grid->sortingGrid(true);
