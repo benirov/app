@@ -2,14 +2,18 @@
 
 $(document).ready(function()
 {
+    var inFormOrLink = false;
     $(document).keydown(function(e)
     {
         var code = (e.keyCode ? e.keyCode : e.which);
         console.log(code);
-        if(code == 116) {
-            inFormOrLink = true
-        });
-    var inFormOrLink = false;
+        if(code == 116)
+        {
+            inFormOrLink = true;
+        };
+    });
+
+    
     $('a').on('click', function() { inFormOrLink = true; });
     $('form').on('submit', function() { inFormOrLink = true; });
 
