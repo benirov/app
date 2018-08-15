@@ -18,5 +18,8 @@
 <!-- bootbox Js -->
 <script src="{{ secure_asset('/plugins/bootbox/bootbox.min.js') }}"></script>
 
+<!-- tableSorter -->
+<script src="{{ secure_asset('/plugins/tablesorter/jquery.tablesorter.min.js') }}"></script>
+
 <!-- Utility Js -->
 <script src="{{ secure_asset('/js/Util.js') }}"></script>
