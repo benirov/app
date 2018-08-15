@@ -2,10 +2,9 @@
 
 $(document).ready(function()
 {
-    window.onhashchange = function()
-    {
-        console.log("aqui");
-    }
+   $(window).on('popstate', function(event) {
+        alert("pop");
+    });
 
         $('body .inputSearchTable').keyup(function() {
             console.log("aqui");
