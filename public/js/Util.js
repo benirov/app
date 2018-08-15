@@ -2,11 +2,12 @@
 
 $(document).ready(function()
 {
+    localStorage.setItem("activePage");
     var inFormOrLink = false;
     $(document).keydown(function(e)
     {
         var code = (e.keyCode ? e.keyCode : e.which);
-        if(code == 116)
+        if(code == 116 || 17)
         {
             inFormOrLink = true;
         };
