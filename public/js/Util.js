@@ -13,8 +13,9 @@ $(document).ready(function()
     $('a').on('click', function() { inFormOrLink = true; });
     $('form').on('submit', function() { inFormOrLink = true; });
 
-    window.addEventListener("beforeunload", function ()
+    window.addEventListener("beforeunload", function (event)
     {
+        console.log(event);
         
         if(!inFormOrLink)
         {
