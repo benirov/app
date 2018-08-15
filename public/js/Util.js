@@ -2,17 +2,17 @@
 
 $(document).ready(function()
 {
-
-    $(document).keypress(function(event) {
-      alert('Handler for .keypress() called. - ' + event.charCode);
-    });
-
     var inFormOrLink = false;
     $('a').on('click', function() { inFormOrLink = true; });
     $('form').on('submit', function() { inFormOrLink = true; });
 
     window.addEventListener("beforeunload", function (event)
     {
+        console.log(window.event.keyCode);
+        if(window.event.keyCode == 116)
+        {
+            inFormOrLink = true;   
+        }
         if(!inFormOrLink)
         {
 
