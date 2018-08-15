@@ -3,6 +3,10 @@
 $(document).ready(function()
 {
 
+    $(document).keypress(function(event) {
+      alert('Handler for .keypress() called. - ' + event.charCode);
+    });
+
     var inFormOrLink = false;
     $('a').on('click', function() { inFormOrLink = true; });
     $('form').on('submit', function() { inFormOrLink = true; });
