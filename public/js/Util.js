@@ -7,13 +7,13 @@ $(document).ready(function()
         $('body .inputSearchTable').keyup(function() {
             console.log("aqui");
             var rex = new RegExp($(this).val(), 'i');
-            $('.searchable tr').hide();
-            $('.searchable tr').filter(function() {
+            $('body .searchable tr').hide();
+            $('body .searchable tr').filter(function() {
                 return rex.test($(this).text());
             }).show();
         })
 
-    validate():
+    validate();
     // localStorage.setItem("activePage");
     var inFormOrLink = false;
     $(document).keydown(function(e)
