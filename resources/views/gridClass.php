@@ -81,7 +81,7 @@ class GridClass extends MasterController
                 $body   .=        '<td>'.$value["id"].'</td>';
                 $body   .=        '<td>'.$value["name"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
-                $body   .=   '<tr>';
+                $body   .=   '</tr>';
 
                 if($this->editing)
                 {
@@ -101,7 +101,7 @@ class GridClass extends MasterController
                                 $icon = '';
                                 break;
                         }
-                        $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="'.$icon.'"></i></button>';
+                        $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="'.$options.'"><i class="'.$icon.'"></i></button>';
                     }
                     $body .= '</tr>';
                 }
