@@ -92,7 +92,6 @@ class GridData extends UserController
             {
                 $body   .=   '<tr>';
                 $body   .=        '<td>'.$value["username"].'</td>';
-                $body   .=        '<td>'.$value["fkIdProfile"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
 
                 if($this->editing)
