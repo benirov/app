@@ -27,7 +27,7 @@
             "App\\": "app/"
         },
         "files": [
-            "resources/views/gridClass.php"
+            "resources/views/gridData.php"
         ]
     },
     "autoload-dev": {
