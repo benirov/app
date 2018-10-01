@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\ApiController;
+use Illuminate\Support\Collection;
 use App\User;
 use App\Login;
 use App\company;
@@ -22,7 +23,7 @@ class UserController extends ApiController
     public function index()
     {
         $users = User::all();
-        return response()->json($users)
+        return response()->json($users);
         // return response()->json(['data' =>$users], 200);
         // return $this->showAll($users);
         exit();
