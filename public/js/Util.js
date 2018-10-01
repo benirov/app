@@ -5,12 +5,6 @@ $(document).ready(function()
 
     $('body .dataTable').tablesorter();
 
-   window.onpopstate = function()
-   {
-        inFormOrLink = true;
-   };
-   history.pushState({}, '');
-
         $('body .inputSearchTable').keyup(function() {
             console.log("aqui");
             var rex = new RegExp($(this).val(), 'i');
@@ -21,38 +15,6 @@ $(document).ready(function()
         })
 
     validate();
-    // localStorage.setItem("activePage");
-    var inFormOrLink = false;
-    $(document).keydown(function(e)
-    {
-        var code = (e.keyCode ? e.keyCode : e.which);
-        if(code == 116 || 17)
-        {
-            inFormOrLink = true;
-        };
-    });
-
-    
-    $('a').on('click', function() { inFormOrLink = true; });
-    $('form').on('submit', function() { inFormOrLink = true; });
-
-    window.addEventListener("beforeunload", function (event)
-    {
-        
-        if(!inFormOrLink)
-        {
-            $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-             });
-             $.ajax({
-                 type: 'POST',
-                 async: false,
-                 url: 'https://young-coast-20991.herokuapp.com/logout'
-               });
-        }
-    });
 });
 
 function alert(Title) {

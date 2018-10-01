@@ -119,7 +119,7 @@ class GridData extends UserController
                                 $icon = '';
                                 break;
                         }
-                        $body .=   '<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="'.$options.'"><i class="'.$icon.'"></i></button>';
+                        $body .=   '<button type="button" class="btn btn-info addMaster disabled" data-toggle="tooltip" data-placement="top" title="'.$options.'"><i class="'.$icon.'"></i></button>';
                     }
                     $body .= '</td>';
                 }
