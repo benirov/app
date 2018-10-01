@@ -79,13 +79,12 @@ class HomeController extends Controller
 
         // grid
         $header = array(
-            'id',
             'name',
             'status');
         $optionsEditing = array(
             'editing',
             'deleted');
-        $grid = new GridClass;
+        $grid = new gridData;
         $grid->editing(true);
         $grid->add(true);
         $grid->optionsEditing($optionsEditing);
