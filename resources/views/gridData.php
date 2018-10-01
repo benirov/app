@@ -90,6 +90,13 @@ class GridData extends UserController
         
             foreach ($dataArray as $key => $value) 
             {
+                if($value["status"] == 1)
+                {
+                    $value["status"] = 'activo';
+                }else
+                {
+                    $value["status"] = 'inactivo';
+                }
                 $body   .=   '<tr>';
                 $body   .=        '<td>'.$value["username"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
