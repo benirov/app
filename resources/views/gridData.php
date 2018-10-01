@@ -85,7 +85,7 @@ class GridData extends UserController
         $data = $this->dataGrid();
 
         // $dataArray = json_decode($data, true);
-        echo $dataArray;
+        // echo $dataArray;
         
         
             foreach ($data as $key => $value) 
