@@ -13,7 +13,7 @@ use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Cookie;
 use resources\views\GridClass;
 // use Custom\Grid;
-require_once('../resources/views/gridClass.php');
+require_once('../resources/views/gridData.php');
 use Session;
 /**
  * Class HomeController

@@ -1,7 +1,7 @@
 <?php
 
 namespace resources\views;
-use App\Http\Controllers\Master\MasterController;
+use App\Http\Controllers\User\UserController;
 
 class GridClass extends MasterController
 {
@@ -48,8 +48,8 @@ class GridClass extends MasterController
 
     public function dataGrid()
     {
-        $master = $this->getMaster();
-        return $master;
+        $user = $this->index();
+        return $user;
 
     }
 
@@ -90,7 +90,7 @@ class GridClass extends MasterController
             foreach ($dataArray as $key => $value) 
             {
                 $body   .=   '<tr>';
-                $body   .=        '<td>'.$value["id"].'</td>';
+                $body   .=        '<td>'.$value["username"].'</td>';
                 $body   .=        '<td>'.$value["name"].'</td>';
                 $body   .=        '<td>'.$value["status"].'</td>';
 
@@ -139,7 +139,7 @@ class GridClass extends MasterController
         {
             $filterRender   = '<div class="row">';
             $filterRender  .=   '<div class="col-md-4">';
-            $filterRender  .=     '<label><strong>filtro</strong></label>';
+            $filterRender  .=     '<label><strong></strong></label>';
             $filterRender  .=    '<input type="text" class="form-control  inputSearchTable" id="filter" placeholder="search">';
              $filterRender .=   '</div>';
             $filterRender  .= '</div><br>';
@@ -172,7 +172,6 @@ class GridClass extends MasterController
         if($this->add)
         {
           $table .=  '<div class="col-md-4 col-sm-4 col-xs-4">
-                            <label><strong>&nbsp</strong></label>
                         <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Agregar"><i class="fas fa-plus"></i></button>
                     </div>';
         }
