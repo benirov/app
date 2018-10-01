@@ -3,7 +3,7 @@
 namespace resources\views;
 use App\Http\Controllers\User\UserController;
 
-class GridData extends MasterController
+class GridData extends UserController
 {
 
         private $editing = false;
