@@ -83,6 +83,7 @@ class GridData extends UserController
     {
         $body = '<tbody class="searchable">';
         $data = $this->dataGrid();
+        echo $data;
 
         $dataArray = json_decode($data, true);
         
