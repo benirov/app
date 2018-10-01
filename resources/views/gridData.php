@@ -168,14 +168,14 @@ class GridData extends UserController
         }
         $table = '<div class="box box-primary">';
         $table .=   '<div class="">';
-        $table .=     '<h3 class="box-title">Categorias</h3>';
+        $table .=     '<h3 class="box-title">Usuarios</h3>';
         $table .=   '</div>';
-        if($this->add)
-        {
-          $table .=  '<div class="col-md-4 col-sm-4 col-xs-4">
-                        <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Agregar"><i class="fas fa-plus"></i></button>
-                    </div>';
-        }
+        // if($this->add)
+        // {
+        //   $table .=  '<div class="col-md-4 col-sm-4 col-xs-4">
+        //                 <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Agregar"><i class="fas fa-plus"></i></button>
+        //             </div>';
+        // }
         $table .= $this->renderFilter();
         $table .= '<table class="table table-bordered table-hover '.$sortin.'">';
         $table .= $this->headerGrid();

@@ -96,7 +96,7 @@ class HomeController extends Controller
         $grid->rowDataGrid();
         
         config(['app.namejs' => '/js/home.js']);
-        config(['app.pagetitle' => 'Aqui podras visualizar']);
+        config(['app.pagetitle' => 'Aqui podras visualizar los usuarios registrados']);
       return view('/home')->with('menu', $menus)->with('grid', $grid->renderGrid());
     }
 }
