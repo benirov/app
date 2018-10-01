@@ -48,7 +48,8 @@ class GridData extends UserController
 
     public function dataGrid()
     {
-        $user = $this->index();
+        $user = $this->index()->toJson();
+        echo $user;
         return $user;
 
     }
@@ -83,7 +84,7 @@ class GridData extends UserController
     {
         $body = '<tbody class="searchable">';
         $data = $this->dataGrid();
-        echo $data;
+        return $data;
 
         $dataArray = json_decode($data, true);
         echo $dataArray;
