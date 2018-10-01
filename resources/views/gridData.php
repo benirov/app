@@ -48,8 +48,7 @@ class GridData extends UserController
 
     public function dataGrid()
     {
-        $user = $this->index()->toJson();
-        echo $user;
+        $user = $this->index();
         return $user;
 
     }
