@@ -12,9 +12,6 @@
 					<div class="col-md-8 col-sm-8 col-xs-8">
 						<h3 class="box-title">Categorias</h3>
 					</div>
-					<div class="col-md-4 col-sm-4 col-xs-4">
-						<button type="button" class="btn btn-info addMaster" data-toggle="tooltip" data-placement="top" title="Agregar Categoria"><i class="fas fa-plus"></i></button>
-					</div>
 					<div id="jsGrid">
 						
 					</div>
