@@ -29,7 +29,7 @@ Route::get('/home', 'HomeController@getHome',  function () {
 
 Route::get('/maestro', 'HomeController@getViewMaster', function () {
     //
-})->middleware('verifySession', 'revalidate');
+})->middleware('verifySession');
 
 
 
