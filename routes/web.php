@@ -23,13 +23,9 @@
 //      Route::get('/maestro', 'HomeController@getViewMaster')->name('master')->middleware('verifySession');
 // });
 
-Route::get('/home', 'HomeController@getHome',  function () {
-    //
-})->middleware('verifySession'); 
+Route::get('/home', 'HomeController@getHome')
 
-Route::get('/maestro', 'HomeController@getViewMaster', function () {
-    //
-})->middleware('verifySession');
+Route::get('/maestro', 'HomeController@getViewMaster')
 
 
 
