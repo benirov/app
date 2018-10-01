@@ -62,11 +62,8 @@ $(document).ready(function()
 });
 
 function getMasters(){
-	$.when(getQuery('masters', '', '', true, 0)).done(function (sRespMasters)
+	$.when(getQuery('masters', '', '', true, 1)).done(function (sRespMasters)
 	{
-		// console.log(sRespMasters);
-
-		console.log(sRespMasters.data);
 
 
 		drawGrid(sRespMasters.data);
